@@ -1,0 +1,170 @@
+---
+title:  |
+        | **Deaths and Disappearances in the Pinochet Regime: A New Dataset**
+author:
+  - "Danilo Freire^[PhD Candidate, Department of Political Economy, King's College London. Email:   [danilofreire@gmail.com](mailto:danilofreire@gmail.com).] &nbsp; John Meadowcroft^[Senior Lecturer in Public Policy, Department of Political Economy, King's College London. Email:  [john.meadowcroft@kcl.ac.uk](mailto:john.meadowcroft@kcl.ac.uk).] &nbsp; David Skarbek^[Associate Professor, Department of Political Science, Brown University. Email: [david_skarbek@brown.edu](david_skarbek@brown.edu). Corresponding author.] &nbsp; Eugenia Guerrero^[Software Developer, Tempo UK.]"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+thanks: "Data and replication information are available at [http://github.com/danilofreire/pinochet-victims-data](http://github.com/danilofreire/pinochet-victims-data)."
+abstract: "How did the Pinochet regime use deaths and disappearances after the violent military coup in September 1973? The coup resulted in more than three decades of violence as General Pinochet's government fought against left-wing movements for the sake of the 'national wellbeing.' While these efforts were significant, they were not uniformly distributed spatially or over time during his regime. This paper provides new data on observed variation of regime-based violence. It codes and compiles data from two volumes of the Report of the Chilean National Commission on Truth and Reconciliation, a systematic investigation of the Pinochet regime published in 1991. The data documents the initially high-level and then steep decline of these atrocities, the extent to which victims were targeted, and other demographic information about the victims. Our data also includes geographic information system data that allows researchers to map the spatial variation of atrocities over time."
+keywords: "authoritarianism, Chile, human rights, Pinochet, truth commission"
+fontsize: 12pt
+monospace-url: no
+spacing: double
+papersize: a4paper
+bibliography: references.bib
+biblio-style: apalike
+output:
+  pdf_document:
+    citation_package: natbib
+    fig_caption: yes
+    number_sections: yes
+    keep_tex: no
+    template: template.latex
+    latex_engine: pdflatex
+---
+
+# Introduction
+
+\setlength{\parindent}{1cm}
+\setlength{\parskip}{0pt}
+
+On 11 September 1973, General Augusto Pinochet led a coup against the democratically elected socialist government of Chile and its leader President Salvador Allende. The coup was the beginning of a seventeen-year military dictatorship that ended when the regime conceded in 1990 to popular demands for a return to democratic government. The Pinochet regime was notable for the violence of the coup -- in which President Allende committed suicide with his own rifle as troops stormed the Presidential Palace -- and of the period that followed, in which there were extra-judicial executions, systematic torture and other human rights abuses against alleged enemies of the regime. These abuses took place while the regime undertook a rapid liberalization of the economy under the direction of a small group of US-trained economists -- the so-called Chicago Boys. The success of those reforms, and the relationship of the reforms to the violence of the regime, remains controversial [@silva1991technocrats; @valdes1995pinochet]. The allegation that two Nobel Prize-winning economists, Milton Friedman and F. A. Hayek, supported the regime's free market policies despite its appalling human rights record, is also a matter of ongoing controversy [@farrant2014can; @farrant2012preventing; @meadowcroft2014hayek].
+
+While there have been many historical and military studies of the Pinochet regime, there has hitherto been no attempt to offer a systematic, quantitative analysis of the regime's actions. Mapping the acts of violence during this period may offer insight into the role of violence in the transition from democratic to autocratic government, in the maintenance of the regime's power, and in the quick transition from one economic model to another. Past studies in political science have focused on the violence associated with wars between nation states [@lacina2006declining; @rummel1997power], civil wars [@azam2002violence; @balcells2010rivalry; @kalyvas2006logic], and conflict with criminal organizations [@lessing2015logics; @snyder2009does]. This paper instead contributes to the emergent literature that maps out and theorizes about autocratic violence during transition periods.
+
+Violence during transitions has characterized a large number of regimes, from General Franco's purges in Spain to the recent ousting of Hosni Mubarak in Egypt. This pattern is also common in Latin America. The transitions to autocratic rule in Brazil (1964) and Argentina (1976) lead to frequent human rights violations, and Alberto Fujimori's _autogolpe_ (1992) explicitly allowed the president to "[apply] drastic punishments" towards alleged terrorists [@dabene1997narcodemocracias, 97; @samtleben2013constitucion, 56]. Much of the studies on regime transitions have been historical and qualitative in nature [e.g. @guest1990behind; @o1986transitions; @skidmore1990politics]. On Chile in particular, previous works have focused on how human rights violations affects the political system [@angell2005elecciones; @huneeus2014democracia; @portales2000chile], how various forms of social resistance emerged [@adams2002art; @gomez2008memory], and the role transitional justice plays in modern Chilean history [@collins2009human; @correa1991dealing; @ensalaco2000chile; @grandin2005instruction]. Unfortunately, quantitative studies on these topics remain rather limited. @ferrara2014assessing [16] writes that quantitative evaluations of long-term impacts of transitional justice are still sparse, mainly "due to the lack of necessary data and the difficulty of measure these types of effects in a statistical manner." Researchers have tried to overcome these problems by resorting to news reports, but events-based data are subject to severe distortions such as selection bias, under-reporting of important events or over-reporting of minor ones [@brysk1994politics; @cook2017two; @poe2004decision].
+
+This article aims to fill that gap by presenting new data based on the Report of the Chilean National Commission on Truth and Reconciliation [-@report1991] that has documented the organized violence that took place in Chile during the time of the Pinochet regime. The Truth and Reconciliation Report describes the findings of a national committee established after the end of the Pinochet regime to record the murders and disappearances during this period. The eight-member commission was chaired by Raúl Retting, who had been Chilean Ambassador to Brazil at the time of the coup, and its report was published in February 1991 and an English translation in 1993. Including all Appendices, the English translation of the report is 907 pages long and lists a total of 2,706 people known or believed to have died at the hands of the regime. In most cases, there is some detail as to the personal characteristics of the victim, and where and when they died or disappeared, and in many cases there is information as to how that person died. The new data presented here is a quantitative presentation of the qualitative data gathered in the Truth and Reconciliation Report.
+
+The data was collected by recording each incidence described in the report into a quantitative dataset. It was possible to code for the geographical location of the incidents, the sociological characteristics of the victim, the affiliation of the victim (where known), the type of violence that took place, whether the victim was interrogated, tortured or in some other way mistreated (if known), and who were the perpetrators of the violence. There are a large number of cases where one or more of the variables are unknown. This reflects the incomplete nature of the original report in the sense that much remains unknown about what happened to a large number of the victims of the regime. Nevertheless, we believe that the new dataset does provide important information about the violence that took place between 11 September 1973 and the end of the regime.  
+
+# The Dataset
+
+Our dataset comprises 2,398 observations and 57 variables. Each observation corresponds to a victim of the Pinochet regime and every individual has received a unique identifier in the data. There are several variables describing personal information of the victims, such as first and last age, his or her age, gender, nationality, occupation, and political affiliation if available. The dataset also contains information about the methods employed by the perpetrators and geographical coordinates for a number of the incidents.
+
+To provide some context, consider first the total amount and types of violence carried out during this period. The report distinguishes between different types of violence. _Deaths_ are cases where the Commission signals a definite and known death of the victim. _Disappearances_ are cases where the victims are presumed to be dead at the hands of government agents. Government agents are assumed to have disposed of their bodies in a covert fashion, making their retrieval impossible at the time of the publication of the Report. _Disappearance, information of death_ are cases which the Commission has information that signals that "the victims are dead; that they died at the hands of the government agents, or persons in their service; and that these or other agents disposed of the victims' mortal remains by throwing them into a river or a sea, by covertly burying them, or by disposing of them in some other secret fashion" [-@report1991 44]. _Unresolved_ cases are those where insufficient information or evidence is available.
+
+From the report, we were able to identify 1,331 victims who were killed, 853 who disappeared, 108 cases of disappearances where some information about the victim was available, 93 unresolved cases, and 7 suicides (see Figure \ref{number-victim}).[^ambiguous] It is, of course, very likely that the people who disappeared were, in fact, killed. However, based on the report and our methodology, we can only determine that 65% of all of the cases led to a person being killed. Forty percent of the documented cases were instances of someone being disappeared.  
+
+[^ambiguous]: Two cases are ambiguously described in the Truth and Commission Report, so we have decided to treat them as missing data. They are Ruiter Enrique Correa Arce, a news stand owner accused of facilitating message exchanges between party leaders (id number 843), and Alonso Fernando Gahona Chavez, a communist leader of municipal workers of La Cisterna (id number 847).
+
+![Number of Victims According to Type of Violence\label{number-victim}](number-victim.pdf){width=85%}
+
+We coded all cases according to the type of weapon used. Excluding missing observations, the vast majority of cases, 1,138 of them (85.9%), indicate that the type of weapon used was a gun. School students and the military had the highest number of deaths caused by guns, 90.4% and 88.5%, respectively. Less frequently, the report indicates that violence was also sometimes committed with a knife, bomb, tear gas, and poison, and involved beatings, hangings, asphyxiation, intentional car crashes, and electrocution. Seven members of the military (15%) were killed with explosives, and many non-military members of government, eleven in total (10.6%), were also victims of bomb attacks.
+
+For those victims whose age was listed (roughly 52% of the total victims), the mean age was about 29 years. Figure \ref{victim-age} shows the distribution of ages, with the bulk of victims being in the age ranges from 21 to 35 years. Secondary and university students were an important part of the opposition [@guzman2012students, 6; @huneeus2016oposicion, 251], and the data indeed shows they were also targeted by regime. The vast majority of victims – 96.5% – were males. Likewise, nearly all of the victims were Chilean nationals – about 99% of the cases.
+
+![Victim Age\label{victim-age}](victim-age.pdf){width=85%}
+
+The report often provides information about the profession of victims (see Figure \ref{victim-occup}). The largest percentage of stated occupations that we classified would count as blue collar jobs. This was followed by white collar occupations, non-military government jobs, and university students. Figure \ref{type-occup} provides more detail about the relationship between the victim's previous occupation and the type violence they suffered.
+
+![Victim Occupations\label{victim-occup}](victim-occup.pdf){width=85%}
+
+![Type of Violence and Victim Occupation\label{type-occup}](type-occup.pdf){width=85%}
+
+Moving on from the demographic of the victims, our data provides information on the nature of the incidents. For example, some of the cases specifically refer to whether victims were interrogated or tortured. However, in the majority of cases this is not known. Perhaps surprisingly, though, in a majority of cases where information is provided, victims were not typically subject to interrogation or torture. In Tables \ref{tab1} and \ref{tab2} below, the data shows that in 561 cases where there is information about the occurrence of an interrogation, it occurred in 85 cases (only about 15%). Likewise, there were 284 cases of torture in the 795 cases with information about whether torture happened (about 36% of cases).
+
+\newpage
+
+\begin{center}
+  \begin{table}[H]
+  		\begin{minipage}{.5\textwidth}
+  		        \centering
+			\caption{Interrogation\label{tab1}}
+			\begin{tabular}{l r r}
+				\toprule       & Total         & Percentage   \\
+				\midrule Yes   & 85            & 3.5          \\
+				No             & 476           & 19.8         \\
+				Unknown        & 1837          & 76.6         \\
+				\textbf{Total} & \textbf{2398} & \textbf{100} \\
+				\bottomrule
+			\end{tabular}
+		\end{minipage}
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\caption{Torture\label{tab2}}
+			\begin{tabular}{l r r}
+				\toprule       & Total         & Percentage   \\
+				\midrule Yes   & 284           & 11.8         \\
+				No             & 511           & 21.3         \\
+				Unknown        & 1603          & 66.9         \\
+				\textbf{Total} & \textbf{2398} & \textbf{100} \\
+				\bottomrule
+			\end{tabular}
+		\end{minipage}
+	\end{table}
+\end{center}
+
+Although it is not clear why there is such a pattern in the data, one may conjecture a few explanatory hypotheses. It seems reasonable to assume that the data is not missing completely at random, that is, missingness is correlated with some unknown covariate [@heitjan1996distinguishing; @lall2016multiple; @little2014statistical; @rubin1976inference]. One such factors may be that former members of the Pinochet regime refused to collaborate with the Chilean Truth Commission, and consequently some of the most sensitive cases might have gone missing [@aguero2002militares, 54; @esperanza2007casi, 123].
+
+Another possibility is that because of the reconciliatory purpose of the Truth and Commission Report, cases that would otherwise be classified as torture were deliberately omitted from the final text. @peris2008contradicciones [76] writes that the commission limited itself to documenting only disappearances and homicides, and about 40,000 possible victims of the regime were not included in the official records. As @grandin2005instruction [55] argues, faced with the need to confront Chile's recent history, the Commission treated some historical facts with "lawyerly ambivalence," minimising the likelihood that a higher number of incidents would be regarded as torture.
+
+A comparison with Guatemala's truth commission offers some evidence in this regard. Guatemala's Commission for Historical Clarification (CEH) was established in 1994 to investigate human rights abuses during the 36 year civil war that ravaged the country [@tomuschat2001clarification, 233]. Like its Chilean counterpart, the Guatemalan CEH could not subpoena witnesses or records nor "individualize responsibility" [@grandin2005instruction, 58], but as the Commission staff investigated the role of informal institutions in the conflict, it was able to describe different types of human rights abuses in further detail [@chapman2001truth; @tepperman2002truth].
+
+Much of the literature on violence in civil wars focuses on whether insurgents are targeted selectively for violence or whether violence is indiscriminate [@balcells2010rivalry; @kalyvas2006logic]. Applied to the Chilean context, the Pinochet Regime could only use selective violence if it had relatively reliable information about who is opposed to the regime and if these people are active in an area where the regime has control. In contrast, in areas controled by the insurgencies and other opposition groups, the government would resort to indiscriminate violence as it would not be able to distinguish between supporters and combatants. Based on Table \ref{tab3}, we see that the report provides information on the (relatively small) number of documented cases where victims were denounced, summoned, listed, voluntarily reported, or confronted in their home. It seems likely that for any of these types of encounters to occur, the regime would require specific information to target the individual.
+
+|                      |   Total  | Percentage |
+|:---------------------|---------:|-----------:|
+| Denounced            |       10 |        0.4 |
+| Summoned             |       62 |        2.6 |
+| Listed               |       25 |        1.0 |
+| Voluntarily reported |       51 |        2.1 |
+| At home              |       15 |        0.6 |
+| Unspecified          |     2235 |       93.2 |     
+| **Total**            | **2398** |    **100** |  
+
+Table: Targeted Victims\label{tab3}
+
+# Changes over Time
+
+Our dataset allows researchers to analyze how violence varied during different stages of the Pinochet regime. Figure \ref{trend} shows the frequency of government-perpetrated incidents per month from 1973 to 1990. The data shows us that the vast majority of the acts of violence happened in the first two months after the coup. This is in line with past and recent historical accounts, including the frequent allusions to the "Caravan of Death", a group formed by paramilitaries in October 1973 to torture and kill dissidents [@davis1990they, 459; @verdugo2001chile].
+
+![Incidents per Month\label{trend}](trend.pdf){width=85%}
+
+In September 1973 alone, the government committed 633 acts of violence against civilians, of which 406 the Commission signals a definite and known death. The scale continued in October, with 504 incidences and 317 certified deaths. The numbers decline to about 10% of those levels in the next months, and then recede further in 1974.
+
+In absolute numbers, the Chilean dictatorship was not as violent as its Argentinian counterpart,[^argentina] but the figures are notably high when compared to other South American countries. The Brazilian military regime made 434 victims from 1964 to 1985; Paraguay had 424 victims of human rights abuse from 1954 to 1989; Bolivia had 350 from 1964 to 1982; and Uruguay reported about 300 incidences from 1973 to 1985 [@agenciabrasil2014ditadura; @elpais2014ditadura; @fsp2016argentina]. The distribution of events over time seem to differ as well. Despite eventual periods of higher intensity, violence in authoritarian Brazil stretched somewhat evenly during the regime [@agenciabrasil2014ditadura; @elpais2014ditadura]. The Strossner regime in Paraguay also constantly employed violence against dissidents [@cvj2008paraguay].
+
+[^argentina]: The Argentinian government disputes the figure of 30,000 deaths and disappearances suggested by human rights organisations [@bbc2016argentina; @elpais2016argentina]. Ceferino Reato, a writer and journalist, indicates that there were 7,158 incidences during the regime, including 6,415 cases of disappearances and 743 victims of "summary executions" [@clarin2016argentina]. Jorge Rafael Videla, who ruled Argentina from 1976 to 1981, also states that the regime murdered "about 7 or 8 thousand people" as "the price of winning the war against subversives" [@clarin2012videla].
+
+After disaggregating the data into occupational status, we see that all groups were affected in the early periods of the regime. The later years show more variation. Figure \ref{trend-occup} displays the previous time trend disaggregated by the victim profession. We present the results for six groups: white collar and blue collar workers, school and university students, members of the military, and non-military civil servants.
+
+Violence against white and blue collar workers were concentrated in September to December 1973. One of the possible causes for this trend is the fact that main guerilla group operating at the time, the _Movimiento de Izquierda Revolucionaria_ (Movement of the Revolutionary Left, MIR), was heavily attacked in the weeks that followed the coup. In addition to that, members of so-called "war councils" attacked civilians in urban squatter settlements and factories [@valdivia2003terrorism, 187]. After this period, violence recedes and does not reach previous levels.
+
+![Incidents per Month, by Occupation\label{trend-occup}](trend-occup.pdf)
+
+Similarly, violence against school and university students were also concentrated in the early stages of the regime. Nevertheless, the data indicates that the military repressed a noticeable number of students in the mid-1980s, a period that coincides with the _jornadas de protesta nacional_. The _protestas_ were a series of massive social upheavals spurred by the economic crisis that affected Chile in the early 1980s [@nsa2016bombing; @tironi1986revuelta; @weinstein1989jovenes]. The most shocking incident involved Rodrigo Rojas and Carmen Quintana, a young photographer and an engineering student, who were burned alive by members of the military after participating in a national protest [@agosin1987generals; @cummings2015democracy, 58].
+
+The data suggests that the state-sponsored violence extended to the military personnel. The case of general Alberto Bachelet illustrates this fact. In 1974, General Bachelet was imprisoned and tortured because of his refusal to support the military coup. His wife Angela Jeria and his daughter Michelle were also tortured before fleeing to exile [@baesa2011reconstruccion; @quiroga2008primera, 8]. Other dissidents from the armed forces had a similar fate, such as Major Luis Iván Lavanderos Lataste who was found dead in the War Academy in 1973 after being accused of supporting political prisoners; and General Carlos Prats González, former member of the Allende cabinet, who was murdered along with his wife in Argentina in 1974 [@carmona2013lataste; @huneeus2016regimen, 23; @paredes2004operacion].
+
+Lastly, non-military members of the government were targeted less frequently after the consolidation of the regime, where 62 people were attacked. Whereas we do observe abuses against this category in the later years of the regime, with 4 cases in July 1989, we observe an average of less than 1 incidence per month.
+
+# Changes across Space
+
+We were able to match a roughly 81% of the victims with data on the location in latitude and longitude of the incident reported. This allows us to analyze the spatial variation of the human rights abuses. Figures \ref{map-continent} provide this information in maps. We can see that all types of violence were mostly concentrated around Santiago and neighbouring cities. The results make intuitive sense. Santiago has been Chile's most densely populated city since the colonial times and in 1975 the city was home to 3,186,000 inhabitants, or about 30% of the country's population [@un1976yearbook].
+
+Nevertheless, the types of abuses present some significant spatial variation. Homicides and disappearances are more widespread across the country, and a few incidents occurred even beyond the Chilean borders. This gives further evidence to the scope of the Operation Condor, a region-wide military effort to track down, and in many instances eliminate, political opponents of right-wing regimes in South America [@dinges2005condor; @mcsherry2002tracking; @mcsherry2012predatory; @slack1996operation]. The operation targeted high-profile members of the Allende government, such as the aforementioned General Carlos Prats, and Orlando Letelier, who was killed in a car bomb in Washington, D.C. [@freed1980death]. Moreover, the Chilean secret police also attempted to assassinate important political figures such as Bernardo Leighton, a Christian Democratic Party politician, and Carlos Altamirano, a prominent Chilean socialist [@wilson1999prosecuting; @wright2007chilean].
+
+![Spatial Distribution of Human Rights Incidents\label{map-continent}](map-continent.pdf){width=110%, height=110%}
+
+We can disaggregate the data to analyze violence patterns in further detail. Figure \ref{map-occup} provides a simple example. We analyze the spatial distribution of government-sponsored violence clustered by the victim's occupation. Violence against housewives and ex-military were concentrated in the capital, but the regime attacked individuals throughout the country regardless of their profession. Blue and white collar workers, the most numerous groups in our dataset, provide a clear example of how violence was widespread throughout Chile.
+
+Moreover, the graph highlights that the government actively tracked down individuals abroad, and this was not strongly associated with their professional or educational background. University students seem to have been a special target, with a number of human right violations taking place in Argentina. The reason why this particular group was subject to violence abroad remains an open question.
+
+In contrast, the regime attacked school students and members of the military only within the Chilean borders. This makes intuitive sense. During the dictatorship, the military were very active in the country due to the "internal war" between the regime and rebel groups [@ensalaco2000chile; @valdivia2003terrorism]; whereas high school students frequently clashed with the police in the 1980s [@kornbluh2004pinochet; @weinstein1989jovenes].  
+
+![Spatial Distribution of Human Rights Incidents\label{map-occup}](map-occup.pdf){width=150%, height=150%}
+
+# Discussion and Outlook
+
+The database discussed in this article is the first quantitative presentation of the Report of the Chilean National Commission on Truth and Reconciliation [-@report1991], which described more than two thousand human rights abuses perpetrated by the Pinochet regime from 1973 to 1990. The dataset includes rich information about the victims, the geographical location of the incidents, and the specific data where the violations occurred. The graphs and maps shown in this article provide some preliminary results about the temporal and spatial variation of state-sponsored violence during the recent military period in Chile.
+
+We believe the dataset opens new potential research avenues. First, scholars can evaluate the long-term impact of human rights violations on social polarisation, political outcomes, and economic development in Chile. As incidences included in the dataset can be clustered into states, cities, neighbourhoods, or any other spatial unit of analysis, researchers can perform fine-grained statistical analyzes at the sub national level. Moreover, sociologists and criminologists can explore whether the intensity of the human rights abuse correlate with pre- or post-regime levels of interpersonal violence or civil conflict.
+
+Second, the dataset also enables researchers to better understand the inner dynamics of authoritarian governments, a topic still understudied in political science. By linking the incidence of human right abuses to changes in the Pinochet government and his support coalition, historians and political scientists can explore whether the violations affected levels of civilian or bureaucratic collaboration to the regime. Additional studies can also make use of small-$n$ comparative designs to understand the reasons why civil society collaborates or opposes repressive regimes in Latin America.
+
+Finally, scholars can investigate the links between the connections between the international realm and domestic politics in repressive regimes. As more documents are being declassified by both the Chilean government and the American intelligent services, this is a promising area of research. Scholars may be able to test whether pressure from foreign governments, international organizations and NGOs had any influence over the levels of human rights abuses in Chile. In this regard, our data allow researchers to shed more light on the possible impact of international actors over repressive regimes. We hope our dataset is useful for scholars interested in these and other questions, and that the information it contains elicits hypotheses not only about the Pinochet era, but about authoritarian governments more generally.
+
+\newpage
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{6pt}
