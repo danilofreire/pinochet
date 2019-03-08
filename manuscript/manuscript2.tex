@@ -1,0 +1,224 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{rotating}
+\usepackage{lscape}
+\usepackage{amssymb,amsmath,amssymb}
+\usepackage[stable]{footmisc}
+\usepackage{lmodern}
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+\usepackage[scale=.95]{inconsolata}
+\usepackage[authoryear]{natbib}
+\usepackage{babelbib}
+\usepackage{booktabs, makecell, longtable}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.55}
+\setcitestyle{aysep={}} 
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\NAT@citex}
+  {\@citea\NAT@hyper@{%
+	 \NAT@nmfmt{\NAT@nm}%
+	 \hyper@natlinkbreak{\NAT@aysep\NAT@spacechar}{\@citeb\@extra@b@citeb}%
+	 \NAT@date}}
+  {\@citea\NAT@nmfmt{\NAT@nm}%
+   \NAT@aysep\NAT@spacechar\NAT@hyper@{\NAT@date}}{}{}
+\patchcmd{\NAT@citex}
+  {\@citea\NAT@hyper@{%
+	 \NAT@nmfmt{\NAT@nm}%
+	 \hyper@natlinkbreak{\NAT@spacechar\NAT@@open\if*#1*\else#1\NAT@spacechar\fi}%
+   {\@citeb\@extra@b@citeb}%
+	 \NAT@date}}
+  {\@citea\NAT@nmfmt{\NAT@nm}%
+   \NAT@spacechar\NAT@@open\if*#1*\else#1\NAT@spacechar\fi\NAT@hyper@{\NAT@date}}
+  {}{}
+\makeatother
+\usepackage{setspace}
+\usepackage[top=2cm,bottom=2cm,left=2.2cm,right=2.2cm]{geometry}
+\usepackage[backref,pagebackref]{hyperref}
+\renewcommand*{\backref}[1]{}
+\renewcommand*{\backrefalt}[4]{%
+	\ifcase #1 (Not cited.)%
+	\or        Cited on page~#2.%
+	\else      Cited on pages~#2.%
+	\fi}
+\renewcommand{\backreftwosep}{ and~}
+\renewcommand{\backreflastsep}{ and~}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{float}
+\floatplacement{figure}{H}
+\usepackage{pgf}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage[UKenglish]{babel}
+\usepackage[UKenglish]{isodate}
+\cleanlookdateon
+\exhyphenpenalty=1000
+\hyphenpenalty=1000
+\widowpenalty=10000
+\clubpenalty=1000
+
+\hypersetup{pdftitle={Deaths and Disappearances in the Pinochet Regime: A New Dataset},
+        pdfauthor={Danilo Freire, John Meadowcroft, David Skarbek and Eugenia Guerrero},
+        pdfsubject={political science},
+        pdfkeywords={authoritarianism, Chile, human rights, Pinochet, truth commission},
+		pdfborder={0 0 0},
+		breaklinks=true,
+		linkcolor=Mahogany,
+		citecolor=Mahogany,
+		urlcolor=darkblue,
+		colorlinks=true}
+	
+\onehalfspacing
+
+\title{Deaths and Disappearances in the Pinochet Regime:\\ A New Dataset\thanks{We thank Umberto Mignozzetti and Robert Myles McDonnell for his helpful comments on previous versions of this manuscript. The dataset and all replication information are available on GitHub at \href{http://github.com/danilofreire/death-disappearances-pinochet}{\texttt{http://github.com/danilofreire/death-disappearances-pinochet}}.}}
+
+\author{Danilo Freire\thanks{Postdoctoral Research Associate, Political Theory Project, Brown University, 8 Fones Alley, Providence RI 02912; \href{http://danilofreire.github.io}{\texttt{http://danilofreire.github.io}},  \href{mailto:danilo\_freire@brown.edu}{\texttt{danilo\_freire@brown.edu}}. Corresponding author.} 
+\and John Meadowcroft\thanks{Senior Lecturer in Public Policy, Department of Political Economy, King's College London, Bush House (North East Wing), 30 Aldwych, London UK WC2B 4BG; \href{https://johnmeadowcroft.net}{\texttt{https://johnmeadowcroft.net}},  \href{mailto:john.meadowcroft@kcl.ac.uk}{\texttt{john.meadowcroft@kcl.ac.uk}}.} 
+\and David Skarbek\thanks{Associate Professor, Department of Political Science and Political Theory Project, Brown University, 8 Fones Alley, Providence RI 02912; \href{http://davidskarbek.com}{\texttt{http://davidskarbek.com}},  \href{mailto:david_skarbek@brown.edu}{\texttt{david\_skarbek@brown.edu}}.} 
+\and Eugenia Guerrero\thanks{Software Developer, Tempo, 8 Greencoat Place, London UK SW1P 1PL.}
+}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+	
+\begin{abstract}
+\noindent In September 1973, General Augusto Pinochet staged a military coup against the Chilean President Salvador Allende. The coup resulted in 17 years of violence in which the Pinochet regime persecuted left-wing groups and government dissidents. While these efforts were significant, the repression was not uniformly distributed across space or over time. In this paper, we present a dataset containing all documented cases of victimisation during the Pinochet regime and include new geocoded information about the repression episodes. In that regard, we expand the findings of the Report of the Chilean National Commission on Truth and Reconciliation (1991) and provide novel statistics about the temporal and spatial variation of state-sponsored violence during the Pinochet era. Our data document the initially high-level and then steep decline of these atrocities, the extent to which victims were targeted, and show how violence was largely concentrated in Chile's metropolitan areas. Our dataset allows scholars to test new hypotheses on the dynamics of regime transition and contributes to the emerging literature on micro-level dynamics of state violence.
+	
+ \vspace{.75cm}
+ \noindent
+ \textbf{Keywords}: authoritarianism, Chile, human rights, Pinochet, truth commission
+\end{abstract}
+	
+\newpage
+	
+\section{Introduction}
+\label{sec:intro}
+
+\doublespacing
+	
+On 11 September 1973, General Augusto Pinochet led a coup against the democratically elected socialist government of Chile and its leader President Salvador Allende. The coup marked the beginning of a seventeen-year military dictatorship that severely curtailed civil and political liberties in the country. The Pinochet regime was notable for the violence of the coup and of the period that followed. Deposed President Allende committed suicide with his own rifle as troops stormed the Presidential Palace, and in the following months the new regime committed a high number of extra-judicial executions, systematic torture and other human rights abuses. These atrocities happened while the regime undertook a rapid liberalisation of the economy under the direction of a small group of US-trained economists -- the so-called Chicago Boys. The success of those reforms, and the relationship of the reforms to the violence of the regime, remains controversial \citep{silva1991technocrats,valdes1995pinochet}. The allegation that two Nobel Prize-winning economists, Milton Friedman and F. A. Hayek, supported the regime's free market policies despite its appalling human rights record, is also a matter of ongoing controversy \citep{farrant2014can,farrant2012preventing,meadowcroft2014hayek}.
+
+In this article, we present new individual-level data on the deaths and disappearances of the Pinochet regime. Our dataset updates and expands the information available in the 1128-page long Report of the Chilean National Commission on Truth and Reconciliation (\citeyear{report1991}), which documented the organised violence that took place in Chile under Pinochet's rule.\footnote{The report is available at \href{https://www.usip.org/publications/1990/05/truth-commission-chile-90}{\texttt{https://www.usip.org/publications/1990/05/truth-commission-chile-90}}.} We make three contributions to the original data. First, we code all textual information about the victims and perpetrators into a spreadsheet that can be easily imported into any statistical software. Scholars are thus able to query data previously available only in print format, such as the victims' sociological characteristics, their affiliation (where known), the type of violence that took place, whether the victim was interrogated, tortured or in some other way mistreated (if known), and who were the perpetrators of the violence. Second, we add new information about political partisanship, an important predictor of victimisation in the Pinochet regime.\footnote{The law decree number 77 (27/03/1973), issued only 16 days after the coup d'état, formally banned all left-wing groups associated with former President Salvador Allende. The text explicitly stated that ``[\dots] the Communist Party of Chile, the Socialist Party, the Socialist Popular Union, MAPU, Radicals, the Christian Left, the Independent Popular Action, the Popular Unity Party and all other entities, groups, factions or movements that support the Marxist doctrine shall be considered illegal.'' See: \href{https://www.leychile.cl/Navegar?idNorma=5730}{\texttt{https://www.leychile.cl/Navegar?idNorma=5730}}. Access: August 2018.} Also, we add the geographical location of all instances of repression in which such information was available. We have matched 87.5\% of the cases in our sample, or 2110 victims, to coordinates of latitude and longitude. These novel data allow researchers to investigate, with new levels of detail, how state repression varied over time and across space during the Chilean dictatorship.
+	
+Our dataset is part of a recent movement in comparative politics and international relations that emphasises the use of disaggregated data to understand the dynamics of conflict and cooperation \citep[e.g.,][]{cederman2009disaggregating, kalyvas2006logic, kalyvas2008microdynamics,lyall2010coethnics,raleigh2012violence}. More specifically, we contribute to the literature on state violence, regime transitions and authoritarian politics \citep[e.g.,][]{gandhi2008political,huneeus2014democracia,huneeus2016regimen,slater2010ordering}, which despite their many recent progresses, still contend with significant data limitations \citep[365]{art2012we}. Individual-level datasets allow scholars to test hypotheses about patterns of state repression, how they evolve over time, and what are their short and long-run consequences. For instance, disaggregated data have been used to analyse the incidence of homicides \citep{karstedt2012contextualizing}, lynchings \citep{godoy2002lynchings}, and sexual violence  \citep{sivakumaran2007sexual,wood2006variation,wood2009armed} in conflicts. Moreover, data from truth commissions can also help in understanding the impact of large-scale violence on state-building \citep{call2003democratisation}, societal reconciliation \citep{gibson2006contributions}, and mental health \citep{brouneus2010trauma, godoy2011something}. Similar efforts include the coding of the Liberian and Sierra Leone truth commission reports by the Human Rights Data Analysis Group \citep{hrgd2009liberia,hrgd2010sierra}, the estimation of human rights violations in Guatemala from 1960 to 1996 \citep{ball1999guatemala}, as well as the compilation of geocoded data from violence episodes in El Salvador \citep{mason2012elsalvador}. 
+
+Out data may also be valuable for scholars in area studies, specially those interested in Latin American politics. Chile is a particularly important case to study the logic of authoritarianism in the region. The Pinochet rule lasted for more than 15 years, was virtually unchallenged, and exerted considerable influence in Chile's democratisation process \citep{angell2005elecciones,barros2002constitutionalism,policzer2009rise, portales2000chile}.
+
+This article proceeds as follows. In the following section, we give an overview of the dataset and describe its main variables. Section~\ref{sec:space} presents the spatial variation in repression by the Pinochet regime using our newly-collected geocoded data. Section \textit{XXXXX gives an empirical example}. Section~\ref{sec:limitations} discusses the potential limitations of the data and of statistical inference made with convenience samples. Section~\ref{sec:discussion} concludes and indicates possible avenues for further research.
+
+\section{The Dataset}
+\label{sec:data}
+
+Our dataset comprises 2,399 observations and 57 variables. Each observation corresponds to one victim of the Pinochet regime and every individual has received a unique identifier. The data contain a wealth of personal information about the victims, such as their first and last names, his or her age, gender, nationality, occupation, and political affiliation if available. We have also included details about 
+
+the methods employed by the perpetrators and geographical coordinates for a number of the incidents.
+
+To provide some context, consider first the total amount and types of violence carried out during this period. The report distinguishes between different types of violence. \textit{Deaths} are cases where the Commission signals a definite and known death of the victim. \textit{Disappearances} are cases where the victims are presumed to be dead at the hands of government agents. Government agents are assumed to have disposed of their bodies in a covert fashion, making their retrieval impossible at the time of the publication of the Report. \textit{Disappearance, information of death} are cases which the Commission has information that signals that ``the victims are dead; that they died at the hands of the government agents, or persons in their service; and that these or other agents disposed of the victims' mortal remains by throwing them into a river or a sea, by covertly burying them, or by disposing of them in some other secret fashion'' 
+\citep[44]{report1991}. \textit{Unresolved} cases are those where insufficient information or evidence is available.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=.9\textwidth, height=10cm]{fig1.eps}
+    \caption{Types of Violence}
+    \label{fig:number-victims}
+\end{figure}
+
+%%%% Add information about gender to the graph
+
+From the report, we were able to identify 1,331 victims who were killed, 853 who disappeared, 108 cases of disappearances where some information about the victim was available, 93 unresolved cases, and 7 suicides.\footnote{Two cases are ambiguously described in the Truth and Commission Report, so we have decided to treat them as missing data. They are Ruiter Enrique Correa Arce, a news stand owner accused of facilitating message exchanges between party leaders (id number 843), and Alonso Fernando Gahona Chavez, a communist leader of municipal workers of La Cisterna (id number 847).} It is, of course, very likely that the people who disappeared were, in fact, killed. However, based on the report and our methodology, we can only determine that 65\% of all of the cases led to a person being killed. Forty percent of the documented cases were instances of someone being disappeared. Note too that the regime targeted males much more frequently than females. In our dataset, about 95\% of the total number of victims were men, and in no category they represent less than 90\% of the sample.
+
+We coded all cases according to the type of weapon used. Excluding missing observations, the vast majority of cases, 1,138 of them (86\%), indicate that the type of weapon used was a gun. School students and the military had the highest number of deaths caused by guns, 90\% and 88\%, respectively. Less frequently, the report indicates that violence was also sometimes committed with a knife, bomb, tear gas, and poison, and involved beatings, hangings, asphyxiation, intentional car crashes, and electrocution. Seven members of the military (15\%) were killed with explosives, and many non-military members of government, eleven in total (11\%), were also victims of bomb attacks.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=.9\textwidth, height=10cm]{fig2.eps}
+    \caption{Victims' Age Distribution}
+    \label{fig:victim-age}
+\end{figure}
+
+%% Again, add gender information here
+
+For those victims whose age was listed (roughly 52\% of the total victims), the mean age was about 29 years. Figure \ref{fig:victim-age} shows the distribution of ages, with the bulk of victims being in the age ranges from 21 to 35 years. Secondary and university students were an important part of the opposition \citep[251]{guzman2012students,huneeus2016oposicion}, and the data indeed shows they were also targeted by regime. The vast majority of victims -- 96.5\% -- were males. Likewise, nearly all of the victims were Chilean nationals -- about 99\% of the cases.
+
+Moving on from the demographic of the victims, our data provides information on the nature of the incidents. For example, some of the cases specifically refer to whether victims were interrogated or tortured. However, in the majority of cases this is not known. Perhaps surprisingly, though, in a majority of cases where information is provided, victims were not typically subject to interrogation or torture. In Tables \ref{tab1} and \ref{tab2} below, the data shows that in 561 cases where there is information about the occurrence of an interrogation, it occurred in 85 cases (only about 15\%). Likewise, there were 284 cases of torture in the 795 cases with information about whether torture happened (about 36\% of cases).
+
+\begin{center}
+  \begin{table}[H]
+  		\begin{minipage}{.5\textwidth}
+  		        \centering
+			\caption{Interrogation\label{tab1}}
+			\begin{tabular}{l r r}
+				\toprule       & Total         & Percentage   \\
+				\midrule Yes   & 85            & 3.5          \\
+				No             & 476           & 19.8         \\
+				Unknown        & 1837          & 76.6         \\
+				\textbf{Total} & \textbf{2398} & \textbf{100} \\
+				\bottomrule
+			\end{tabular}
+		\end{minipage}
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\caption{Torture\label{tab2}}
+			\begin{tabular}{l r r}
+				\toprule       & Total         & Percentage   \\
+				\midrule Yes   & 284           & 11.8         \\
+				No             & 511           & 21.3         \\
+				Unknown        & 1603          & 66.9         \\
+				\textbf{Total} & \textbf{2398} & \textbf{100} \\
+				\bottomrule
+			\end{tabular}
+		\end{minipage}
+	\end{table}
+\end{center}
+
+%%%% check the number of unknown cases in tables 1 and 2
+
+Out dataset also has information about the political affiliation of XX\% of victims of the regime. The Pinochet regime followed strict ideological lines, thus political partisanship appears as a robust predictor of victimisation during that period. The repression against left-wing demonstrators was particularly prevalent in universities, where the government forces conducted what \citet[249]{constable1993nation} call a ``massive ideological purge''. 
+
+
+%%%%%%%%%% Insert graph with information about political affiliation
+
+
+\newpage
+
+\section{Variation Across Space}
+\label{sec:space}
+
+\section{Data Limitations}
+\label{sec:limitations}
+
+Although the data we present in this article constitute the most comprehensive account of the repression that took place during the Pinochet years, they also have some important limitations. Such limitations, however, are not unique to our data; in fact, most historical studies of political violence and authoritarian regimes suffer from the problems we describe below, like reporting bias, systematic missingness, and inconsistent information  \citep[e.g.,][]{art2012we,ball1999guatemala,kalyvas2006logic,king2009data,lustick1996history}. We discuss how these issues relates to our dataset and suggest some strategies scholars can adopt to minimise these concerns.
+
+First, our dataset is a convenience sample, that is, it was not collected according a  probability-based selection method. In other words, the data are neither a random sample nor the full distribution of the events. Despite the wide-reaching scope of the Chilean Truth Commission, obtaining reliable information about repressive regimes is a difficult undertaking, and one cannot ensure that the report describes all violence episodes.
+
+For instance, it is likely that the data are subject to report bias, as certain individuals may be more willing to report their victimisation that others. Moreover, former government officials who know about missing cases have few incentives to speak the truth if they will incriminate themselves or others by doing so. Also, human rights violations that occurred in urban areas are often overrepresented in the sample, as observers, journalists, legal practitioners and scholars are clustered in cities \citep{kalyvas2004urban}.
+
+Finally, some observations may include conflicting information as the reports rely on individual recollections of the past. Historical memory can suffer from several types of bias, such as holding overly favourable views of the ingroup \citep{sahdra2007group}, ascribing positive attributes to one's choices \citep{mather2000choice}, using evidence to confirm one's prior beliefs \citep{nickerson1998confirmation}, or framing past events as predictable when they were not \citep{fischhoff2007early}.
+
+Unfortunately, we cannot measure the extend of the selection bias without access to the underlying population distribution, what is impossible in our case. So we recommend authors proceed with some caution when conducting statistical inference with the data. However, there are ways of mitigating these problems. One suggestion is to use sensitivity tests to measure how large the selection bias should be to invalidate a given result, as proposed by \citet{blackwell2014selection}, \citet{cinelli2018making}, \citet{oster2017unobservable}, \citet{rosenbaum1983assessing}, and others. % This is the approach we adopt in this paper.
+
+Another suggestion would be to use other sources of evidence to complement or verify the information available in the dataset. \citet{balcells2017rivalry} uses individual testimonies and archival records to analyse the Spanish Civil War; \citet{kalyvas2006logic} employs mixed methods to understand how groups use lethal force in internal conflicts;
+
+\section{Discussion}
+\label{sec:discussion}
+
+The database discussed in this article is a quantitative presentation of the Report of the Chilean National Commission on Truth and Reconciliation (\citeyear{report1991}), which described more than two thousand human rights abuses perpetrated by the Pinochet regime from 1973 to 1990. The dataset includes rich information about the victims, the geographical location of the incidents, and the specific data where the violations occurred. The graphs and maps shown in this article provide some preliminary results about the temporal and spatial variation of state-sponsored violence during the recent military period in Chile.
+
+As we discussed in the previous section, scholars should be cautious when using inferential methods with non-random samples, and it is important to describe to readers the limitations of such analyses. Nevertheless, we believe that the dataset opens new potential research avenues. First, scholars can evaluate the long-term impact of human rights violations on social polarisation, political outcomes, and economic development in Chile. As incidences included in the dataset can be clustered into states, cities, neighbourhoods, or any other spatial unit of analysis, researchers can perform fine-grained statistical analyses at the sub-national level. Moreover, sociologists and criminologists can explore whether the intensity of the human rights abuse correlate with pre- or post-regime levels of interpersonal violence or civil conflict.
+
+Second, the dataset also enables researchers to better understand the inner dynamics of authoritarian governments, a topic still understudied in political science. By linking the incidence of human right abuses to changes in the Pinochet government and his support coalition, historians and political scientists can explore whether the violations affected levels of civilian or bureaucratic collaboration to the regime. Additional studies can also make use of small-$n$ comparative designs to understand the reasons why civil society collaborates or opposes repressive regimes in Latin America.
+
+Finally, scholars can investigate the links between the connections between the international realm and domestic politics in repressive regimes. As more documents are being declassified by both the Chilean government and the American intelligent services, this is a promising area of research. Scholars may be able to test whether pressure from foreign governments, international organisations and NGOs had any influence over the levels of human rights abuses in Chile. In this regard, our data allow researchers to shed more light on the possible impact of international actors over repressive regimes. We hope our dataset is useful for scholars interested in these and other questions, and that the information it contains elicits hypotheses not only about the Pinochet era, but about authoritarian governments more generally.
+
+\newpage
+	
+\bibliography{references}
+\bibliographystyle{apalike}
+\end{document}
