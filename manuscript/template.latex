@@ -1,46 +1,77 @@
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{article}
-\usepackage{amssymb,amsmath}
 \newcommand*{\authorfont}{\fontfamily{phv}\selectfont}
 $if(fontfamily)$
 \usepackage[$fontfamilyoptions$]{$fontfamily$}
 $else$
 \usepackage{lmodern}
 $endif$
+% If you're using libertine, this math font looks nice:
+\usepackage[libertine]{newtxmath}
 \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[scaled=.85]{inconsolata}
+\usepackage[scaled=.9]{inconsolata}
+% Add the following packages to support kableExtra
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{etoolbox}
 % Uncomment the line below if you want to use XeLaTeX or 
 % write on ShareLaTeX or Overleaf
-% \setmonofont[Scale=0.90,BoldFont=inconsolata-bold.ttf]{inconsolata-regular.ttf}
-\usepackage{color}
+% \setmonofont[Scale=.9,BoldFont=inconsolata-bold.ttf]{inconsolata-regular.ttf}
+\usepackage[usenames,dvipsnames]{xcolor}
 \definecolor{darkblue}{rgb}{0.0,0.0,0.55}
 \usepackage{setspace}
 \usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
-\usepackage{hyperref}
+\usepackage[backref,pagebackref]{hyperref}
+\usepackage{dcolumn}
 \usepackage{graphicx}
 \usepackage{float}
 \floatplacement{figure}{H}
 \usepackage{pgf}
-\usepackage{booktabs}
 \usepackage{tikz}
 \usetikzlibrary{arrows}
 \usetikzlibrary{positioning}
 \usepackage{mathtools}
 \usepackage{caption}
-\usepackage[USenglish]{babel}
-\usepackage[USenglish]{isodate}
-\usepackage{babelbib} 
+\usepackage{ifthen}
+\usepackage[UKenglish]{babel}
+\usepackage[UKenglish]{isodate}
+\cleanlookdateon
 \exhyphenpenalty=1000
 \hyphenpenalty=1000
 \widowpenalty=1000
 \clubpenalty=1000
+\renewcommand*{\backref}[1]{}
+\renewcommand*{\backrefalt}[4]{%
+    \ifcase #1 (Not cited.)%
+    \or        Cited on page~#2.%
+    \else      Cited on pages~#2.%
+    \fi}
+\renewcommand{\backreftwosep}{ and~} 
+\renewcommand{\backreflastsep}{ and~}
 \hypersetup{
-  linkcolor=darkblue,
-  citecolor=darkblue,
+  linkcolor=Mahogany,
+  citecolor=Mahogany,
   urlcolor=darkblue, 
   breaklinks=true, 
-  colorlinks=true}
-\doublespacing
+  colorlinks=true,
+  $if(title-meta)$
+  pdftitle={$title-meta$},
+  $endif$
+  $if(author-meta)$
+  pdfauthor={$author-meta$},
+  $endif$
+  $if(keywords)$
+  pdfkeywords={$for(keywords)$$keywords$$sep$; $endfor$},
+  $endif$}
 \setlength{\parindent}{1cm}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -85,28 +116,6 @@ $endif$
 \usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-$if(colorlinks)$
-\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
-$endif$
-\hypersetup{unicode=true,
-$if(title-meta)$
-            pdftitle={$title-meta$},
-$endif$
-$if(author-meta)$
-            pdfauthor={$author-meta$},
-$endif$
-$if(keywords)$
-            pdfkeywords={$for(keywords)$$keywords$$sep$; $endfor$},
-$endif$
-$if(colorlinks)$
-            colorlinks=true,
-            linkcolor=$if(linkcolor)$$linkcolor$$else$darkblue$endif$,
-            citecolor=$if(citecolor)$$citecolor$$else$darkblue$endif$,
-            urlcolor=$if(urlcolor)$$urlcolor$$else$darkblue$endif$,
-$else$
-            pdfborder={0 0 0},
-$endif$
-            breaklinks=true}
 
 $if(monospace-url)$
 $else$
@@ -130,6 +139,45 @@ $endif$
 $if(natbib)$
 \usepackage{natbib}
 \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
+\usepackage{etoolbox}
+\makeatletter
+% Remove comma after author
+\setcitestyle{aysep={}}
+\patchcmd{\NAT@citex}
+	  {\@citea\NAT@hyper@{%
+		 \NAT@nmfmt{\NAT@nm}%
+		 \hyper@natlinkbreak{\NAT@aysep\NAT@spacechar}{\@citeb\@extra@b@citeb}%
+		 \NAT@date}}
+	  {\@citea\NAT@nmfmt{\NAT@nm}%
+	   \NAT@aysep\NAT@spacechar\NAT@hyper@{\NAT@date}}{}{}
+	\patchcmd{\NAT@citex}
+	  {\@citea\NAT@hyper@{%
+		 \NAT@nmfmt{\NAT@nm}%
+		 \hyper@natlinkbreak{\NAT@spacechar\NAT@@open\if*#1*\else#1\NAT@spacechar\fi}%
+		   {\@citeb\@extra@b@citeb}%
+		 \NAT@date}}
+	  {\@citea\NAT@nmfmt{\NAT@nm}%
+	   \NAT@spacechar\NAT@@open\if*#1*\else#1\NAT@spacechar\fi\NAT@hyper@{\NAT@date}}
+	  {}{}
+% Patch case where name and year are separated by aysep
+\patchcmd{\NAT@citex}
+  {\@citea\NAT@hyper@{%
+     \NAT@nmfmt{\NAT@nm}%
+     \hyper@natlinkbreak{\NAT@aysep\NAT@spacechar}{\@citeb\@extra@b@citeb}%
+     \NAT@date}}
+  {\@citea\NAT@nmfmt{\NAT@nm}%
+   \NAT@aysep\NAT@spacechar\NAT@hyper@{\NAT@date}}{}{}
+% Patch case where name and year are separated by opening bracket
+\patchcmd{\NAT@citex}
+  {\@citea\NAT@hyper@{%
+     \NAT@nmfmt{\NAT@nm}%
+     \hyper@natlinkbreak{\NAT@spacechar\NAT@@open\if*#1*\else#1\NAT@spacechar\fi}%
+       {\@citeb\@extra@b@citeb}%
+     \NAT@date}}
+  {\@citea\NAT@nmfmt{\NAT@nm}%
+   \NAT@spacechar\NAT@@open\if*#1*\else#1\NAT@spacechar\fi\NAT@hyper@{\NAT@date}}
+  {}{}
+\makeatother
 $endif$
 $if(biblatex)$
 \usepackage$if(biblio-style)$[style=$biblio-style$]$endif${biblatex}
