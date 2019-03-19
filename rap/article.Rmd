@@ -34,6 +34,15 @@ output:
 
 
 
+# Background
+
+# The Dataset
+
+## Types of Violence
+
+## Geocoding
+
+## Variables and Patterns
 
 # Conclusion: New Avenues for Research
 
@@ -43,7 +52,7 @@ We believe our data open new topics of research. For instance, @lupu2017legacy, 
 
 Researchers can also examine how political coalitions affect the use of lethal violence in authoritarian regimes. Although the topic has received increasing attention [e.g., @fjelde2010generals; @gandhi2007authoritarian; @rivera2017authoritarian], the internal dynamics of autocratic governments remains understudied. The main reason is a lack of fine-grained information [@ferrara2014assessing, 16]. By linking human right abuses to changes in Pinochet's coalition, scholars can explore whether civilian or bureaucratic support lead to higher incidence of state violence. The individual data presented here can be combined with government records at any level of aggregation. 
 
-Qualitative scholars will find the personal details of the victims to be particularly useful. Historians willing to reconstruct the biographies of specific individuals are able to access pre-compiled information in a single digital file. Others might be interested in using our data as a starting point for network analysis or to collect oral testimony from survivors and acquaintaces. In that regard, the dataset can accommodate future qualitative information. As we include a unique identification number to each victim, it is easy to update the personal record of any individual with new data from public archives or personal correspondence. 
+Qualitative scholars will find the personal details of the victims to be particularly useful. Historians willing to reconstruct the biographies of specific individuals are able to access pre-compiled information in a single digital file. Others might be interested in using our data as a starting point for network analysis or to collect oral testimony from survivors and acquaintances. In that regard, the dataset can accommodate future qualitative information. As we include a unique identification number to each victim, it is easy to update the personal record of any individual with new data from public archives or personal correspondence. 
 
 Lastly, scholars can investigate the connections between international legitimacy and domestic politics in repressive regimes. This is a promising area of research as the Chilean government and American intelligence services continue to declassify documents from the Pinochet era. One relevant question is whether pressure from foreign governments and organisations had any influence over the levels of human rights abuses in Chile. We hope our dataset is useful for scholars interested in these and other questions, and that the information it contains elicits hypotheses not only about the Pinochet period, but about authoritarian governments more generally.
 
