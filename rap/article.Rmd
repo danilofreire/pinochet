@@ -7,9 +7,9 @@ author:
   - "David Skarbek[^ds]"
   - "Eugenia Guerrero[^eg]"
 date: \today
-thanks: "We thank Umberto Mignozzetti and Robert Myles McDonnell for their helpful comments. Data and replication information are available at [`http://github.com/danilofreire/pinochet-dataset`](http://github.com/danilofreire/pinochet-dataset)."
+thanks: "We thank Umberto Mignozzetti and Robert Myles McDonnell for their helpful comments. Data and replication information are available at [`http://github.com/danilofreire/pinochet-data`](http://github.com/danilofreire/pinochet-data)."
 abstract: "... However, . This paper presents a georeferenced event dataset on "
-keywords: "authoritarian regimes, Chile, geocoded event data, Pinochet, truth commission"
+keywords: "authoritarian regimes, Chile, georeferenced event data, Pinochet, truth commission"
 fontfamily: libertine
 fontawesome: yes
 fontsize: 12pt
@@ -32,15 +32,38 @@ output:
 \setlength{\parindent}{1cm}
 \setlength{\parskip}{0pt}
 
+On 11 September 1973, General Augusto Pinochet led a coup against Chile's socialist President Salvador Allende. The coup marked the beginning of a seventeen-year military dictatorship that undertook a rapid liberalisation of the Chilean economy while perpetrating systematic violence against the opposition [@meadowcroft2014hayek; @valdes1995pinochet]. The extent of the human rights abuses during the Pinochet regime remains unknown. However, in 1991 then-President Patricio Aylwin created a commission to investigate the most serious violations that happened during the military period. The Report of the Chilean National Commission on Truth and Reconciliation [-@report1991], or the Rettig Report[^rettig], records over 2,000 cases of murders and disappearances. In most cases, there is some detail as to the personal characteristics of the victim, and where and when they died or disappeared, and in many cases there is information as to how that person died. The Report proved a major milestone in the pursuit of justice for the victims of the regime.
+
+Although the Report is a valuable source, quantitative scholars cannot easily use the rich information it contains. In this paper, we present a manually-coded dataset with all information from the Rettig Report plus new variables we constructed to complement the original data. We transcribed every personal detail from the 903 pages of the English translation of the Report, assigned a unique identification number to each of the victims, then matched the location of the human rights abuses to geographic coordinates when we could verify that information.
+
+Apart from the geographical location of the incidents, our dataset also includes: 1) the sociological characteristics of the victim; 2) their affiliation (where known); 3) the type of violence that took place during that particular event; 4) whether the victim was interrogated, tortured or in some other way mistreated (if known); 5) who were the perpetrators of the violence. If the Report does not have a particular information, we coded it as missing. As each individual receives their own ID, new information can be added to the dataset as archival work continues. The next sections of this paper describe the dataset, show the descriptive statistics of some variables, and then suggest how our data can help answer future research questions.
+
+# Historical Background
 
 
-# Background
 
 # The Dataset
 
+Our dataset comprises 2,398 observations and 57 variables. As we noted above, each observation corresponds to a victim of the Pinochet regime and every individual has a unique ID. There are several variables describing personal information of the victims, such as age, gender, nationality, occupation, and political affiliation if available. The dataset also includes information about torture or assassination methods and geographical coordinates for a number of the incidents.
+
+Users can download the data as an Excel spreadsheet (`.xlsx`) or as a comma-separated values (`.csv`) file. Both data and codebook are also available to download as an `R` package at <http://github.com/danilofreire/pinochet-data>. The repository has detailed installation instructions for users new to `R`. We follow the principles of "tidy data", where each column represents one variable and each row is one case [@wickham2014tidy]. 
+
 ## Types of Violence
 
+The Report distinguishes between different types of violence carried out by the Pinochet regime. The first type is _deaths_. These are cases where the Commission signals a definite and known death of the victim. Take the case of Benito Heriberto Torres Torres, one of the first victims of the Pinochet regime (id number 2). Our dataset shows that Mr Torres a 57-years old male who worked as a plumber, and that he was tortured on the way to the 26th police station in Santiago on the 12 September 1973, just one day after the military coup. He was executed and his body was later found in Las Barrancas, a commune close to Santiago.
+
+
+
+ _Disappearances_ are cases where the victims are presumed to be dead at the hands of government agents. Government agents are assumed to have disposed of their bodies in a covert fashion, making their retrieval impossible at the time of the publication of the Report. _Disappearance, information of death_ are cases which the Commission has information that signals that "the victims are dead; that they died at the hands of the government agents, or persons in their service; and that these or other agents disposed of the victims' mortal remains by throwing them into a river or a sea, by covertly burying them, or by disposing of them in some other secret fashion" [-@report1991 44]. _Unresolved_ cases are those where insufficient information or evidence is available.
+
+From the report, we identify 1,331 murders, 853 disappearances, 108 cases of disappearances where some information about the victim was available, 93 unresolved cases, and 7 suicides[^ambiguous]. However, it is very likely that the people who disappeared were, in fact, killed. Based on the report and our methodology, we can only determine that 65% of all of the cases led to an assassination. Forty percent of the documented cases are disappearances.  
+
+
+
+
 ## Geocoding
+
+We georeferenced the events using the Google Maps API. The process is straightforward. The Truth and Commission Report often includes the name or approximate location of hospitals, police districts, houses, or other sites government agents used to torture or kill dissidents. We then 
 
 ## Variables and Patterns
 
@@ -63,6 +86,11 @@ Lastly, scholars can investigate the connections between international legitimac
 [^ds]: Associate Professor, Department of Political Science and the Political Theory Project, Brown University, [`david_skarbek@brown.edu`](david_skarbek@brown.edu), [`http://davidskarbek.com`](http://davidskarbek.com).
 
 [^eg]: Software Developer, Tempo UK.
+
+[^rettig]: Former Chilean ambassador Raúl Rettig chaired the Chilean National Commission for Truth and Reconciliation. 
+
+[^ambiguous]: Two cases are ambiguously described in the Truth and Commission Report, so we treat them as missing data. The victims are Ruiter Enrique Correa Arce, a news stand owner accused of facilitating message exchanges between party leaders (id number 843), and Alonso Fernando Gahona Chavez, a communist leader of municipal workers of La Cisterna (id number 847).
+
 
 \newpage
 \setlength{\parindent}{0cm}
