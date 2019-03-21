@@ -29,7 +29,7 @@ $endif$
 \usepackage[usenames,dvipsnames]{xcolor}
 \definecolor{darkblue}{rgb}{0.0,0.0,0.55}
 \usepackage{setspace}
-\usepackage[top=2.2cm,bottom=2.2cm,left=2.35cm,right=2.35cm]{geometry}
+\usepackage[top=2cm,bottom=2cm,left=2.35cm,right=2.35cm]{geometry}
 \usepackage[backref,pagebackref]{hyperref}
 \usepackage{dcolumn}
 \usepackage{graphicx}
