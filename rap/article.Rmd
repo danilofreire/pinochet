@@ -7,7 +7,7 @@ author:
   - "David Skarbek[^ds]"
   - "Eugenia Guerrero[^eg]"
 date: \today
-thanks: "We thank Umberto Mignozzetti and Robert Myles McDonnell for their helpful comments. Data and replication information are available at [`http://github.com/danilofreire/pinochet-data`](http://github.com/danilofreire/pinochet-data)."
+thanks: "We thank Umberto Mignozzetti and Robert Myles McDonnell for their helpful comments. Data and replication information are available at [`http://github.com/danilofreire/pinochet`](http://github.com/danilofreire/pinochet)."
 abstract: "... However, . This paper presents a georeferenced event dataset on "
 keywords: "authoritarian regimes, Chile, georeferenced event data, Pinochet, truth commission"
 fontfamily: libertine
@@ -46,7 +46,7 @@ Apart from the geographical location of the incidents, our dataset also includes
 
 Our dataset comprises 2,398 observations and 57 variables. As we noted above, each observation corresponds to a victim of the Pinochet regime and every individual has a unique ID. There are several variables describing personal information of the victims, such as age, gender, nationality, occupation, and political affiliation if available. The dataset also includes information about torture or assassination methods and geographical coordinates for a number of the incidents.
 
-Users can download the data as an Excel spreadsheet (`.xlsx`) or as a comma-separated values (`.csv`) file. Both data and codebook are also available to download as an `R` package at <http://github.com/danilofreire/pinochet-data>. The repository has detailed installation instructions for users new to `R`. We follow the principles of "tidy data", where each column represents one variable and each row is one case [@wickham2014tidy]. 
+Users can download the data as an Excel spreadsheet (`.xlsx`) or as a comma-separated values (`.csv`) file. We have also created an `R` package called `pinochet` which includes the dataset in both formats plus the codebook. The files follow the principles of "tidy data", where each column represents one variable and each row is one case [@wickham2014tidy]. The `pinochet` package is available for download on the Comprehensive R Archive Network (CRAN) and at <http://github.com/danilofreire/pinochet>. To make the data accessible, our GitHub repository has detailed installation instructions for users new to `R`.  
 
 ## Types of Violence
 
@@ -54,18 +54,22 @@ The Report distinguishes between different types of violence carried out by the 
 
 The second type of violence recorded in the dataset is _disappearances_. These are cases where government agents are presumed to have killed and disposed of the body of the victims. One such example is that of the Brazilian engineer Tulio Roberto Quintiliano Cardozo (id number 5). Mr Cardozo was a member of the Communist party and troops took him to the Military Academy for interrogation also on the 12 September 1971. He was never seen again and is presumed dead.  
 
-The third category is _disappearance, information of death_. As the name implies, these observations refer to cases the Commission confirms the individual died after being missing. The formal definition for this category is that "the victims are dead; that they died at the hands of the government agents, or persons in their service; and that these or other agents disposed of the victims' mortal remains by throwing them into a river or a sea, by covertly burying them, or by disposing of them in some other secret fashion" [-@report1991 44]. The assassination of Humberto de las Nieves Fuentes Rodriguez is an example (id number 854). He was taken in custody to the Colina air base, then loaded onto a helicopter with other political prisoners. According to the Report, government agents drugged him, beat him with a metal bar, opened his stomach with a knife before throwing the former Communist alderman from a helicopter. While his body has not been found, there is enough information about the case to classify his death as a severe human rights violation.  
+The third category is _disappearance, information of death_. As the name implies, these observations refer to cases the Commission confirms the individual died after being missing. The formal definition for this category is that "the victims are dead; that they died at the hands of the government agents, or persons in their service; and that these or other agents disposed of the victims' mortal remains by throwing them into a river or a sea, by covertly burying them, or by disposing of them in some other secret fashion" [@report1991 44]. The assassination of Humberto de las Nieves Fuentes Rodriguez is an example (id number 854). He was taken in custody to the Colina air base, then loaded onto a helicopter with other political prisoners. According to the Report, government agents drugged him, beat him with a metal bar, opened his stomach with a knife before throwing the former Communist alderman from a helicopter. While his body has not been found, there is enough information about the case to classify his death as a severe human rights violation.  
 
 The last group is that of _unresolved_ cases. These are defined as those where insufficient information or evidence is available. Our dataset counts 93 unresolved cases, many with georeferenced information about possible torture sites[^ambiguous]. However, it is very likely that the people who disappeared were, in fact, killed. Based on the report and our methodology, we can only determine that 65% of all of the cases led to an assassination. Forty percent of the documented cases are disappearances.  
 
+[comment]: <> (Table 1 around here)
 
-
+Although the Report provides a comprehensive list of the regime victims, the Chilean Truth Commission itself acknowledges that the data are incomplete. The Commission had only nine months to write the Report and it had no legal power to oblige citizens to cooperate. Therefore, we expect that some cases have not been recorded. But this problem is not unique to the Pinochet regime. Selection bias is a common feature in events data, even more so in datasets about armed conflict or government repression [@ball2019using; @chapman2001truth]. As the cases might not be a representative sample of the population of victims, we suggest scholars to carefully consider issues of model specification.
 
 ## Geocoding
+
+We have georeferenced all observations for which the relevant data was available.
 
 We georeferenced the events using the Google Maps API. The process is straightforward. The Truth and Commission Report often includes the name or approximate location of hospitals, police districts, houses, or other sites government agents used to torture or kill dissidents. We then 
 
 ## Variables and Patterns
+
 
 # Conclusion: New Avenues for Research
 
