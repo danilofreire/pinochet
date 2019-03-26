@@ -1,4 +1,4 @@
-
+---
 title:  |
         | **Deaths and Disappearances in the Pinochet Regime: A New Dataset**
 author: 
@@ -76,14 +76,17 @@ Our third source of geographic coordinates is Latitude (<http://latitude.to>). W
 
 ## Variables and Patterns
 
-As mentioned previously, our dataset includes 57 variables and covers the seventeen years of the Pinochet Presidency (1973--1990). Figure \ref{trend} shows the frequency of government-perpetrated incidents per month from 1973 to 1990. The data show us that the vast majority of the acts of violence happened in the first two months after the military coup. The high incidence of human rights violations in the beginning of the Pinochet era reflects the activity of the "Caravan of Death", a group of paramilitaries established in October 1973 to torture and kill dissidents [@davis1990they, 459; @verdugo2001chile]. 
+As mentioned previously, our dataset includes 57 variables and covers the seventeen years of the Pinochet Presidency (1973--1990). Figure \ref{trend} shows the frequency of government-perpetrated incidents per month from 1973 to 1990. We see that the vast majority of the acts of violence happened in the first two months after the military coup. The high incidence of human rights violations in the beginning of the Pinochet era reflects the activity of the "Caravan of Death", a group of paramilitaries established in October 1973 to torture and kill dissidents [@davis1990they, 459; @verdugo2001chile]. 
 
 [comment]: <> (Figure 02 - Time Trends Here)
 
-In September 1973 alone, the government committed 633 acts of violence against civilians, of which 406 the Commission signals a definite and known death. The scale continued in October, with 504 incidences and 317 certified deaths. The numbers decline to about 10% of those levels in the next months, and then recede further in 1974.
+In September 1973 alone, the government committed 633 acts of violence against civilians, of which 406 the Commission signals as "definite and known deaths". The violations continued in October, with 504 incidences and 317 certified deaths. The numbers decline to about 10% of those levels in November and December, and then recede further in 1974.
 
-In absolute numbers, the Chilean dictatorship was not as violent as its Argentinian counterpart,[^argentina] but the figures are notably high when compared to other South American countries. The Brazilian military regime made 434 victims from 1964 to 1985; Paraguay had 424 victims of human rights abuse from 1954 to 1989; Bolivia had 350 from 1964 to 1982; and Uruguay reported about 300 incidences from 1973 to 1985 [@agenciabrasil2014ditadura; @elpais2014ditadura; @fsp2016argentina]. The distribution of events over time seem to differ as well. Despite eventual periods of higher intensity, violence in authoritarian Brazil stretched somewhat evenly during the regime [@agenciabrasil2014ditadura; @elpais2014ditadura]. The Stroessner regime in Paraguay also constantly employed violence against the opposition [@cvj2008paraguay].
+In absolute numbers, the Chilean dictatorship was not as violent as its Argentinian counterpart[^argentina], but the figures are high when compared to other South American countries. For example, the Brazilian military regime made 434 victims from 1964 to 1985; Paraguay had 424 victims of human rights abuse from 1954 to 1989; and Uruguay reported about 300 incidences from 1973 to 1985 [@elpais2014ditadura; @fsp2016argentina]. The timing of repression also varies. Despite eventual periods of higher intensity, violence in authoritarian Brazil and Paraguay stretched somewhat evenly during the regime [@agenciabrasil2014ditadura; @elpais2014ditadura]. This contrasts with the Chilean case, whose repression was concentrated in the early years of the regime.
 
+We can also explore how the government employed violence across space. We see that all types of violence were concentrated around Santiago and neighbouring cities. The results are in line with theoretical expectations. Santiago has been Chile's most densely populated city since the colonial times and in 1975 the city was home to about 30% of the country's population [@un1976yearbook].
+
+[comment]: <> (Figure 03 - Spatial variation. Add a few more lines above)
 
 
 

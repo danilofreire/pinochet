@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.19)  25 MAR 2019 22:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.19)  26 MAR 2019 01:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1585,7 +1585,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 
 LaTeX Warning: Reference `trend' on page 5 undefined on input line 371.
 
-[5] [6] [7] (./article.bbl (./article.brf)
+[5] [6] [7] [8] (./article.bbl (./article.brf)
 \tf@brf=\write5
 \openout5 = `article.brf'.
 
@@ -1614,44 +1614,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--43
 recidos-[]derechos _ humanos-[]estela _ de _
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 88--88
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
 []\T1/LinuxLibertineT-TLF/m/n/12 (+20) Folha de São Paulo (2016).  Ar-gentina A
 inda Dis-cute Quan-tas Foram as Ví-ti-mas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--88
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
 \T1/LinuxLibertineT-TLF/m/n/12 (+20) da Úl-tima Di-tadura Mil-i-tar.  [][]$\T1/
 zi4/m/n/12 http : / / www1 . folha . uol . com . br / mundo / 2016 / 02 /
  []
 
 
-Overfull \hbox (12.34872pt too wide) in paragraph at lines 88--88
+Overfull \hbox (12.34872pt too wide) in paragraph at lines 82--82
 \T1/zi4/m/n/12 1735938-[]argentina-[]ainda-[]discute-[]quantas-[]foram-[]as-[]v
 itimas-[]da-[]ultima-[]ditadura-[]militar .
  []
 
-[9]) [10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 478.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 478.
+[10]) [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 482.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 482.
 (./article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 478.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 478.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 482.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 482.
 Package rerunfilecheck Info: File `article.out' has not changed.
 (rerunfilecheck)             Checksum: 85810A7B732E5EAF4B23E54A765A7D8E;415.
 Package rerunfilecheck Info: File `article.brf' has not changed.
-(rerunfilecheck)             Checksum: C2F0D0D06C5695DB0168E6A7E1987911;1512.
+(rerunfilecheck)             Checksum: 76BAB3B77F41186A4CD2EF4ABC24C76D;1447.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 26120 strings out of 494585
- 482317 string characters out of 6176391
- 565730 words of memory out of 5000000
+ 26124 strings out of 494585
+ 482387 string characters out of 6176391
+ 565719 words of memory out of 5000000
  28957 multiletter control sequences out of 15000+600000
- 157185 words of font info for 271 fonts, out of 8000000 for 9000
+ 157458 words of font info for 273 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  53i,12n,92p,2571b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/politicaltheory/Library/TinyTeX/texmf-dist/fonts/enc/dvips/libertine/
@@ -1665,10 +1665,10 @@ olata-zi4r.pfb></Users/politicaltheory/Library/TinyTeX/texmf-dist/fonts/type1/p
 ublic/libertine/LinLibertineT.pfb></Users/politicaltheory/Library/TinyTeX/texmf
 -dist/fonts/type1/public/libertine/LinLibertineTB.pfb></Users/politicaltheory/L
 ibrary/TinyTeX/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb>
-Output written on article.pdf (10 pages, 302243 bytes).
+Output written on article.pdf (11 pages, 303284 bytes).
 PDF statistics:
- 246 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
- 55 named destinations out of 1000 (max. 500000)
+ 248 PDF objects out of 1000 (max. 8388607)
+ 228 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
  26693 words of extra memory for PDF output out of 29859 (max. 10000000)
 
