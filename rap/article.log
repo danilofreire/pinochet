@@ -1,13 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.19)  26 MAR 2019 01:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  26 MAR 2019 17:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **article.tex
 (./article.tex
-LaTeX2e <2018-04-01> patch level 5
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/base/size12.clo
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -21,38 +22,24 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/libertine/libertin
-e.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/libertine/libertine.sty
 Package: libertine 2018/01/03 (Bob Tennent) Supports Libertine and Biolinum fon
 ts for all LaTeX engines.
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/ifxetex/ifxetex.
-sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/ifluate
-x.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.st
-y
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.
-tex
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils
-.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local
+/texlive/2018/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks14
 \XKV@tempa@toks=\toks15
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/keyval.t
-ex))
+(/usr/local/texlive/2018/texmf-dist/tex/generic/xkeyval/keyval.tex))
 \XKV@depth=\count88
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/base/textcomp.s
-ty
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -66,11 +53,11 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/base/ts1enc.def
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/base/ts1enc.dfu
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1enc.dfu
 File: ts1enc.dfu 2018/04/05 v1.2c UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -206,9 +193,7 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/mweights/mweights.
-sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/mweights/mweights.sty
 Package: mweights 2017/03/30 (Bob Tennent) Support package for multiple-weight 
 font packages. 
 LaTeX Info: Redefining \bfseries on input line 22.
@@ -216,11 +201,9 @@ LaTeX Info: Redefining \mdseries on input line 30.
 LaTeX Info: Redefining \rmfamily on input line 38.
 LaTeX Info: Redefining \sffamily on input line 66.
 LaTeX Info: Redefining \ttfamily on input line 94.
-) (/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/fontaxes/fontaxes.
-sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/fontaxes/fontaxes.sty
 Package: fontaxes 2014/03/23 v1.0d Font selection axes
 LaTeX Info: Redefining \upshape on input line 29.
 LaTeX Info: Redefining \itshape on input line 31.
@@ -228,35 +211,24 @@ LaTeX Info: Redefining \slshape on input line 33.
 LaTeX Info: Redefining \scshape on input line 37.
 )
 LaTeX Info: Redefining \oldstylenums on input line 490.
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/libertine/LinLiber
-tine_I.tex))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/newtx/newtxmath.st
-y
-Package: newtxmath 2018/05/15 v1.553
-
-`newtxmath' v1.553, 2018/05/15 Math macros based originally on txfonts (msharpe
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.st
-y
+(/usr/local/texlive/2018/texmf-dist/tex/latex/libertine/LinLibertine_I.tex)) (/
+usr/local/texlive/2018/texmf-dist/tex/latex/newtx/newtxmath.sty
+Package: newtxmath 2017/12/14 v1.53
+`newtxmath' v1.53, 2017/12/14 Math macros based on txfonts (msharpe) (/usr/loca
+l/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip43
 For additional information on amsmath, use the `?' option.
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.st
-y
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
 \ex@=\dimen103
-))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen104
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count89
@@ -296,163 +268,140 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.
-sty
-Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count101
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/centernot
-.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/centernot.sty
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
-)
-\tx@cntz=\count102
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/kastrup/binhex.t
-ex)
-\tx@Isdigit=\count103
-\tx@IsAlNum=\count104
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 171.
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/kastrup/binhex.tex)
+\tx@Isdigit=\count101
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 156.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/LinuxLibertineT-TLF/m/n on input li
-ne 171.
+ne 156.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> OT1/LinuxLibertineT-TLF/m/n on input l
-ine 171.
+ine 156.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/LinuxLibertineT-TLF/m/n --> OT1/LinuxLibertineT-TLF
-/sb/n on input line 172.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 180.
+/sb/n on input line 157.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 163.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  OT1/cmss/m/n --> OT1/LinuxBiolinumT-TLF/m/n on input li
-ne 180.
+ne 163.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> OT1/LinuxBiolinumT-TLF/m/n on input l
-ine 180.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 181.
+ine 163.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> OT1/LinuxLibertineT-TLF/m/it on input 
-line 181.
+line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/LinuxLibertineT-TLF/m/it on input
- line 181.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 182.
+ line 164.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> OT1/LinuxLibertineMonoT-TLF/m/n on inp
-ut line 182.
+ut line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/LinuxLibertineMonoT-TLF/m/n on inp
-ut line 182.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 184.
+ut line 165.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 167.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> OT1/LinuxLibertineT-TLF/sb/n on input 
-line 184.
+line 167.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
 (Font)                  OT1/cmr/bx/n --> OT1/LinuxLibertineT-TLF/sb/n on input 
-line 184.
+line 167.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/LinuxLibertineT-TLF/m/it --> OT1/LinuxLibertineT-TL
-F/sb/it on input line 185.
+F/sb/it on input line 168.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/LinuxBiolinumT-TLF/m/n --> OT1/LinuxBiolinumT-TLF/b
-/n on input line 186.
+/n on input line 169.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/LinuxLibertineMonoT-TLF/m/n --> OT1/LinuxLibertineM
-onoT-TLF/b/n on input line 187.
-LaTeX Font Info:    Redeclaring symbol font `letters' on input line 199.
+onoT-TLF/b/n on input line 170.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 182.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/cmm/m/it --> OML/nxlmi/m/it on input line 199.
+(Font)                  OML/cmm/m/it --> OML/nxlmi/m/it on input line 182.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/cmm/b/it --> OML/nxlmi/m/it on input line 199.
+(Font)                  OML/cmm/b/it --> OML/nxlmi/m/it on input line 182.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/nxlmi/m/it --> OML/nxlmi/b/it on input line 200.
+(Font)                  OML/nxlmi/m/it --> OML/nxlmi/b/it on input line 183.
 \symlettersA=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
-(Font)                  U/ntxmia/m/it --> U/ntxmia/b/it on input line 261.
+(Font)                  U/ntxmia/m/it --> U/ntxmia/b/it on input line 238.
 Now handling font encoding LMS ...
 ... no UTF-8 mapping file for font encoding LMS
-LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 282.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 259.
 LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 282.
+(Font)              `symbols' in the math version `normal' on input line 259.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> LMS/ntxsy/m/n on input line 282.
+(Font)                  OMS/cmsy/m/n --> LMS/ntxsy/m/n on input line 259.
 LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 282.
+(Font)              `symbols' in the math version `bold' on input line 259.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> LMS/ntxsy/m/n on input line 282.
+(Font)                  OMS/cmsy/b/n --> LMS/ntxsy/m/n on input line 259.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  LMS/ntxsy/m/n --> LMS/ntxsy/b/n on input line 283.
+(Font)                  LMS/ntxsy/m/n --> LMS/ntxsy/b/n on input line 260.
 \symAMSm=\mathgroup5
 LaTeX Font Info:    Overwriting symbol font `AMSm' in version `bold'
-(Font)                  U/ntxsym/m/n --> U/ntxsym/b/n on input line 306.
+(Font)                  U/ntxsym/m/n --> U/ntxsym/b/n on input line 283.
 \symsymbolsC=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
-(Font)                  U/ntxsyc/m/n --> U/ntxsyc/b/n on input line 327.
+(Font)                  U/ntxsyc/m/n --> U/ntxsyc/b/n on input line 304.
 Now handling font encoding LMX ...
 ... no UTF-8 mapping file for font encoding LMX
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 340.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 317.
 LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 3
-40.
+17.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 340.
+(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 317.
 LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 340
+(Font)              `largesymbols' in the math version `bold' on input line 317
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 340.
+(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 317.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 341.
+(Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 318.
 \symlargesymbolsTXA=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
 
-(Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 355.
-LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 548.
-LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 549.
-LaTeX Font Info:    Redeclaring math delimiter \lmoustache on input line 550.
-LaTeX Font Info:    Redeclaring math delimiter \rmoustache on input line 551.
-LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 557.
-LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 558.
-LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 559.
-LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 560.
-LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 561.
-LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 562.
-LaTeX Font Info:    Redeclaring math delimiter \langle on input line 563.
-LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 565.
-LaTeX Font Info:    Redeclaring math symbol \mid on input line 567.
-LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 569.
-LaTeX Font Info:    Redeclaring math delimiter \vert on input line 570.
-LaTeX Font Info:    Redeclaring math symbol \parallel on input line 571.
-LaTeX Font Info:    Redeclaring math delimiter \Arrowvert on input line 572.
-LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 573.
-LaTeX Font Info:    Redeclaring math delimiter \updownarrow on input line 575.
-LaTeX Font Info:    Redeclaring math delimiter \Updownarrow on input line 576.
-LaTeX Font Info:    Redeclaring math delimiter \lvert on input line 581.
-LaTeX Font Info:    Redeclaring math delimiter \rvert on input line 582.
-LaTeX Font Info:    Redeclaring math delimiter \lVert on input line 583.
-LaTeX Font Info:    Redeclaring math delimiter \rVert on input line 584.
-LaTeX Font Info:    Redeclaring math symbol \m@thbbch@rA on input line 1929.
-\ntx@numstart=\count105
-\ntx@UCstart=\count106
-\ntx@lcstart=\count107
-\ntx@tmpc=\count108
-\ntx@imath=\count109
-\ntx@jmath=\count110
-LaTeX Info: Redefining \not on input line 2322.
-) (/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+(Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 332.
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 503.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 504.
+LaTeX Font Info:    Redeclaring math delimiter \lmoustache on input line 505.
+LaTeX Font Info:    Redeclaring math delimiter \rmoustache on input line 506.
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 512.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 513.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 514.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 515.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 516.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 517.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 518.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 520.
+LaTeX Font Info:    Redeclaring math symbol \mid on input line 522.
+LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 524.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 525.
+LaTeX Font Info:    Redeclaring math symbol \parallel on input line 526.
+LaTeX Font Info:    Redeclaring math delimiter \Arrowvert on input line 527.
+LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 528.
+LaTeX Font Info:    Redeclaring math delimiter \updownarrow on input line 530.
+LaTeX Font Info:    Redeclaring math delimiter \Updownarrow on input line 531.
+LaTeX Font Info:    Redeclaring math delimiter \lvert on input line 536.
+LaTeX Font Info:    Redeclaring math delimiter \rvert on input line 537.
+LaTeX Font Info:    Redeclaring math delimiter \lVert on input line 538.
+LaTeX Font Info:    Redeclaring math delimiter \rVert on input line 539.
+LaTeX Info: Redefining \not on input line 2146.
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/base/t1enc.def
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/incons
-olata.sty
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/inconsolata/inconsolata.sty
 Package: inconsolata 2017/01/04 v1.112
 `inconsolata-zi4' v1.112, 2017/01/04 Text macros for Inconsolata (msharpe)
-\zifour@ocount=\count111
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.
-sty
+\zifour@ocount=\count102
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \heavyrulewidth=\dimen112
 \lightrulewidth=\dimen113
@@ -464,34 +413,32 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \cmidrulesep=\dimen119
 \cmidrulekern=\dimen120
 \defaultaddspace=\dimen121
-\@cmidla=\count112
-\@cmidlb=\count113
+\@cmidla=\count103
+\@cmidlb=\count104
 \@aboverulesep=\dimen122
 \@belowrulesep=\dimen123
-\@thisruleclass=\count114
-\@lastruleclass=\count115
+\@thisruleclass=\count105
+\@lastruleclass=\count106
 \@thisrulewidth=\dimen124
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.st
-y
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip46
 \LTright=\skip47
 \LTpre=\skip48
 \LTpost=\skip49
-\LTchunksize=\count116
+\LTchunksize=\count107
 \LTcapwidth=\dimen125
 \LT@head=\box28
 \LT@firsthead=\box29
 \LT@foot=\box30
 \LT@lastfoot=\box31
-\LT@cols=\count117
-\LT@rows=\count118
-\c@LT@tables=\count119
-\c@LT@chunks=\count120
+\LT@cols=\count108
+\LT@rows=\count109
+\c@LT@tables=\count110
+\c@LT@chunks=\count111
 \LT@p@ftn=\toks21
-) (/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
-Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
 \col@sep=\dimen126
 \ar@mcellbox=\box32
 \extrarowheight=\dimen127
@@ -499,86 +446,63 @@ Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \extratabsurround=\skip50
 \backup@length=\skip51
 \ar@cellbox=\box33
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/multirow/multirow.
-sty
-Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip52
-\multirow@cntb=\count121
+\multirow@cntb=\count112
 \multirow@dima=\skip53
 \bigstrutjot=\dimen128
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.st
-y
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen129
 \WF@size=\dimen130
-\c@WF@wrappedlines=\count122
+\c@WF@wrappedlines=\count113
 \WF@box=\box34
 \WF@everypar=\toks23
 Package: wrapfig 2003/01/31  v 3.6
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.
-sty
-Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color
-.cfg
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdfte
-x.def
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \everycr=\toks24
 \minrowclearance=\skip54
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/pdflscape
-.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/graphics/lscape.st
-y
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.
-sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graph
-ics.cfg
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
-))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/ifpdf.s
-ty
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)) (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-) (/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/tabu/tabu.sty
-Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.
-sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2011/02/26 v2.8 - flexible LaTeX tabulars (FC)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box35
-\sift@deathcycles=\count123
+\sift@deathcycles=\count114
 \@vwid@loff=\dimen131
 \@vwid@roff=\dimen132
 )
-\c@taburow=\count124
-\tabu@nbcols=\count125
-\tabu@cnt=\count126
-\tabu@Xcol=\count127
-\tabu@alloc=\count128
-\tabu@nested=\count129
+\c@taburow=\count115
+\tabu@nbcols=\count116
+\tabu@cnt=\count117
+\tabu@Xcol=\count118
+\tabu@alloc=\count119
+\tabu@nested=\count120
 \tabu@target=\dimen133
 \tabu@spreadtarget=\dimen134
 \tabu@naturalX=\dimen135
@@ -596,48 +520,41 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \tabu@vleads=\box39
 \tabu@cellskip=\skip55
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/threeparttable/thr
-eeparttable.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box40
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/threeparttablex/th
-reeparttablex.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/threeparttablex/threeparttablex.s
+ty
 Package: threeparttablex 2013/07/23 v0.3 by daleif
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/environ/environ.st
-y
+(/usr/local/texlive/2018/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/trimspaces/trimspa
-ces.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \TPTL@width=\skip56
-) (/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box41
 \UL@hyphenbox=\box42
 \UL@skip=\skip57
 \UL@hook=\toks27
 \UL@height=\dimen142
-\UL@pe=\count130
+\UL@pe=\count121
 \UL@pixel=\dimen143
 \ULC@box=\box43
 Package: ulem 2012/05/18
 \ULdepth=\dimen144
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/makecell/makecell.
-sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen145
-\c@nlinenum=\count131
+\c@nlinenum=\count122
 \TeXr@lab=\toks28
-) (/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.st
-y
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count123
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color
-.cfg
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Package option `usenames' ignored on input line 216.
@@ -652,27 +569,19 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/graphics/dvipsnam.
-def
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/setspace/setspace.
-sty
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/geometry/geometry.
-sty
-Package: geometry 2018/04/16 v5.8 Page Geometry
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/ifvtex.
-sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/03/24 v5.7 Page Geometry
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-\Gm@cnth=\count132
-\Gm@cntv=\count133
-\c@Gm@tempcnt=\count134
+\Gm@cnth=\count124
+\Gm@cntv=\count125
+\c@Gm@tempcnt=\count126
 \Gm@bindingoffset=\dimen146
 \Gm@wd@mp=\dimen147
 \Gm@odd@mp=\dimen148
@@ -682,18 +591,12 @@ Package ifvtex Info: VTeX not detected.
 \Gm@layouthoffset=\dimen152
 \Gm@layoutvoffset=\dimen153
 \Gm@dimlist=\toks29
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.
-sty
-Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/hobsub-
-hyperref.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/hobsub-
-generic.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
@@ -709,7 +612,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -729,136 +632,108 @@ Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/auxhook.s
-ty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/kvoptions
-.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen154
-\Hy@linkcounter=\count135
-\Hy@pagecounter=\count136
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.de
-f
-File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+\Hy@linkcounter=\count127
+\Hy@pagecounter=\count128
+(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count137
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/hyperr
-ef.cfg
+\Hy@SavedSpaceFactor=\count129
+(/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4519.
-Package hyperref Info: Link nesting OFF on input line 4524.
-Package hyperref Info: Hyper index ON on input line 4527.
-Package hyperref Info: Plain pages OFF on input line 4534.
-Package hyperref Info: Backreferencing ON on input line 4537.
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing ON on input line 4527.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4772.
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/hyperref/backref.s
-ty
+Package hyperref Info: Bookmarks ON on input line 4762.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/backref.sty
 Package: backref 2016/05/21 v1.39 Bibliographical back referencing
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/rerunfile
-check.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 ))
-\c@Hy@tempcnt=\count138
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
+\c@Hy@tempcnt=\count130
+(/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5125.
+LaTeX Info: Redefining \url on input line 5115.
 \XeTeXLinkMargin=\dimen155
-\Fld@menulength=\count139
+\Fld@menulength=\count131
 \Field@Width=\dimen156
 \Fld@charsize=\dimen157
-Package hyperref Info: Hyper figures OFF on input line 6380.
-Package hyperref Info: Link nesting OFF on input line 6385.
-Package hyperref Info: Hyper index ON on input line 6388.
-Package hyperref Info: backreferencing ON on input line 6393.
-Package hyperref Info: Link coloring OFF on input line 6400.
-Package hyperref Info: Link coloring with OCG OFF on input line 6405.
-Package hyperref Info: PDF/A mode OFF on input line 6410.
-LaTeX Info: Redefining \ref on input line 6450.
-LaTeX Info: Redefining \pageref on input line 6454.
-\Hy@abspage=\count140
-\c@Item=\count141
-\c@Hfootnote=\count142
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing ON on input line 6382.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
+\Hy@abspage=\count132
+\c@Item=\count133
+\c@Hfootnote=\count134
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.d
-ef
-File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
-\Fld@listcount=\count143
-\c@bookmark@seq@number=\count144
+(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
+\Fld@listcount=\count135
+\c@bookmark@seq@number=\count136
 \Hy@SectionHShift=\skip58
-) (/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/tools/dcolumn.st
-y
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/dcolumn.sty
 Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.
-sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 \Gin@req@height=\dimen158
 \Gin@req@width=\dimen159
-) (/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/float/float.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count145
+\c@float@type=\count137
 \float@exts=\toks30
 \float@box=\box44
 \@float@everytoks=\toks31
 \@floatcapt=\box45
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgf
-.sty
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfr
-cs.sty
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pg
-futil-common.tex
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/lo
+cal/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
 \pgfutil@everybye=\toks32
 \pgfutil@tempdima=\dimen160
 \pgfutil@tempdimb=\dimen161
 
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pg
-futil-common-lists.tex))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pg
-futil-latex.def
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+sts.tex))
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box46
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/ms/everyshi.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pg
-frcs.code.tex
+)) (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.te
+x
 Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
 ))
 Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgf
-core.sty
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/pgf/systemlayer/pg
-fsys.sty
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/
-pgfsys.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/
+local/texlive/2018/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pg
-fkeys.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks33
 \pgfkeys@temptoks=\toks34
 
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pg
-fkeysfiltered.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
 \pgfkeys@tmptoks=\toks35
 ))
 \pgf@x=\dimen162
@@ -871,81 +746,72 @@ fkeysfiltered.code.tex
 \pgf@yc=\dimen169
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count146
-\c@pgf@countb=\count147
-\c@pgf@countc=\count148
-\c@pgf@countd=\count149
+\c@pgf@counta=\count138
+\c@pgf@countb=\count139
+\c@pgf@countc=\count140
+\c@pgf@countd=\count141
 \t@pgf@toka=\toks36
 \t@pgf@tokb=\toks37
 \t@pgf@tokc=\toks38
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/
-pgf.cfg
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/
-pgfsys-pdftex.def
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
 File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
 
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/
-pgfsys-common-pdf.def
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/
-pgfsyssoftpath.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count150
-\pgfsyssoftpath@bigbuffer@items=\count151
+\pgfsyssoftpath@smallbuffer@items=\count142
+\pgfsyssoftpath@bigbuffer@items=\count143
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/
-pgfsysprotocol.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
 ))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcore.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath
-.code.tex
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath
-calc.code.tex
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath
-util.code.tex)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath
-parser.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr
+/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/
+local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen170
-\pgfmath@count=\count152
+\pgfmath@count=\count144
 \pgfmath@box=\box47
 \pgfmath@toks=\toks39
 \pgfmath@stack@operand=\toks40
 \pgfmath@stack@operation=\toks41
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath
-functions.code.tex
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath
-functions.basic.code.tex)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath
-functions.trigonometric.code.tex)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath
-functions.random.code.tex)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath
-functions.comparison.code.tex)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath
-functions.base.code.tex)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath
-functions.round.code.tex)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath
-functions.misc.code.tex)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath
-functions.integerarithmetics.code.tex)))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath
-float.code.tex
-\c@pgfmathroundto@lastzeros=\count153
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex))) (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/m
+ath/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count145
 ))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcorepoints.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@picminx=\dimen171
 \pgf@picmaxx=\dimen172
@@ -962,132 +828,122 @@ File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@zx=\dimen183
 \pgf@zy=\dimen184
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcorepathconstruct.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 \pgf@path@lastx=\dimen185
 \pgf@path@lasty=\dimen186
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcorepathusage.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 \pgf@shorten@end@additional=\dimen187
 \pgf@shorten@start@additional=\dimen188
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcorescopes.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box48
 \pgf@hbox=\box49
 \pgf@layerbox@main=\box50
-\pgf@picture@serial@count=\count154
+\pgf@picture@serial@count=\count146
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcoregraphicstate.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
 \pgflinewidth=\dimen189
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcoretransformations.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
 \pgf@pt@x=\dimen190
 \pgf@pt@y=\dimen191
 \pgf@pt@temp=\dimen192
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcorequick.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcoreobjects.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcorepathprocessing.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
 File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcorearrows.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 \pgfarrowsep=\dimen193
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcoreshade.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen194
-\pgf@sys@shading@range@num=\count155
+\pgf@sys@shading@range@num=\count147
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcoreimage.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcoreexternal.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
 \pgfexternal@startupbox=\box51
 ))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcorelayers.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
 File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcoretransparency.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
 File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/p
-gfcorepatterns.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
 File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfm
-oduleshapes.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
 \pgfnodeparttextbox=\box52
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfm
-oduleplot.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/pgf/compatibility/
-pgfcomp-version-0-65.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen195
 \pgf@nodesepend=\dimen196
 )
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/pgf/compatibility/
-pgfcomp-version-1-18.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
 Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
-))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/pgf/frontendlayer/
-tikz.sty
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgff
-or.sty
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfk
-eys.sty
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pg
-fkeys.code.tex))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/pgf/math/pgfmath.s
-ty
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath
-.code.tex))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pg
-ffor.code.tex
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/u
+sr/local/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local
+/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texliv
+e/2018/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texl
+ive/2018/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2018/tex
+mf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2018/texmf-
+dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath
-.code.tex)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen197
 \pgffor@skip=\dimen198
 \pgffor@stack=\toks42
 \pgffor@toks=\toks43
 ))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/frontendlaye
-r/tikz/tikz.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pg
-flibraryplothandlers.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count156
+\pgf@plot@mark@count=\count148
 \pgfplotmarksize=\dimen199
 )
 \tikz@lastx=\dimen256
@@ -1100,62 +956,58 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@figbox@bg=\box54
 \tikz@tempbox=\box55
 \tikz@tempbox@bg=\box56
-\tikztreelevel=\count157
-\tikznumberofchildren=\count158
-\tikznumberofcurrentchild=\count159
-\tikz@fig@count=\count160
+\tikztreelevel=\count149
+\tikznumberofchildren=\count150
+\tikznumberofcurrentchild=\count151
+\tikz@fig@count=\count152
 
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfm
-odulematrix.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count161
-\pgfmatrixcurrentcolumn=\count162
-\pgf@matrix@numberofcolumns=\count163
+\pgfmatrixcurrentrow=\count153
+\pgfmatrixcurrentcolumn=\count154
+\pgf@matrix@numberofcolumns=\count155
 )
-\tikz@expandcount=\count164
+\tikz@expandcount=\count156
 
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/frontendlaye
-r/tikz/libraries/tikzlibrarytopaths.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/frontendlaye
-r/tikz/libraries/tikzlibraryarrows.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pg
-flibraryarrows.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
 \arrowsize=\dimen262
 ))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/pgf/frontendlaye
-r/tikz/libraries/tikzlibrarypositioning.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/mathtools/mathtool
-s.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count165
-\calc@Bcount=\count166
+\calc@Acount=\count157
+\calc@Bcount=\count158
 \calc@Adimen=\dimen263
 \calc@Bdimen=\dimen264
 \calc@Askip=\skip59
 \calc@Bskip=\skip60
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count167
+\calc@Ccount=\count159
 \calc@Cskip=\skip61
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/mathtools/mhsetup.
-sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count168
+\g_MT_multlinerow_int=\count160
 \l_MT_multwidth_dim=\dimen265
 \origjot=\skip62
 \l_MT_shortvdotswithinadjustabove_dim=\dimen266
@@ -1164,15 +1016,11 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_below_intertext_sep=\dimen269
 \l_MT_above_shortintertext_sep=\dimen270
 \l_MT_below_shortintertext_sep=\dimen271
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/caption/caption.st
-y
-Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/caption/caption3.s
-ty
-Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 64.
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen272
 \captionmargin@=\dimen273
 \captionwidth=\dimen274
@@ -1181,74 +1029,57 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@parindent=\dimen277
 \caption@hangindent=\dimen278
 )
-\c@caption@flags=\count169
-\c@ContinuedFloat=\count170
+\c@ContinuedFloat=\count161
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/caption/ltcaption.
-sty
-Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
-) (/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-) (/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/babel/babel.st
-y
-Package: babel 2018/11/13 3.27 The Babel package
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2018/11/13 3.27 Babel switching mechanism
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/babel-english/UK
-english.ldf
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/02/14 3.18 The Babel package
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/babel-english/UKenglish.ldf
 Language: UKenglish 2017/06/06 v3.3r English support from the babel system
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/babel-english/en
-glish.ldf
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2018/11/13 3.27 Babel common definitions
-\babel@savecnt=\count171
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/02/14 3.18 Babel common definitions
+\babel@savecnt=\count162
 \U@D=\dimen279
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/babel/txtbabel.d
-ef)
-\bbl@dirlevel=\count172
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count163
 )
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
-)))
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/isodate/isodate.st
-y
+))) (/usr/local/texlive/2018/texmf-dist/tex/latex/isodate/isodate.sty
 Package: isodate 2010/01/03 v2.30 Print dates with different formats (HH)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/substr/substr.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/substr/substr.sty
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count173
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/isodate/english.id
-f
+\c@su@anzahl=\count164
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/isodate/english.idf
 File: english.idf 2010/01/03 v2.30 Language definitions for isodate package (HH
 )
 Define commands for English date format
 )
-\c@iso@tmpmonth=\count174
-\c@iso@yeartwo=\count175
-\c@iso@slash=\count176
-\c@iso@minus=\count177
-\c@iso@dot=\count178
-\c@iso@@slash=\count179
-\c@iso@@minus=\count180
-\c@iso@@dot=\count181
+\c@iso@tmpmonth=\count165
+\c@iso@yeartwo=\count166
+\c@iso@slash=\count167
+\c@iso@minus=\count168
+\c@iso@dot=\count169
+\c@iso@@slash=\count170
+\c@iso@@minus=\count171
+\c@iso@@dot=\count172
 )
 Package hyperref Info: Option `breaklinks' set `true' on input line 65.
 Package hyperref Info: Option `colorlinks' set `true' on input line 65.
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/base/fixltx2e.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/fixltx2e.sty
 Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
 Applying: [2015/01/01] Old fixltx2e package on input line 46.
 
@@ -1257,34 +1088,27 @@ Package fixltx2e Warning: fixltx2e is not required with releases after 2015
 (fixltx2e)                See the latexrelease package for details.
 
 Already applied: [0000/00/00] Old fixltx2e package on input line 53.
-) (/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/base/t1enc.def
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) (/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/base/inputenc.s
-ty
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks44
 \inpenc@posthook=\toks45
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/upquote/upquote.st
-y
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
-)
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/microtype/microtyp
-e.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
 \MT@toks=\toks46
-\MT@count=\count182
+\MT@count=\count173
 LaTeX Info: Redefining \textls on input line 793.
 \MT@outer@kern=\dimen280
 LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
-\MT@listname@count=\count183
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/microtype/microtyp
-e-pdftex.def
+\MT@listname@count=\count174
+(/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 913.
@@ -1292,85 +1116,92 @@ LaTeX Info: Redefining \lslig on input line 913.
 \MT@outer@space=\skip63
 )
 Package microtype Info: Loading configuration file microtype.cfg.
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/microtype/microtyp
-e.cfg
+(/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
-)) (/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/natbib/natbib.s
-ty
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip64
 \bibsep=\skip65
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count184
+\c@NAT@ctr=\count175
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2001/04/09 non-zero parskip adjustments
 ) (./article.aux)
 \openout1 = `article.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 169.
-LaTeX Font Info:    Try loading font information for OML+nxlmi on input line 16
+LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 159.
+LaTeX Font Info:    Try loading font information for OML+nxlmi on input line 15
 9.
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/newtx/omlnxlmi.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/newtx/omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 169.
-LaTeX Font Info:    Try loading font information for U+ntxexa on input line 169
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 159.
+LaTeX Font Info:    Try loading font information for U+ntxexa on input line 159
 .
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/newtx/untxexa.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 169.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 169.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 159.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 159.
 
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 169.
-LaTeX Font Info:    Try loading font information for LMS+ntxsy on input line 16
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 159.
+LaTeX Font Info:    Try loading font information for LMS+ntxsy on input line 15
 9.
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/newtx/lmsntxsy.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 159.
 LaTeX Font Info:    Try loading font information for LMX+ntxexx on input line 1
-69.
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/newtx/lmxntxexx.fd
+59.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
 LaTeX Font Info:    Try loading font information for T1+LinuxLibertineT-TLF on 
-input line 169.
+input line 159.
 
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/libertine/T1LinuxL
-ibertineT-TLF.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/libertine/T1LinuxLibertineT-TLF.f
+d
 File: T1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Li
 nuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 169.
-\c@mv@tabular=\count185
-\c@mv@boldtabular=\count186
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/epstopdf-
-base.sty
+(Font)              scaled to size 12.0pt on input line 159.
+\c@mv@tabular=\count176
+\c@mv@boldtabular=\count177
+(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count178
+\scratchdimen=\dimen281
+\scratchbox=\box57
+\nofMPsegments=\count179
+\nofMParguments=\count180
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count181
+\MPscratchDim=\dimen282
+\MPnumerator=\count182
+\makeMPintoPDFobject=\count183
+\everyMPtoPDFconversion=\toks48
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/grfext.st
-y
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1379,9 +1210,7 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstop
-df-sys.cfg
+(/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -1419,23 +1248,19 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box57
-Package backref Info: ** backref set up for natbib ** on input line 169.
-Package hyperref Info: Link coloring ON on input line 169.
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.s
-ty
+\AtBeginShipoutBox=\box58
+Package backref Info: ** backref set up for natbib ** on input line 159.
+Package hyperref Info: Link coloring ON on input line 159.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/gettitl
-estring.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count187
+\c@section@level=\count184
 )
-LaTeX Info: Redefining \ref on input line 169.
-LaTeX Info: Redefining \pageref on input line 169.
-LaTeX Info: Redefining \nameref on input line 169.
+LaTeX Info: Redefining \ref on input line 159.
+LaTeX Info: Redefining \pageref on input line 159.
+LaTeX Info: Redefining \nameref on input line 159.
 (./article.out) (./article.out)
 \@outlinefile=\write4
 \openout4 = `article.out'.
@@ -1444,7 +1269,7 @@ ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 isodate: babel.sty has been loaded
-LaTeX Info: Redefining \microtypecontext on input line 169.
+LaTeX Info: Redefining \microtypecontext on input line 159.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
@@ -1459,131 +1284,111 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 20.74pt on input line 171.
+(Font)              scaled to size 20.74pt on input line 161.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 20.74pt on input line 171.
+(Font)              scaled to size 20.74pt on input line 161.
 LaTeX Font Info:    Try loading font information for OT1+LinuxLibertineT-TLF on
- input line 171.
+ input line 161.
 
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/libertine/OT1Linux
-LibertineT-TLF.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/libertine/OT1LinuxLibertineT-TLF.
+fd
 File: OT1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 20.74pt on input line 171.
+(Font)              scaled to size 20.74pt on input line 161.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 16.1pt on input line 171.
+(Font)              scaled to size 16.1pt on input line 161.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 11.4pt on input line 171.
-LaTeX Font Info:    Try loading font information for U+ntxmia on input line 171
+(Font)              scaled to size 11.4pt on input line 161.
+LaTeX Font Info:    Try loading font information for U+ntxmia on input line 161
 .
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/newtx/untxmia.fd
-File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/newtx/untxmia.fd
+File: untxmia.fd 2016/01/31 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsym on input line 171
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 161
 .
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/newtx/untxsym.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 171
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 161
 .
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/newtx/untxsyc.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 16.1pt on input line 171.
+(Font)              scaled to size 16.1pt on input line 161.
 LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineT-TLF on
- input line 171.
+ input line 161.
 
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/libertine/TS1Linux
-LibertineT-TLF.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.
+fd
 File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 16.1pt on input line 171.
+(Font)              scaled to size 16.1pt on input line 161.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 171.
+(Font)              scaled to size 14.4pt on input line 161.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 171.
+(Font)              scaled to size 14.4pt on input line 161.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.5pt on input line 171.
+(Font)              scaled to size 10.5pt on input line 161.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.9pt on input line 171.
+(Font)              scaled to size 7.9pt on input line 161.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.5pt on input line 171.
+(Font)              scaled to size 10.0pt on input line 161.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 161.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 7.3pt on input line 161.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 5.5pt on input line 161.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 7.3pt on input line 161.
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.5pt on input line 171.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 171.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 171.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 171.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 171.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 171.
-LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 171.
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 171.
-
-(/Users/politicaltheory/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/t1zi4.
-fd
+(Font)              scaled to size 7.3pt on input line 161.
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 161.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 171.
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--171
-[][]\T1/LinuxLibertineT-TLF/m/n/10 (+20) Senior Lec-turer in Pub-lic Pol-icy, D
-e-part-ment of Po-lit-i-cal Econ-omy, King's Col-lege Lon-don,
- []
-
-
-Underfull \hbox (badness 1158) in paragraph at lines 171--171
-[][]\T1/LinuxLibertineT-TLF/m/n/10 (+20) Associate Pro-fes-sor, De-part-ment of
- Po-lit-i-cal Sci-ence and the Po-lit-i-cal The-ory Project, Brown Uni-ver-sity
-,
- []
-
+(Font)              scaled to size 9.49997pt on input line 161.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 172.
+(Font)              scaled to size 10.95pt on input line 162.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 172.
+(Font)              scaled to size 10.95pt on input line 162.
 [1
 
-{/Users/politicaltheory/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdfte
-x.map}]
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 184.
+(Font)              scaled to size 17.28pt on input line 173.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 184.
+(Font)              scaled to size 17.28pt on input line 173.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 200.
+(Font)              scaled to size 12.0pt on input line 186.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 200.
+(Font)              scaled to size 8.8pt on input line 186.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.6pt on input line 200.
+(Font)              scaled to size 6.6pt on input line 186.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 200.
+(Font)              scaled to size 8.8pt on input line 186.
 [2]
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 247.
+(Font)              scaled to size 11.39996pt on input line 235.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 259.
+(Font)              scaled to size 14.4pt on input line 246.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 262.
+(Font)              scaled to size 12.0pt on input line 249.
 [3] [4]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 371.
+(Font)              scaled to size 12.0pt on input line 356.
 
-LaTeX Warning: Reference `trend' on page 5 undefined on input line 371.
+LaTeX Warning: Reference `trend' on page 5 undefined on input line 356.
 
 [5] [6] [7] [8] (./article.bbl (./article.brf)
 \tf@brf=\write5
@@ -1592,7 +1397,7 @@ LaTeX Warning: Reference `trend' on page 5 undefined on input line 371.
 
 Underfull \hbox (badness 4229) in paragraph at lines 10--10
 []\T1/LinuxLibertineT-TLF/m/n/12 (+20) Agência Brasil (2014).  Comis-são Re-con
--hece 434 Mortes e De-sa-parec-i-men-tos Du-rante
+-hece 434 Mor-tes e De-sa-pare-ci-men-tos Dur-ante
  []
 
 
@@ -1605,7 +1410,7 @@ Ac-
 
 Underfull \hbox (badness 10000) in paragraph at lines 43--43
 []\T1/LinuxLibertineT-TLF/m/n/12 (+20) Clarín (2016).  El Número de De-sa-pare-
-ci-dos: La Ver-dad no Au-menta la Gri-eta.
+cidos: La Ver-dad no Aumenta la Gri-eta.
  []
 
 
@@ -1615,60 +1420,59 @@ recidos-[]derechos _ humanos-[]estela _ de _
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
-[]\T1/LinuxLibertineT-TLF/m/n/12 (+20) Folha de São Paulo (2016).  Ar-gentina A
-inda Dis-cute Quan-tas Foram as Ví-ti-mas
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+[]\T1/LinuxLibertineT-TLF/m/n/12 (+20) Folha de São Paulo (2016).  Ar-gen-tina 
+Ainda Dis-cute Quantas Fo-ram as Ví-ti-mas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
-\T1/LinuxLibertineT-TLF/m/n/12 (+20) da Úl-tima Di-tadura Mil-i-tar.  [][]$\T1/
-zi4/m/n/12 http : / / www1 . folha . uol . com . br / mundo / 2016 / 02 /
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+\T1/LinuxLibertineT-TLF/m/n/12 (+20) da Úl-tima Ditadura Mil-itar.  [][]$\T1/zi
+4/m/n/12 http : / / www1 . folha . uol . com . br / mundo / 2016 / 02 /
  []
 
 
-Overfull \hbox (12.34872pt too wide) in paragraph at lines 82--82
+Overfull \hbox (12.34872pt too wide) in paragraph at lines 88--88
 \T1/zi4/m/n/12 1735938-[]argentina-[]ainda-[]discute-[]quantas-[]foram-[]as-[]v
 itimas-[]da-[]ultima-[]ditadura-[]militar .
  []
 
 [10]) [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 482.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 482.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 466.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 466.
 (./article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 482.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 482.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 466.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 466.
 Package rerunfilecheck Info: File `article.out' has not changed.
 (rerunfilecheck)             Checksum: 85810A7B732E5EAF4B23E54A765A7D8E;415.
 Package rerunfilecheck Info: File `article.brf' has not changed.
-(rerunfilecheck)             Checksum: 76BAB3B77F41186A4CD2EF4ABC24C76D;1447.
+(rerunfilecheck)             Checksum: 2B8B2C888C0E562FD8AB60E1C775D43D;1498.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 26124 strings out of 494585
- 482387 string characters out of 6176391
- 565719 words of memory out of 5000000
- 28957 multiletter control sequences out of 15000+600000
- 157458 words of font info for 273 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 53i,12n,92p,2571b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/Users/politicaltheory/Library/TinyTeX/texmf-dist/fonts/enc/dvips/libertine/
-lbtn_7grukw.enc}{/Users/politicaltheory/Library/TinyTeX/texmf-dist/fonts/enc/dv
-ips/inconsolata/i4-t1-0.enc}{/Users/politicaltheory/Library/TinyTeX/texmf-dist/
-fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/Users/politicaltheory/Library/TinyT
-eX/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/Users/politicaltheory
-/Library/TinyTeX/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}</Users/p
-oliticaltheory/Library/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Incons
-olata-zi4r.pfb></Users/politicaltheory/Library/TinyTeX/texmf-dist/fonts/type1/p
-ublic/libertine/LinLibertineT.pfb></Users/politicaltheory/Library/TinyTeX/texmf
--dist/fonts/type1/public/libertine/LinLibertineTB.pfb></Users/politicaltheory/L
-ibrary/TinyTeX/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb>
-Output written on article.pdf (11 pages, 303284 bytes).
+ 26300 strings out of 492649
+ 478442 string characters out of 6129622
+ 570353 words of memory out of 5000000
+ 29384 multiletter control sequences out of 15000+600000
+ 151089 words of font info for 266 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 53i,8n,92p,2571b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc
+}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{/
+usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/u
+sr/local/texlive/2018/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/us
+r/local/texlive/2018/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}</usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.
+pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/libertine/LinLiberti
+neT.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/libertine/LinLib
+ertineTB.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/libertine/L
+inLibertineTI.pfb>
+Output written on article.pdf (11 pages, 301222 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 228 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
+ 239 PDF objects out of 1000 (max. 8388607)
+ 219 compressed objects within 3 object streams
+ 51 named destinations out of 1000 (max. 500000)
  26693 words of extra memory for PDF output out of 29859 (max. 10000000)
 
