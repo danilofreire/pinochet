@@ -8,7 +8,7 @@ author:
   - "Eugenia Guerrero[^eg]"
 date: \today
 thanks: "We thank Umberto Mignozzetti and Robert Myles McDonnell for their helpful comments. Data and replication information are available at [`http://github.com/danilofreire/pinochet`](http://github.com/danilofreire/pinochet)."
-abstract: "... However, . This paper presents a georeferenced event dataset on "
+abstract: "This article presents a georeferenced dataset on human rights abuses in the Pinochet regime (1973-1990). Our dataset is based on the Chilean Truth Commission and Reconciliation Report and includes 57 variables on 2,398 uniquely-identified victims. We manually coded all information available in the two volumes of the Report and added geographical coordinates to the atrocities that could be identified. The data describe the initially high-level then steep decline of these violations, the extent to which victims were targeted, and the spatial variation of state repression. We also discuss our coding methodology and introduce an accompanying R package named `pinochet` that contains the data files and codebook. Lastly, we conclude with suggestions for potential uses of our dataset and new avenues of research on authoritarianism."
 keywords: "authoritarian regimes, Chile, georeferenced event data, Pinochet, truth commission"
 fontfamily: libertine
 fontawesome: yes

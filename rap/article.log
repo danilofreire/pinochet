@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.19)  27 MAR 2019 23:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.19)  28 MAR 2019 04:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1556,34 +1556,36 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 172.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 10.95pt on input line 172.
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 10.40245pt on input line 182.
 [1
 
 {/Users/politicaltheory/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdfte
 x.map}]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 184.
+(Font)              scaled to size 17.28pt on input line 196.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 184.
+(Font)              scaled to size 17.28pt on input line 196.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 197.
+(Font)              scaled to size 12.0pt on input line 209.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 197.
+(Font)              scaled to size 8.8pt on input line 209.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.6pt on input line 197.
+(Font)              scaled to size 6.6pt on input line 209.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 197.
+(Font)              scaled to size 8.8pt on input line 209.
 [2]
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 244.
+(Font)              scaled to size 11.39996pt on input line 256.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 256.
+(Font)              scaled to size 14.4pt on input line 268.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 259.
+(Font)              scaled to size 12.0pt on input line 271.
 [3] [4]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 368.
+(Font)              scaled to size 12.0pt on input line 380.
 
-LaTeX Warning: Reference `trend' on page 5 undefined on input line 368.
+LaTeX Warning: Reference `trend' on page 5 undefined on input line 380.
 
 [5] [6] [7] [8] (./article.bbl (./article.brf)
 \tf@brf=\write5
@@ -1633,27 +1635,27 @@ itimas-[]da-[]ultima-[]ditadura-[]militar .
  []
 
 [10]) [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 479.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 479.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 513.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 513.
 (./article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 479.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 479.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 513.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 513.
 Package rerunfilecheck Info: File `article.out' has not changed.
 (rerunfilecheck)             Checksum: 85810A7B732E5EAF4B23E54A765A7D8E;415.
 Package rerunfilecheck Info: File `article.brf' has not changed.
-(rerunfilecheck)             Checksum: 2581A6CA8E2342F661B6AF5FD597B4C5;1498.
+(rerunfilecheck)             Checksum: D6D553BE6B12EC9854775DA02CADEC43;1617.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 26130 strings out of 494585
- 482533 string characters out of 6176391
- 565723 words of memory out of 5000000
- 28965 multiletter control sequences out of 15000+600000
- 157185 words of font info for 271 fonts, out of 8000000 for 9000
+ 26166 strings out of 494585
+ 483461 string characters out of 6176391
+ 565783 words of memory out of 5000000
+ 28982 multiletter control sequences out of 15000+600000
+ 159275 words of font info for 284 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 53i,12n,92p,2571b,518s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,12n,92p,2571b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/politicaltheory/Library/TinyTeX/texmf-dist/fonts/enc/dvips/libertine/
 lbtn_7grukw.enc}{/Users/politicaltheory/Library/TinyTeX/texmf-dist/fonts/enc/dv
 ips/inconsolata/i4-t1-0.enc}{/Users/politicaltheory/Library/TinyTeX/texmf-dist/
@@ -1665,10 +1667,10 @@ olata-zi4r.pfb></Users/politicaltheory/Library/TinyTeX/texmf-dist/fonts/type1/p
 ublic/libertine/LinLibertineT.pfb></Users/politicaltheory/Library/TinyTeX/texmf
 -dist/fonts/type1/public/libertine/LinLibertineTB.pfb></Users/politicaltheory/L
 ibrary/TinyTeX/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb>
-Output written on article.pdf (11 pages, 303409 bytes).
+Output written on article.pdf (11 pages, 306989 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 231 compressed objects within 3 object streams
- 57 named destinations out of 1000 (max. 500000)
+ 257 PDF objects out of 1000 (max. 8388607)
+ 237 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
  26693 words of extra memory for PDF output out of 29859 (max. 10000000)
 
