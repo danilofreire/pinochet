@@ -110,7 +110,7 @@ As mentioned previously, our dataset includes 57 variables and covers the sevent
 \begin{center}
 Figure 1 about here. 
 
-Two time trends: one with the whole period,\\ another discarding the first year to bette visualise variation in later years
+Two time trends: one with the whole period,\\ another discarding the first year to better visualise variation in later years
 \end{center}
 \vspace{.5cm}
 
