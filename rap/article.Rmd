@@ -7,7 +7,7 @@ author:
   - "David Skarbek[^ds]"
   - "Eugenia Guerrero[^eg]"
 date: \today
-thanks: "We thank Fábio Barros, Umberto Mignozzetti and Robert Myles McDonnell for their helpful comments. Replication materials and R source code are available at [`http://github.com/danilofreire/pinochet`](http://github.com/danilofreire/pinochet)."
+thanks: "We thank Umberto Mignozzetti and Robert Myles McDonnell for their helpful comments. Replication materials and R source code are available at [`http://github.com/danilofreire/pinochet`](http://github.com/danilofreire/pinochet)."
 abstract: "This article presents a georeferenced dataset on human rights violations in the Pinochet dictatorship in Chile. We coded the personal details of 2,398 victims named in the Chilean Truth Commission Report and added geographical coordinates for all identifiable atrocity locations. The dataset comprises 57 variables from 1973 to 1990 and is available as a stand-alone spreadsheet or as the `pinochet` package for `R`. As examples, we describe the major temporal and spatial patterns of the human rights abuses. We also discuss our coding procedures, show descriptive statistics, and conclude with suggestions for potential applications of the dataset."
 keywords: "Chile, georeferenced event data, human rights, Pinochet, truth commission"
 fontfamily: libertine
@@ -32,7 +32,7 @@ output:
 \setlength{\parindent}{1cm}
 \setlength{\parskip}{0pt}
 
-On 11 September 1973, General Augusto Pinochet led a coup against Chile's socialist President Salvador Allende. The coup marked the beginning of a seventeen-year military dictatorship which combined rapid economic liberalisation with large-scale political repression [@meadowcroft2014hayek; @valdes1995pinochet]. In 1991, after Chile's transition to democracy, President Patricio Aylwin convened a commission to investigate human rights violations in the Pinochet regime. The Report of the National Commission on Truth and Reconciliation [-@report1991], also known as the Rettig Report[^rettig], recorded over 2,000 cases of murders and disappearances from 1973 to 1990. The Commission confronted the abuses of the past and portrayed a careful reconstruction of state violence during the military government. Most importantly, the Report contributed to the erosion of authoritarianism in Chile, as it fostered a series of criminal investigations that culminated with the indictment of General Pinochet in 2000 [@brahm2007uncovering 26]. 
+On 11 September 1973, General Augusto Pinochet led a coup against Chile's socialist President Salvador Allende. The coup marked the beginning of a seventeen-year military dictatorship which combined rapid economic liberalisation with large-scale political repression [@valdes1995pinochet]. In 1991, after Chile's transition to democracy, President Patricio Aylwin convened a commission to investigate human rights violations in the Pinochet regime. The Report of the National Commission on Truth and Reconciliation [-@report1991], also known as the Rettig Report[^rettig], recorded over 2,000 cases of murders and disappearances from 1973 to 1990. The Commission confronted the abuses of the past and portrayed a careful reconstruction of state violence during the military government. Most importantly, the Report contributed to the erosion of authoritarianism in Chile, as it fostered a series of criminal investigations that culminated with the indictment of General Pinochet in 2000 [@brahm2007uncovering 26]. 
 
 Although the Report is a valuable source of information for scholars, quantitative researchers cannot readily use the rich data it contains. In this paper, we present a manually-coded dataset with all information from the Truth Commission Report plus new variables we collected to complement the original records. We transcribed every personal detail from the 903 pages of the English translation of the Report, assigned a unique identification number to each victim, then georeferenced the location of the human rights abuses. We added coordinates of latitude and longitude to every location mentioned in the report, such as places used to torture, interrogate or murder the victims.
 
@@ -42,11 +42,11 @@ Apart from the geographical location of the incidents, our dataset includes vari
 
 # Historical Background
 
-Violence during transitions has characterised regime change in Latin America. Transitions to autocratic rule in Brazil (1964) and Argentina (1976) prompted frequent human rights violations that only recently have been fully documented [@agosin1987generals; @elpais2016argentina]. In some cases, autocrats declared unrestrained violence to be an explicit government policy. In 1992, Peru's former President Alberto Fujimori openly stated that his _autogolpe_ granted him the rights to "[apply] drastic punishments" towards any suspect of terrorism [@dabene1997narcodemocracias, 97; @samtleben2013constitucion, 56].
+Violence during transitions has characterised regime change in Latin America. Transitions to autocratic rule in Brazil (1964) and Argentina (1976) prompted frequent human rights violations that only recently have been fully documented [@agenciabrasil2014ditadura; @elpais2016argentina]. In some cases, autocrats declared unrestrained violence to be an explicit government policy. In 1992, Peru's former President Alberto Fujimori openly stated that his _autogolpe_ granted him the rights to "[apply] drastic punishments" towards any suspect of terrorism [@dabene1997narcodemocracias, 97; @samtleben2013constitucion, 56].
 
 The Pinochet regime was also notable for its brutality. On the day of the coup, the military opened fire against the _Palacio La Moneda_, the Presidential Office, and President Salvador Allende committed suicide after troops stormed the building [@verdugo2001chile]. The violence continued during the military government. The _junta_ killed thousands of students and members of labour organisations in 1973, with up to 200,000 Chileans -- about 2% of the country's population -- led into exile [@wright2007chilean, 31]. 
 
-The establishment of the Truth and Reconciliation Commission was the first attempt to make the dictatorship accountable for its crimes. The Commission focused on the most serious cases of human rights violations, those which resulted in deaths of disappearances[^omissions]. One factor that limited the scope of the investigations was that the Commission did not have the legal authority to demand collaboration from the military forces [@popkin1995truth, 85]. The Chilean Commission negotiated an amnesty to perpetrator in exchange for freedom of inquiry, and it collected testimony from victims in Chile and abroad [@quinn2001dealing, 399]. The result was a broad yet accurate description of the events. Although the military contested the conclusions of the Report, they did not question its factual information [@bakiner2009denial, 54; @brahm2005beyond]. 
+The establishment of the Truth and Reconciliation Commission was the first attempt to make the dictatorship accountable for its crimes. The Commission focused on the most serious cases of human rights violations, which are those that resulted in deaths of disappearances[^omissions]. One factor that limited the scope of the investigations was that the Commission did not have the legal authority to demand collaboration from the military forces [@popkin1995truth, 85]. The Chilean Commission negotiated an amnesty to perpetrator in exchange for freedom of inquiry, and it collected testimony from victims in Chile and abroad [@quinn2001dealing, 399]. The result was a broad yet accurate description of the events. Although the military contested the conclusions of the Report, they did not question its factual information [@bakiner2009denial, 54; @brahm2005beyond]. 
 
 While the Report did not bring legal punishment to violence perpetrators, it addressed important concerns of the victims. In February 1992, the Chilean Congress passed a law granting a monthly pension to individuals named in the Report, along with psychological treatment for their families and school subsidies for their children [@vasallo2002truth, 167]. The Chilean government also created a new office to deal with returning nationals, and President Aylwin released almost all political prisoners in the country [@quinn2001dealing, 400].
 
@@ -58,37 +58,62 @@ Despite these noteworthy examples, quantitative studies on the dynamics of autho
 
 Our dataset comprises 2,398 observations and 57 variables. Each observation corresponds to a victim of the Pinochet regime and every individual has a unique id number. There are several variables describing the personal information of the victims, such as age, gender, nationality, occupation, and political affiliation if available. The data also feature geographical coordinates for a number of the incidents, as well as information about methods of torture and causes of death. Table 1 shows an example entry from our dataset.
 
-\vspace{.5cm}
-\begin{center}
-Table 1 about here. 
+\newpage
 
-Example entry with the victim's characteristics\\ and information about their murder or disappearance.
-\end{center}
-\vspace{.5cm}
+| Variable                | Sample          |
+| :---------------------- | :-------------- |
+| region                  | Taparacá        |
+| id                      | 276             |
+| page                    | 265             |
+| start date              | 18/01/1974      |
+| end date                | 18/01/1974      |
+| last name               | Marques Agusto  |
+| first name              | Nelson José     |
+| minor                   | 0               |
+| age                     | 31              |
+| male                    | 1               |
+| occupation              | Office worker   |
+| victim affiliation      | Communist party |
+| violence                | 1 (killed)      |
+| method                  | 1 (gun)         |
+| interrogation           | NA (unknown)    |
+| torture                 | NA (unknown)    |
+| mistreatment            | 1 (yes)         |
+| perpetrator             | Military        |
+| place                   | 5 (in public)   |
+| start location          | Iquique         |
+| latitude 1              | -20.23070       |
+| longitude 1             | -70.13567       |
+| place 2                 | 4 (in custody)  |
+| location 2              | Pisagua prison  |
+| latitude 2              | -19.59667       |
+| longitude 2             | -70.21222       |
 
-[comment]: <> (Example Entry)
+Table: Sample event from the dataset (selected variables).
+
+\newpage
 
 Users can download the data as an Excel spreadsheet (`.xlsx`) or as a comma-separated values text file (`.csv`).  We have also created an `R` package called `pinochet` which includes the dataset in both formats plus the data codebook. The files follow the principles of "tidy data", where each column represents one variable and each row is one case [@wickham2014tidy]. The `pinochet` package is available for download on the Comprehensive R Archive Network (CRAN) and at <http://github.com/danilofreire/pinochet>. To make the data accessible, our GitHub repository has detailed installation instructions for users new to `R`. 
 
 ## Types of Violence
 
-The Report distinguishes between different types of violence carried out by the Pinochet regime. The first type is _deaths_. These are cases where the Commission signals a definite and known death of the victim. Take the case of Benito Heriberto Torres Torres, one of the first victims of the Pinochet regime (id number 2). Our dataset shows that Mr Torres was male, 57 years-old, and that he worked as a plumber. On the 12 September 1973, just one day after the military coup, Mr Torres was torture on the way to the 26th police station in Santiago. The records indicate he was executed and that his body was later found in Las Barrancas, Santiago. The dataset also shows that we obtained this information from pages 159-160 of the Truth Commission Report. 
+The Report distinguishes between different types of violence carried out by the Pinochet regime. The first type is _deaths_. These are cases where the Commission signals a definite and known death of the victim. Take the case of Benito Heriberto Torres Torres, one of the first victims of the Pinochet regime (id number 2). Our dataset shows that Mr Torres was male, 57 years-old, and that he worked as a plumber. On the 12 September 1973, just one day after the military coup, Mr Torres was torture on the way to the 26th police station in Santiago. The records indicate he was executed and that his body was later found in Las Barrancas, Santiago. The dataset also shows that we obtained this information from pages 159-160 of the Truth Commission Report.
+
+| Violence         | _N_    |
+| :--------------- | -----: |
+| Killed           |   1331 |
+| Disappeared      |    853 |
+| Unresolved cases |     93 |
+| Suicides         |      7 |
+| Unknown          |        |
+
+Table: Number of killings, disappearances, unresolved cases, and suicides 
 
 The second type of violence recorded in the dataset is _disappearances_. These are cases where the Truth Commission presumes government agents to have killed and disposed of the body of the victims. One such example is that of the Brazilian engineer Tulio Roberto Quintiliano Cardozo (id number 5). Mr Cardozo was a member of the Communist party and troops took him to the Military Academy for interrogation also on the 12 September 1973. He was never seen again and is presumed dead. 
 
 The third category is _disappearance, information of death_. As the name implies, these observations refer to cases the Commission confirms the individual died after being missing. The formal definition for this category is the following: "the victims are dead; they died at the hands of the government agents, or persons in their service; and these or other agents disposed of the victims' mortal remains by throwing them into a river or a sea, by covertly burying them, or by disposing of them in some other secret fashion" [@report1991 44]. The assassination of Humberto de las Nieves Fuentes Rodriguez is an example (id number 854). The military took in custody to the Colina air base, then loaded onto a helicopter with other political prisoners. According to the Report, government agents drugged him, beat him with a metal bar, opened his stomach with a knife before throwing the former Communist alderman from a helicopter. While his body has not been found, there is enough information about the case to classify his death as a severe human rights violation. 
 
 The last group is that of _unresolved_ cases. The Report defines them as cases where insufficient information or evidence is available. Our dataset counts 93 unresolved cases, many with georeferenced information about possible torture sites[^ambiguous]. However, it is very likely that the people who disappeared were, in fact, killed. Based on the report and our methodology, we can only determine that 65% of all of the cases led to an assassination. Forty percent of the documented cases are disappearances. 
-
-\vspace{.5cm}
-\begin{center}
-Table 2 about here. 
-
-Number of killings, disappearances, unresolved cases, and suicides 
-\end{center}
-\vspace{.5cm}
-
-[comment]: <> (Table 2 around here)
 
 Although the Report provides a comprehensive list of the regime victims, the Chilean Truth Commission itself acknowledges that the data are incomplete. The Commission had only nine months to write the Report and it had no legal power to oblige citizens to cooperate. Therefore, we expect that some cases have not been recorded. But this problem is not unique to the Pinochet regime. Selection bias is a common feature in events data, even more so in datasets about armed conflict or government repression [@ball2019using; @chapman2001truth]. As the cases might not be a representative sample of the population of victims, we suggest scholars to consider issues of model specification.
 
@@ -114,7 +139,7 @@ Two time trends: one with the whole period,\\ another discarding the first year 
 \end{center}
 \vspace{.5cm}
 
-[comment]: <> (Figure 02 - Time Trends Here)
+[comment]: <> (Figure 01 - Time Trends Here)
 \newpage 
 
 In September 1973 alone, the government committed 633 acts of violence against civilians, of which 406 the Commission signals as "definite and known deaths". The violations continued in October, with 504 incidences and 317 certified deaths. The numbers decline to about 10% of those levels in November and December, and then recede further in 1974.
@@ -131,7 +156,7 @@ Two maps: deaths and disappearances
 \end{center}
 \vspace{.5cm}
 
-[comment]: <> (Figure 03 - Spatial variation)
+[comment]: <> (Figure 02 - Spatial variation)
 
 We can further disaggregate the analysis and visualise how the regime persecuted particular groups. Students and members of left-wing parties are two categories of special interest. On 18 September 1073, only one week after the coup, Pinochet and his followers rounded up thousands of students and activists in Chile's National Stadium. Military forces tortured and murdered hundreds of prisoners over the course of a few days. An emblematic victim was Víctor Lidio Jara Martínez, a university teacher, theatre director and singer (id number 25). According to witnesses, Mr Jara had his hand crushed and his wrists broken, and he was later shot 44 times with a machine gun. Mr Jara's body was left in the front of the stadium as a warning for other political prisoners [@mcsherry2015victor 56]. The government again tortured and killed students and activists in its campaign against the Revolutionary Left Movement (_Movimiento de Izquierda Revolucionaria_, MIR). The MIR originated in student unions and in the late 1970s the movement promoted a series of attacks against government personnel and official buildings. Government forces strongly retaliated and the group resorted to terrorist tactics to confront the regime [@schlotterbeck2018beyond].
 
@@ -143,7 +168,7 @@ Time trends: attacks against students and workers
 \end{center}
 \vspace{.5cm}
 
-[comment]: <> (Figure 04 - Students and Communist Leaders)
+[comment]: <> (Figure 03 - Students and Communist Leaders)
 
 # Conclusion: New Avenues for Research
 
