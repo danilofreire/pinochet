@@ -2,13 +2,17 @@
 title:  |
         | **Data Codebook and Appendix for**
         | **Deaths and Disappearances in the Pinochet Regime: A New Dataset**
-author:
-  - "Danilo Freire^[PhD Candidate, Department of Political Economy, King's College London. Email:   [danilofreire@gmail.com](mailto:danilofreire@gmail.com).] &nbsp; John Meadowcroft^[Senior Lecturer in Public Policy, Department of Political Economy, King's College London. Email:  [john.meadowcroft@kcl.ac.uk](mailto:john.meadowcroft@kcl.ac.uk).] &nbsp; David Skarbek^[Associate Professor, Department of Political Science, Brown University. Email: [david_skarbek@brown.edu](david_skarbek@brown.edu). Corresponding author.] &nbsp; Eugenia Guerrero^[Software Developer, Tempo UK.]"
-date: "`r format(Sys.time(), '%B %d, %Y')`"
-abstract: How did the Pinochet regime use deaths and disappearances after the violent military coup in September 1973? The coup resulted in more than three decades of violence as General Pinochet's government fought against left-wing movements for the sake of the 'national wellbeing.' While these efforts were significant, they were not uniformly distributed spatially or over time during his regime. This paper provides new data on observed variation of regime-based violence. It codes and compiles data from two volumes of the Report of the Chilean National Commission on Truth and Reconciliation, a systematic investigation of the Pinochet regime published in 1991. The data documents the initially high-level and then steep decline of these atrocities, the extent to which victims were targeted, and other demographic information about the victims. Our data also includes geographic information system data that allows researchers to map the spatial variation of atrocities over time.
-keywords: authoritarianism, Chile, human rights, Pinochet, truth commission
+author: 
+  - "Danilo Freire[^df]"
+  - "John Meadowcroft[^jm]"
+  - "David Skarbek[^ds]"
+  - "Eugenia Guerrero[^eg]"
+date: \today
+thanks: "Replication materials and R source code are available at [`http://github.com/danilofreire/pinochet`](http://github.com/danilofreire/pinochet)."
+fontfamily: libertine
+fontawesome: yes
 fontsize: 12pt
-monospace-url: no
+monospace-url: yes
 spacing: double
 papersize: a4paper
 bibliography: references.bib
@@ -17,10 +21,9 @@ output:
   pdf_document:
     citation_package: natbib
     fig_caption: yes
-    number_sections: no
+    number_sections: yes
     keep_tex: no
     template: template.latex
-    latex_engine: pdflatex
 ---
 
 \newpage
@@ -29,13 +32,13 @@ output:
 
 \setlength{\parindent}{0pt}
 
-This document contains the codebook, data and code necessary to replicate the results in "Deaths and Disappearances in the Pinochet Regime" by @freire2017pinochet-regime-data. The `dataset.csv` file includes the complete dataset. The original Excel file, also included in the paper [GitHub repository](https://github.com/danilofreire/pinochet-victims-data), has been pre-processed to reduce compatibility problems with other statistical software such as R or Stata. All data pre-processing steps are described below. The analyses were performed in the R statistical language, version 3.4.1 [@rstats2017].
+This document contains the codebook, data and code necessary to replicate the results in "Deaths and Disappearances in the Pinochet Regime: A New Dataset" by @freire2019pinochet. The `pinochet.csv` file includes the complete dataset. The original Excel file, also included in the paper [GitHub repository](https://github.com/danilofreire/pinochet-victims-data), has been pre-processed to reduce compatibility problems with other statistical software such as R or Stata.
 
 # Background
 
 The violent military coup in Chile in September 1973 resulted in over three decades of sustained violence, deaths, and forced disappearances as General Pinochet’s government fought against left-wing movements for the sake of the 'national wellbeing'. The fall of Pinochet’s regime and the traumatic consequences of his authoritarian government left Chile deeply divided. In order to move forward and avoid a repetition of the past, the Chilean government highlighted the need of an impartial and comprehensive report detailing the extent of the deaths and disappearances.
 
-By compiling and analyzing the data from both volumes of the Report of the Chilean National Commission on Truth and Reconciliation, we seek to understand the logic and dynamics of the violence, deaths, and disappearances under Pinochet’s Chile.
+By compiling and analysing the data from both volumes of the Report of the Chilean National Commission on Truth and Reconciliation, we seek to understand the logic and dynamics of the violence, deaths, and disappearances under Pinochet’s Chile.
 
 # Sources
 
