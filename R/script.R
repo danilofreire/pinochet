@@ -16,12 +16,12 @@ if (!require("devtools")) {
 if (!require("narnia")) {
         install_github("njtierney/narnia")
 }
+if (!require("ggplot2")) {
+        install.packages("ggplot2")
+}
 if (!require("rnaturalearth")) {
         install.packages("rnaturalearth")
 }
-
-devtools::install_github("tidyverse/ggplot2")
-library(ggplot2)
 
 ## Load data
 df <- readr::read_csv("https://goo.gl/F1tgk1")
@@ -83,12 +83,16 @@ df <- plyr::rename(df,
 
 # Transform variables
 df <- transform(df,
+                region = as.character(region),
+                id = as.integer(id),
                 merged_id = as.integer(merged_id),
+                page = as.character(page),
                 start_date = as.Date(start_date, "%d/%m/%Y"),
                 end_date = as.Date(end_date, "%d/%m/%Y"),
+                last_name = as.character(last.name),
+                first_name = as.character(first_name),
                 minor = as.factor(minor),
                 age = as.numeric(age),
-                female = female - 1,
                 violence = as.integer(violence),
                 method = as.integer(method),
                 number_previous_arrests = as.integer(number_previous_arrests),

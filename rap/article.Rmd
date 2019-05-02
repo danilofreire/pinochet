@@ -7,8 +7,8 @@ author:
   - "David Skarbek[^ds]"
   - "Eugenia Guerrero[^eg]"
 date: \today
-thanks: "We thank Umberto Mignozzetti and Robert Myles McDonnell for their helpful comments. Replication materials and R source code are available at [`http://github.com/danilofreire/pinochet`](http://github.com/danilofreire/pinochet)."
-abstract: "This article presents a georeferenced dataset on human rights violations in the Pinochet dictatorship in Chile. We coded the personal details of 2,398 victims named in the Chilean Truth Commission Report and added geographical coordinates for all identifiable atrocity locations. The dataset comprises 57 variables from 1973 to 1990 and is available as a stand-alone spreadsheet or as the `pinochet` package for `R`. As examples, we describe the major temporal and spatial patterns of the human rights abuses. We also discuss our coding procedures, show descriptive statistics, and conclude with suggestions for potential applications of the dataset."
+thanks: "We thank Umberto Mignozzetti, Lucas Mingardi and Robert Myles McDonnell for their helpful comments. Replication materials and R source code are available at [`http://github.com/danilofreire/pinochet`](http://github.com/danilofreire/pinochet)."
+abstract: "This article presents a georeferenced dataset on human rights violations in the Pinochet dictatorship in Chile. We coded the personal details of 2,398 victims named in the Chilean Truth Commission Report and added geographical coordinates for all identifiable atrocity locations. The dataset comprises XXXXXXXXXX variables from 1973 to 1990 and is available as a stand-alone spreadsheet or as the `pinochet` package for `R`. As examples, we describe the major temporal and spatial patterns of the human rights abuses. We also discuss our coding procedures, show descriptive statistics, and conclude with suggestions for potential applications of the dataset."
 keywords: "Chile, georeferenced event data, human rights, Pinochet, truth commission"
 fontfamily: libertine
 fontawesome: yes
@@ -56,35 +56,34 @@ Despite these noteworthy examples, quantitative studies on the dynamics of autho
 
 # The Dataset
 
-Our dataset comprises 2,398 observations and 57 variables. Each observation corresponds to a victim of the Pinochet regime and every individual has a unique id number. There are several variables describing the personal information of the victims, such as age, gender, nationality, occupation, and political affiliation if available. The data also feature geographical coordinates for a number of the incidents, as well as information about methods of torture and causes of death. Table 1 shows an example entry from our dataset.
+Our dataset comprises 2,398 observations and XXXXXXXXX variables. Each observation corresponds to a victim of the Pinochet regime and every individual has a unique id number. There are several variables describing the personal information of the victims, such as age, gender, nationality, occupation, and political affiliation if available. The data also feature geographical coordinates for a number of the incidents, as well as information about methods of torture and causes of death. Table 1 shows an example entry from our dataset.
 
 \newpage
 
 | Variable                | Sample          |
 | :---------------------- | :-------------- |
-| region                  | Taparacá        |
 | id                      | 276             |
 | page                    | 265             |
 | start date              | 18/01/1974      |
 | end date                | 18/01/1974      |
 | last name               | Marques Agusto  |
 | first name              | Nelson José     |
-| minor                   | 0               |
+| minor                   | 0 (no)          |
 | age                     | 31              |
-| male                    | 1               |
-| occupation              | Office worker   |
-| victim affiliation      | Communist party |
-| violence                | 1 (killed)      |
-| method                  | 1 (gun)         |
+| male                    | 1 (yes)         |
+| occupation              | office worker   |
+| victim affiliation      | communist party |
+| violence                | killed          |
+| method                  | gun             |
 | interrogation           | NA (unknown)    |
 | torture                 | NA (unknown)    |
 | mistreatment            | 1 (yes)         |
-| perpetrator             | Military        |
-| place                   | 5 (in public)   |
+| perpetrator             | military        |
+| place                   | in public       |
 | start location          | Iquique         |
 | latitude 1              | -20.23070       |
 | longitude 1             | -70.13567       |
-| place 2                 | 4 (in custody)  |
+| place 2                 | in custody      |
 | location 2              | Pisagua prison  |
 | latitude 2              | -19.59667       |
 | longitude 2             | -70.21222       |
@@ -105,9 +104,9 @@ The Report distinguishes between different types of violence carried out by the 
 | Disappeared      |    853 |
 | Unresolved cases |     93 |
 | Suicides         |      7 |
-| Unknown          |        |
+| Unknown          |    115 |
 
-Table: Number of killings, disappearances, unresolved cases, and suicides 
+Table: Number of killings, disappearances, unresolved cases, and suicides.
 
 The second type of violence recorded in the dataset is _disappearances_. These are cases where the Truth Commission presumes government agents to have killed and disposed of the body of the victims. One such example is that of the Brazilian engineer Tulio Roberto Quintiliano Cardozo (id number 5). Mr Cardozo was a member of the Communist party and troops took him to the Military Academy for interrogation also on the 12 September 1973. He was never seen again and is presumed dead. 
 
