@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1559074932323.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "4F984D0A",
+    "lastKnownWriteTime" : 2318265524422193721,
+    "last_content_update" : 1559074932323,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "84F92866",
+        "caption" : "pinochet",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=pinochet&cache_key=84F92866",
+        "displayedObservations" : 2398,
+        "environment" : "",
+        "expression" : "pinochet",
+        "object" : "pinochet",
+        "preview" : 0,
+        "totalObservations" : 2398,
+        "variables" : 59
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

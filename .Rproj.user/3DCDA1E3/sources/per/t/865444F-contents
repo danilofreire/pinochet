@@ -1,0 +1,11 @@
+citHeader("To cite pinochet in publications use")
+
+citEntry(entry = "Manual",
+        title = "{congressbr}: An R Package for Analysing Data from Brazil's Chamber of Deputies and Federal Senate",
+        author = personList(as.person("Danilo Freire"),
+        as.person("Lucas Mingardi")),
+        as.person("Robert Myles McDonnell"),
+        year = "2019",
+        note = "R package version 0.1",
+        url = "https://CRAN.R-project.org/package=pinochet"
+)
