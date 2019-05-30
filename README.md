@@ -1,12 +1,12 @@
 # Deaths and Disappearances in the Pinochet Regime: A New Dataset
 
-This Github repository contains data and documented R code for [Deaths and Disappearances in the Pinochet Regime: A New Dataset](https://osf.io/vqnwu) by Freire et al (2019). We coded the personal details of 2,398 victims named in the Chilean Truth Commission Report along with information about the perpetrators and geographical coordinates for all identifiable atrocity locations. The dataset covers from 1973 to 1990 and includes 59 indicators. Please refer to our [accompanying article](https://osf.io/vqnwu) and our [online appendix](https://osf.io/uv8h3/) for more details.
+This Github repository contains data and documented R code for [Deaths and Disappearances in the Pinochet Regime: A New Dataset](https://osf.io/vqnwu) by Freire et al (2019). We coded the personal details of 2,398 victims named in the Chilean Truth Commission Report along with information about the perpetrators and geographical coordinates for all identifiable atrocity locations. The dataset covers from 1973 to 1990 and includes 59 indicators. Please refer to our [accompanying article](https://osf.io/vqnwu) and our [online appendix](https://osf.io/8fkxq) for more details.
 
 This branch has the data and code for the main article. The source code for the `pinochet` package is available in the [package branch](https://github.com/danilofreire/pinochet/tree/package).
 
 ## Installation
 
-The dataset is available both as an [Excel spreadsheet](http://github.com/danilofreire/pinochet/data/pinochet.xlsx) and as the `pinochet` package for `R`. The stable version of the package is on [CRAN](https://cran.r-project.org/package=pinochet). You can install it with:
+The dataset is available in three formats: as an [Excel spreadsheet](http://github.com/danilofreire/pinochet/data/pinochet.xlsx), a [`csv` file](http://github.com/danilofreire/pinochet/data/pinochet.csv),  and as the [`pinochet` package for `R`](http://github.com/danilofreire/pinochet/tree/package). The stable version of the package is on [CRAN](https://cran.r-project.org/package=pinochet). You can install it with:
 
 ```
 install.packages("pinochet")
@@ -32,7 +32,7 @@ data(pinochet)
 
 There are 59 variables in our dataset. Most of them refer to information about the victims, such as gender, age, first and last name, and their political affiliation (if available). The Chilean Truth Commission Report, our main data source, also mentions some characteristics of the perpetrators when they could be identified. We include coordinates of latitude and longitude for all identifiable places used for torture or executions. We created a variable indicating whether the coordinates are exact or not. In some cases, the Truth Commission was not able to locate where the atrocities took place. We likewise indicate that the coordinates are approximate. 
 
-Our [data codebook](https://github.com/danilofreire/pinochet/manuscript/online-appendix.pdf) has the description of the variables. You can quickly see the variable names with: 
+Our [data codebook](https://osf.io/8fkxq) has the description of the variables. You can quickly see the variable names with: 
 
 ```
 names(pinochet)
@@ -148,7 +148,7 @@ You can cite the manuscript as:
 If you use the `pinochet` package, you can cite it as:
 
 ```
-@Manual{,
+@Manual{freire2019package,
     title = {pinochet: Packages data about the victims of the Pinochet regime},
     author = {Danilo Freire and Lucas Mingardi and Robert McDonnell},
     year = {2019},
