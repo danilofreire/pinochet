@@ -2,6 +2,8 @@
 
 This Github repository contains data and documented R code for [Deaths and Disappearances in the Pinochet Regime: A New Dataset](https://osf.io/rm4y8) by Freire et al (2019). We coded the personal details of 2,398 victims named in the Chilean Truth Commission Report along with information about the perpetrators and geographical coordinates for all identifiable atrocity locations. The dataset covers from 1973 to 1990 and includes 59 indicators. Please refer to our [accompanying article](https://osf.io/rm4y8) and our [online appendix](http://github.com/danilofreire/pinochet/manuscript/online-appendix/online-appendix.pdf) for more details.
 
+This branch has the data and code for the main article. The source code for the `pinochet` package is available in the [package branch](https://github.com/danilofreire/pinochet/tree/package).
+
 ## Installation
 
 The dataset is available both as an [Excel spreadsheet](http://github.com/danilofreire/pinochet/data/pinochet.xlsx) and as the `pinochet` package for `R`. The stable version of the package is on [CRAN](https://cran.r-project.org/package=pinochet). You can install it with:
@@ -16,7 +18,14 @@ We plan to update the dataset by including information from other official sourc
 if (!require("devtools")) {
     install.packages("devtools")
 }
-devtools::install_github("danilo/pinochet")
+devtools::install_github("danilo/pinochet", ref = "package")
+```
+
+Then load the dataset with:
+
+```
+library(pinochet)
+data(pinochet)
 ```
 
 ## Variables
