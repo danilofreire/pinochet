@@ -1,6 +1,6 @@
 # Deaths and Disappearances in the Pinochet Regime: A New Dataset
 
-This Github repository contains data and documented R code for [Deaths and Disappearances in the Pinochet Regime: A New Dataset](https://osf.io/rm4y8) by Freire et al (2019). We coded the personal details of 2,398 victims named in the Chilean Truth Commission Report along with information about the perpetrators and geographical coordinates for all identifiable atrocity locations. The dataset covers from 1973 to 1990 and includes 59 indicators. Please refer to our [accompanying article](https://osf.io/rm4y8) and our [online appendix](http://github.com/danilofreire/pinochet/manuscript/online-appendix/online-appendix.pdf) for more details.
+This Github repository contains data and documented R code for [Deaths and Disappearances in the Pinochet Regime: A New Dataset](https://osf.io/vqnwu) by Freire et al (2019). We coded the personal details of 2,398 victims named in the Chilean Truth Commission Report along with information about the perpetrators and geographical coordinates for all identifiable atrocity locations. The dataset covers from 1973 to 1990 and includes 59 indicators. Please refer to our [accompanying article](https://osf.io/vqnwu) and our [online appendix](https://osf.io/uv8h3/) for more details.
 
 This branch has the data and code for the main article. The source code for the `pinochet` package is available in the [package branch](https://github.com/danilofreire/pinochet/tree/package).
 
@@ -137,7 +137,7 @@ You can cite the manuscript as:
 ```
 @misc{freire2019pinochet,
   title={{Deaths and Disappearances in the Pinochet Regime: A New Dataset}},
-  howpublished = {\url{https://osf.io/rm4y8}},
+  howpublished = {\url{https://osf.io/vqnwu}},
   publisher={Open Science Framework},
   author={Freire, Danilo and Meadowcroft, John and Skarbek, David and Guerrero, Eugenia},
   year={2019},
