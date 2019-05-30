@@ -1,6 +1,6 @@
 # Deaths and Disappearances in the Pinochet Regime: A New Dataset
 
-This Github repository contains data and documented R code for [Deaths and Disappearances in the Pinochet Regime: A New Dataset](https://osf.io/rm4y8) by Freire et al (2019). We coded the personal details of 2,398 victims named in the Chilean Truth Commission Report along with geographical coordinates for all identifiable atrocity locations and information about the perpetrators. The dataset covers from 1973 to 1990 and includes XXXXX indicators. Please refer to our [accompanying article](https://github.com/danilofreire/pinochet/manuscript/article.pdf) for more details.
+This Github repository contains data and documented R code for [Deaths and Disappearances in the Pinochet Regime: A New Dataset](https://osf.io/rm4y8) by Freire et al (2019). We coded the personal details of 2,398 victims named in the Chilean Truth Commission Report along with information about the perpetrators and geographical coordinates for all identifiable atrocity locations. The dataset covers from 1973 to 1990 and includes 59 indicators. Please refer to our [accompanying article](https://osf.io/rm4y8) and our [online appendix](http://github.com/danilofreire/pinochet/manuscript/online-appendix/online-appendix.pdf) for more details.
 
 ## Installation
 
@@ -21,40 +21,12 @@ devtools::install_github("danilo/pinochet")
 
 ## Variables
 
-There are XXXX variables in our dataset. Most of them refer to information about the victims, such as gender, age, first and last name, and their political affiliation (if available). The Chilean Truth Commission Report, our main data source, also mentions some characteristics of the perpetrators when they could be identified. We include coordinates of latitude and longitude for all identifiable places used for torture or executions. We created a variable indicating whether the coordinates are exact or not. In some cases, the Truth Commission was not able to locate where the atrocities took place. We likewise indicate that the coordinates are approximate. 
+There are 59 variables in our dataset. Most of them refer to information about the victims, such as gender, age, first and last name, and their political affiliation (if available). The Chilean Truth Commission Report, our main data source, also mentions some characteristics of the perpetrators when they could be identified. We include coordinates of latitude and longitude for all identifiable places used for torture or executions. We created a variable indicating whether the coordinates are exact or not. In some cases, the Truth Commission was not able to locate where the atrocities took place. We likewise indicate that the coordinates are approximate. 
 
-Our [data codebook](https://github.com/danilofreire/pinochet/codebook.pdf) has a full description of the variables. You can quickly see the variable names with: 
+Our [data codebook](https://github.com/danilofreire/pinochet/manuscript/online-appendix.pdf) has the description of the variables. You can quickly see the variable names with: 
 
 ```
 names(pinochet)
-```
-
-## Long and Wide Data Formats
-
-We present the dataset in two formats, wide and long. In the wide data format, each row corresponds to a victim of the Pinochet regime and each column is one variable, such as last name or the age of the victim. Scholars looking for information about a particular individual may find the wide format useful. To download the data in wide format, type:
-
-```
-library(pinochet) 
-
-pinochet_wide() 
-```
-
-This is how a sample entry looks like:
-
-```
-pinochet[276,]
-```
-
-The wide format is the default. For convenience, the `pinochet` package also has a function that converts the dataset from wide to long format. Please type:
-
-```
-pinochet_long()
-```
-
-if the long format is more appropriate to your needs. Long data has a column for all variable types and additional columns for the values of those variables. You can see an example entry below:
-
-```
-pinochet[276,]
 ```
 
 ## Applications
@@ -62,18 +34,92 @@ pinochet[276,]
 To illustrate the potential uses of the package, we show some spatial and temporal variation of the data. We see that the Pinochet regime concentrated most of the violence in the first three months after the coup. The graph below describe time trends for the atrocities perpetrated by the dictatorship:
 
 ```
-library(ggplot2)
+# Install necessary packages
+if (!require("tidyverse")) {
+        install.packages("tidyverse")
+}
+if (!require("lubridate")) {
+        install.packages("lubridate")
+}
+
+# Plot
+pinochet %>% 
+  ungroup() %>% 
+  mutate(Year = year(start_date_monthly)) %>%
+  group_by(Year) %>% tally() %>% 
+  filter(!is.na(Year)) %>% 
+  ggplot(aes(x = Year, y = n)) +
+  geom_line() +
+  theme_minimal() +
+  labs(x = NULL, y = NULL, title = "Number of Human Rights Abuses", 
+       subtitle = "Pinochet Regime, 1973-1990") +
+  scale_y_continuous(breaks = c(0, 500, 1000, 1274))
 ```
+
+!["Human rights abuses in the Pinochet regime, 1973-1990"]()
 
 We can also plot the geographical locations of the human rights abuses: 
 
 ```
-library(rnaturalearth)
+# Load necessary packages
+if (!require("sf")) {
+        install.packages("sf")
+}
+if (!require("devtools")) {
+        install.packages("devtools")
+}
+devtools::install_github("ropensci/rnaturalearthdata")
+if (!require("rnaturalearthhires")) {
+        install.packages("rnaturalearthhires",
+                         repos = "http://packages.ropensci.org",
+                         type = "source")
+}
+library(rnaturalearthdata)
+library(rnaturalearthhires)
+
+# Save events
+chile <- rnaturalearthhires::countries10 %>%
+st_as_sf() %>%
+filter(SOVEREIGNT %in% c("Chile", "Argentina", "Peru", "Paraguay"))
+
+violent_events <- pinochet %>% 
+  select(violence, latitude_1, longitude_1) %>%
+  filter(!is.na(violence), !is.na(latitude_1), !is.na(longitude_1)) %>%
+  st_as_sf(coords = c("longitude_1", "latitude_1"), crs = 5361) 
+
+coords_vio <- st_coordinates(violent_events) %>% as_tibble()
+violent_events <- bind_cols(violent_events, coords_vio)
+
+# Create map
+ggplot() +
+  geom_sf(data = chile) +
+  coord_sf(xlim = c(-75.6, -67), ylim = c(-55, -19)) +
+  labs(x = NULL, y = NULL) +
+  geom_point(data = violent_events, aes(x = X, y = Y,
+                                        colour = violence,
+                                        fill = violence),
+             shape = 21) + 
+  scale_colour_manual(values = c("#042333FF", "#481567FF",
+                                 "#253582FF", "#2D708EFF",
+                                 "#29AF7FFF")) +
+  scale_fill_manual(values = alpha(c("#042333FF", "#481567FF",
+                                     "#253582FF", "#2D708EFF",
+                                     "#29AF7FFF"), .6)) +
+  facet_wrap(~violence, nrow = 1) +
+  theme_minimal() +
+  theme(strip.text = element_blank()) +
+  theme(legend.position = "bottom",
+        axis.text = element_blank()) + 
+  theme(legend.title=element_blank())
 ```
+
+!["Spatial variation in human rights abuses in the Pinochet regime, 1973-1990"]()
 
 We believe our data open new topics of research. For instance, researchers can test whether the Pinochet regime has caused attitudinal changes in direct or indirect victims, the relationship between human rights abuses and post-regime levels of interpersonal violence, or investigate the connections between international legitimacy and domestic politics in repressive regimes. These questions are still discussed in the literature and our dataset provides a way to empirically test them.
 
-We hope our dataset is useful for scholars interested in these and other questions, and that the information it contains elicits hypotheses not only about the Pinochet period, but about authoritarian governments more generally.
+We hope our dataset is useful for scholars interested in these and other questions, and that the information it contains elicits hypotheses not only about the Pinochet period, but about authoritarian governments more generally. 
+
+Contributions and suggestions are always welcome. Feel free to send me an email or to open an issue on GitHub.
 
 ## Citation
 
@@ -93,7 +139,13 @@ You can cite the manuscript as:
 If you use the `pinochet` package, you can cite it as:
 
 ```
-citation("pinochet")
+@Manual{,
+    title = {pinochet: Packages data about the victims of the Pinochet regime},
+    author = {Danilo Freire and Lucas Mingardi and Robert McDonnell},
+    year = {2019},
+    note = {R package version 0.1.0},
+    url = {http://github.com/danilofreire/pinochet}
+}
 ```
 
 

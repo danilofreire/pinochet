@@ -160,8 +160,8 @@ filter(SOVEREIGNT %in% c("Chile", "Argentina", "Peru", "Paraguay"))
 
 violent_events <- pinochet %>% 
   select(violence, latitude_1, longitude_1) %>%
-  filter(!is.na(latitude_1), !is.na(longitude_1), !is.na(violence)) %>%
-  st_as_sf(coords = c("longitude_1", "latitude_1"), crs = 5361)
+  filter(!is.na(violence), !is.na(latitude_1), !is.na(longitude_1)) %>%
+  st_as_sf(coords = c("longitude_1", "latitude_1"), crs = 5361) 
 
 coords_vio <- st_coordinates(violent_events) %>% as_tibble()
 violent_events <- bind_cols(violent_events, coords_vio)
@@ -181,28 +181,39 @@ ggplot() +
   theme(legend.title=element_blank())
 ```
 
-We can further disaggregate the analysis and visualise how the regime persecuted particular groups. School and university students are two categories of special interest. On 18 September 1073, only one week after the coup, Pinochet and his followers rounded up thousands of students and activists in Chile's National Stadium. Military forces tortured and murdered dozens of prisoners over the course of a few days. The government again tortured and killed students and activists in its campaign against the Revolutionary Left Movement (_Movimiento de Izquierda Revolucionaria_, MIR). The MIR originated in student unions and in the late 1970s the movement promoted a series of attacks against government personnel and official buildings. Government forces strongly retaliated and the group resorted to terrorist tactics to confront the regime [@schlotterbeck2018beyond].
+We can further disaggregate the analysis and visualise how particular groups perpetrated violence during the regime. Figure~\ref{fig:time-trend-perpetrators} shows how the regime forces and the opposition attacked each other after the consolidation of the military rule. The mid-1970s is a period of severe state repression, but the government violence lessens around the end of the decade. In 1977, the National Intelligence Directorate (_Dirección de Inteligencia Nacional_), the Chilean secret police, was dissolved after killing the main leaders of the Revolutionary Left Movement (_Movimiento de Izquierda Revolucionaria_, MIR), a left-wing guerrilla organisation [@loveman1986military, 12]. In contrast, the number of atrocities by the opposition increases in the late 1970s and early 1980s, when the MIR regrouped and promoted a series of attacks against government personnel and official buildings. In the mid-1980s, we see a retaliation from the Chilean government against a wave of protests in the wake of an economic crisis. State violence would only recede in the years preceding the democratisation [@valdivia2003terrorism, 188]. 
 
 \vspace{.5cm}
 
-```{r time-trend-students, echo=FALSE, fig.align='center', fig.height=3, fig.width=5, warning=FALSE, message=FALSE, fig.cap='Human rights abuses against students, 1973-1990',cache=TRUE}
-
-pinochet %>% ungroup() %>% 
+```{r time-trend-perpetrators, echo=FALSE, fig.align='center', fig.height=4, fig.width=5, warning=FALSE, message=FALSE, fig.cap='Violence perpetrators in the Pinochet regime, 1973-1990'}
+# Load requied packages
+if (!require("tidyverse")) {
+        install.packages("tidyverse")
+}
+if (!require("lubridate")) {
+        install.packages("lubridate")
+}
+# Plot
+pinochet %>% 
+  select(c(perpetrator_affiliation, start_date_monthly)) %>%
   mutate(Year = year(start_date_monthly)) %>%
-  group_by(Year) %>% tally() %>% 
-  filter(!is.na(Year)) %>% 
-  ggplot() +
-  geom_line(aes(x = Year, y = n)) +
-  geom_line(aes(x = Year, y = n)) +
+  filter(!is.na(perpetrator_affiliation)) %>% 
+  filter(!is.na(Year)) %>%
+  filter(Year >= 1975) %>%
+  group_by(perpetrator_affiliation, Year) %>%
+  summarise(no_rows = length(perpetrator_affiliation)) %>%
+  ggplot(aes(x = Year, y = no_rows, colour = perpetrator_affiliation)) +
+  viridis::scale_color_viridis(discrete = TRUE,
+                               end = 0.5, direction = -1) + 
+  geom_line() +
   theme_minimal() +
-  labs(x = NULL, y = NULL, title = "Number of Human Rights Abuses Against Students", 
-       subtitle = "Pinochet Regime, 1973-1990") +
-  scale_y_continuous(breaks = c(0, 500, 1000))
+  labs(x = NULL, y = NULL, title = "Violence Perpetrators", 
+       subtitle = "Pinochet Regime, 1975-1990") +
+  scale_x_continuous(breaks = c(1975, 1980, 1985, 1990)) +
+  facet_grid(perpetrator_affiliation ~ ., scales = "fixed") + 
+  theme(legend.position = "bottom") + 
+  theme(legend.title=element_blank())
 ```
-
-\vspace{.5cm}
-
-[comment]: <> (Figure 03 - Students and Communist Leaders)
 
 # Conclusion: New Avenues for Research
 
@@ -222,7 +233,7 @@ Lastly, scholars can investigate the connections between international legitimac
 
 [^ds]: Associate Professor, Department of Political Science and the Political Theory Project, Brown University, [`david_skarbek@brown.edu`](david_skarbek@brown.edu), [`http://davidskarbek.com`](http://davidskarbek.com).
 
-[^eg]: Software Developer, Tempo UK.
+[^eg]: Software Developer, Attest, UK.
 
 [^rettig]: Former Chilean Senator and jurist Raúl Rettig chaired the Chilean National Commission for Truth and Reconciliation. 
 

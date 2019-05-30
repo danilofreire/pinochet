@@ -21,6 +21,7 @@ output:
   pdf_document:
     citation_package: natbib
     fig_caption: yes
+    toc: true
     number_sections: yes
     keep_tex: no
     template: template.latex
@@ -32,7 +33,7 @@ output:
 
 \setlength{\parindent}{0pt}
 
-This document contains the codebook, data and code necessary to replicate the results in "Deaths and Disappearances in the Pinochet Regime: A New Dataset" by @freire2019pinochet. The `pinochet.csv` file includes the complete dataset. The original Excel file, also included in the paper [GitHub repository](https://github.com/danilofreire/pinochet-victims-data), has been pre-processed to reduce compatibility problems with other statistical software such as R or Stata.
+This document contains the code necessary to replicate the results in "Deaths and Disappearances in the Pinochet Regime: A New Dataset" by @freire2019dataset. The data are available as the `pinochet` package for the `R` statistical language [@freire2019pinochet] and as an Excel spreadsheet at <http://github.com/danilofreire/pinochet>. 
 
 # Background
 
@@ -46,649 +47,280 @@ Report of the Chilean National Commission on Truth and Reconciliation, Vol. 1.
 
 Report of the Chilean National Commission on Truth and Reconciliation, Vol. 2.
 
-\newpage
-
 # Variables
 
-**Region**. Report of the Chilean National Commission on Truth and Reconciliation, Vol. 1.
+The dataset has 59 variables with information about the victims, the perpetrators, and geographical coordinates of each incident. We provide a brief description of each variable below. Here, we sorted them alphabetically.
 
-**Case number**. Variable label: “Case number in the dataset”.
+* `additional_comments`: This variable gives additional information about cases that are too ambiguous to fit precisely into a single category. For instance, when the Truth and Commission Report is unsure whether the victim was killed or committed suicide, or if a given human rights abuse may have occurred in Santiago or elsewhere. Only 10 cases have additional information.
 
-**Sub-case number**. Variable label: “Sub-case number in the dataset”.
+* `age`: Victim's age, in years. The variable ranges from 0.22 (about 4 months) to 85. The mean is 29.7 years.
 
-**Merged ID**. Variable label: “Identification number in the dataset”. The variable ‘Merged ID’ was created so as to have a complete row of ID numbers recognized by the mapping software. The previous two variables label cases by number (e.g. 1098) and subdivide the cases within that number (e.g. 1098 A, 1098 B).
+* `end_date_daily`: Day when the human rights abuse ended.
 
-**Page**. Variable label: “Page related to the identification number in the dataset”.
+* `end_date_monthly`: Not all instances of human rights abuses have exact dates. This variable indicates the month where the atrocity occurred, when this information is available. We used the first day of the month as a reference. 
 
-**Start Date**. Variable label: “Start date of incident”.
+* `exact_coordinates_n`: We matched the event sites with coordinates of latitude and longitude. As the report does not have the precise location of all events, we used the closest reference available. This is a dummy variable stating whether coordinates are precise (street level) or not. 1 = yes. There are six variables in the dataset, each pertaining to one location where the individual was found or taken to. 
 
-**End Date**. Variable label: “End date of incident”. This variable attempts to pinpoint when the individual died, was found, or was last presumed to be seen.
+* `first_name`: Victim's first name.
 
-**LastName**. Variable label: “Last name(s) of individual”.
+* `group_id`: Unique identification number for groups of individuals attacked together.
 
-**FirstName**. Variable label: “First name(s) of individual”.
+* `individual_id`: Unique individual identification number.
 
-**Minor**. Variable label: “Minor or not”. Categories:
+* `interrogation`: Individual was interrogated, 1 = yes.
 
-* 0 - Adult
-* 1 - Minor
-* NA - Unspecified
+* `last_name`: Victim's last name.
 
-**Age**. Variable label: “Age of individual”. Range: from 2 to 85 years old.
+* `latitude_n`: Latitudinal coordinates pertaining to the string `place_n` variable. 
 
-**Female**. Variable label: “Female”. Categories:
+* `location_n`: Where the individual was seen or found. There are up to 6 locations, so we coded them as `location_1` to `location_6`. The same pattern repeats in the variables below. The compilation of the `location_n` variable was based completely on information given in the Truth Report. However, since this information was in a string format (e.g. intersection of Calle Grecia and Avenida Rosa), creating a new variable incorporating each location’s latitude and longitude was necessary to pursue further analysis of the trends in deaths and disappearances. The format chosen was decimal coordinates. Three main websites were used to find the decimal coordinates:
+  - Latitude: http://latitude.to/. We used Latitude for sourcing more inexact coordinates, such as the coordinates for cities or towns. We also used it to convert non-decimal coordinates into the decimal format.
+   - Wikimapia: http://wikimapia.org/. Wikimapia was mostly used for locating shantytowns, neighborhoods, military bases, or police stations that were not found on Google maps. Its strength is that it is an editable map, meaning that individual users can collaborate so as to produce a more comprehensive map (filled with local knowledge) than other standard maps such as Google maps.
+  - Google maps: http://maps.google.co.uk/. Google Maps was useful for finding intersections of roads or precise addresses, as well as for searching for police stations, some military bases, and other governmental buildings.
 
-* 0 - Male
-* 1 - Female
-* NA - Unknown
+* `longitude_n`: Longitudinal coordinates pertaining to the string `place_n` variable.
 
-**Nationality**. Variable label: “Country of nationality label”. Categories:
+* `male`: Victim is male, 1 = yes.
 
-* Argentinean
-* Austrian
-* Bolivian
-* Brazilian
-* Chilean
-* Dual British and Chilean
-* Dual French and Chilean
-* Dual Swiss and Chilean
-* Ecuadorian
-* French
-* Mexican
-* Spanish
-* Uruguayan
-* Vietnamese
+* `method`: Method of violence used by the perpetrator. There are 25 categories. 
 
-**Occupation**. Variable label: “Identification number of individual’s occupation”. Categories:
+* `minor`: Victim is a minor, 1 = yes.
 
-* 1 - White collar
-* 2 - Blue collar
-* 3 - School student
-* 4 - University student
-* 5 - Military
-* 6 - Non-military government
-* 7 - Unemployed
-* 8 - Unknown
-* 9 - Ex-military
-* 10 - Housewife
+* `mistreatment`: Individual was mistreated by the government or the opposition, 1 = yes.
 
-**Occupation (string)**. Variable label: “Description of individual’s occupation”.
+* `nationality`: Individual's nationality. They are:
+  - Argentinean, Austrian, Bolivian, Brazilian, Chilean, Dual British and Chilean, Dual French and Chilean, Dual Swiss and Chilean, Ecuadorian, French, Mexican, Spanish, Uruguayan, Vietnamese
 
-\newpage
+* `number_previous_arrests`: Number of individual's previous arrests. 0 indicates that the individual was reported to the authorities and was allowed to go free (no arrest).
 
-**Victim Affiliation** Variable label: “Individual’s political affiliation”. Categories:
+* `occupation`: Victim occupation. We grouped all occupations into 10 categories:
+  - White collar, Blue collar, School student, University student, Military, Non-military government, Unemployed, Unknown, Ex-military, Housewife 
 
-* 1 - _Opposition (Allende/Left)_: this category encompasses individuals loyal to the ex-president Allende, as well as individuals who were affiliated or leaders of left-wing groups
-* 2 - _Regime (Pinochet)_: this category encompasses individuals who belonged to the Pinochet
-government.
-* 3 - _Unknown_: this category refers to individuals whose political affiliation was unknown or
-unspecified.
-* 4 - _None_: this category pertains to individuals whom the report states had no known political
-affiliation.
+* `occupation_detail`: Details about victim's occupation, when available. The details usually describe the company or public sector office where the individual worked.
 
-**Victim Affiliation (string)**. Variable label: “Description of individual’s political affiliation” This complements the previous variable by giving as much information as possible on the victims’ political affiliations. Categories:
+* `page`: Denotes which page of the English version of the Truth and Commission Report describes the victim.
 
-* _Opposition_
-    - Communist
-        - Young Communist
-    - Christian Democrat/Christian Left
-    - FER-MIR
-    - MAPU (Movimiento de Acción Popular Unitaria)
-    - MIR (Revolutionary Left Movement)
-    - National Party
-    - Pro-Democracy party (PPD)
-    - Revolutionary Radical Party
-        - Revolutionary Radical Youth Party
-    - Socialist
-        - Young Socialist
-* _Regime_. This variable encompasses individuals who belonged to the Pinochet government.
+* `perpetrator_affiliation`: Perpetrator's political affiliation. It is a binary variable: either individuals are in the government or in the opposition. We follow the Report's broad definition the opposition: “private citizens who committed terrorist acts or other kinds of politically motivated attacks” (p.43). Thus, the opposition includes supporters of Presidente Allende, terrorist groups, etc.
+
+* `perpetrator_affiliation_detail`: Details about perpetrator's political affiliation. As with `occupation_detail`, this variable contains extra information about the perpetrator.
+
+* `place_n`: Place where the individual was spotted/reported to be seen. (in chronological order, from 1 to 6 places). Categories:
+  - Home; Work; University; In custody; In public; In hospital; Unknown
+
+* `press`: Individual disappearance or death appeared in the press.
+
+* `start_date_daily`: Date when the victim suffered abuse.
+
+* `start_date_monthly`: Calendar month when victim suffered abuse. Similar to what we did in `end_date_monthly`, we used the first day of the month as a reference. 
+
+* `victim_affiliation`: individual's political affiliation. Categories:
+  - Opposition (Allende/Left): this category encompasses individuals loyal to the ex-president Allende, as well as individuals who were affiliated or leaders of left-wing groups
+  - Regime (Pinochet): this category encompasses individuals who belonged to the Pinochet government.
+  - Unknown: this category refers to individuals whose political affiliation was unknown or unspecified.
+  - None: this category pertains to individuals whom the report states had no known political affiliation.
+
+* `victim_affiliation_detail`: details about the individual's political affiliation, when available. This complements the previous variable by giving as much information as possible on the victims’ political affiliations. 
+
+* `violence`: Type of violence. Categories: 
+  - Killed: cases where the Commission signals a definite and known death.
+  - Suicide
+  - Disappearance: cases where the victims are presumed to be dead at the hands of government agents. Government agents are assumed to have disposed of their bodies in a covert fashion, making their retrieval impossible at the time of the publication of the Report.
+  - Disappearance, information of death: cases which the Commission has information that signals that “the victims are dead; that they died at the hands of the government agents, or persons in their service; and that these or other agents disposed of the victims’ mortal remains by throwing them into a river or a sea, by covertly burying them, or by disposing of them in some other secret fashion” (p.44).
+  - Unresolved: insufficient information or evidence
+
+* `targeted`: Individual was targeted. Categories:
+  - Denounced; Summoned; Listed; Voluntarily reported; At home
+  
+* `torture`: individual was tortured, 1 = yes. The definition of torture the Report uses is the following: “[...] torture means any act by which severe pain or suffering, whether physical or mental, is intentionally inflicted on a person for such purposes as obtaining from him or a third person information or confession, punishing him for an act he or a third person has committed or is suspected of having committed, or intimidating or coercing him or a third person, or for any reason based on discrimination of any kind, when such pain or suffering is inflicted by or at the instigation of, or with the consent or acquiescence of a public official or other person acting in an official capacity. It does not include pain or suffering arising only from, inherent in or incidental to, lawful sanctions” (pp. 38-39).
+
+* `war_tribunal`: Individual was subject to a war tribunal, 1 = yes.
 
 \newpage
 
-**Violence**. Categories:
+# Replication Code
 
-* 1 - Killed: cases where the Commission signals a definite and known death.
-* 2 - Suicide
-* 3 - Disappearance: cases where the victims are presumed to be dead at the hands of government
-agents. Government agents are assumed to have disposed of their bodies in a covert fashion, making their retrieval impossible at the time of the publication of the Report.
-* 4 - Disappearance, information of death: cases which the Commission has information that signals that “the victims are dead; that they died at the hands of the government agents, or persons in their service; and that these or other agents disposed of the victims’ mortal remains by throwing them into a river or a sea, by covertly burying them, or by disposing of them in some other secret fashion” (p.44).
-* 5 - Unresolved: insufficient information or evidence
+## Table 01 - Sample Event
 
-**Method**. Categories:
+The code below downloads the `pinochet` package, loads the dataset into `R` and reproduces table 01 in the article. 
 
-* 1 - Gun
-* 2 - Knife
-* 3 - Unknown
-* 4 - Beaten
-* 5 - Hung
-* 6 - Denied medical treatment
-* 7 - Acute loss of blood
-* 8 - Asphyxiated
-* 9 - Intentional car crash
-* 10 - Cardio-respiratory arrest
-* 11 - Torture
-* 12 - Jumped
-* 13 - Immersion
-* 14 - Poisoned
-* 15 - Bomb
-* 16 - Burned
-* 17 - Tear gas
-* 18 - Electrocuted
-
-**Interrogation**. Variable label: “Individual was interrogated”. Categories:
-
-* 1 - Yes
-* 2 - No
-* 3 - Unknown
-
-**Torture**. Variable label: “Individual was tortured”. Categories:
-
-* 1 - Yes
-* 2 - No
-* 3 - Unknown
-
-“For the purposes of this Convention, torture means any act by which severe pain or suffering, whether physical or mental, is intentionally inflicted on a person for such purposes as obtaining from him or a third person information or confession, punishing him for an act he or a third person has committed or is suspected of having committed, or intimidating or coercing him or a third person, or for any reason based on discrimination of any kind, when such pain or suffering is inflicted by or at the instigation of, or with the consent or acquiescence of a public official or other person acting in an official capacity. It does not include pain or suffering arising only from, inherent in or incidental to, lawful sanctions” (pp. 38-39).
-
-“These agencies – the CNI, the DICOMAR, and the group called COVEMA – practiced torture. CNI’s use of torture was systematic but more selective than that of the DINA which tortured practically everyone who passed through some of its secret facilities. The main torture methods continued to be the use of electricity, especially on the sensitive parts of the body, all kinds of beatings, and plunging the person’s head down into the water to the brink of asphyxiation, and then doing it again/ There are also indications that DICOMAR and COVEMA practiced torture, even to the point of death, as this Commission has verified and as will be noted in the case material.” (p. 644)
-
-**Mistreatment**. Variable label: “Individual was mistreated”.
-
-**Mistreatment means**. Categories:
-
-* 1 - Yes
-* 2 - No
-* 3 - Unknown
-
-**Targeted**. Variable label: “Individual was targeted”. Categories:
-
-* 1 - Denounced
-* 2 - Summoned
-* 3 - Listed
-* 4 - Voluntarily reported
-* 5 - At home
-* 6 - Unspecified
-
-**Press**. Variable label: “Individual’s disappearance or death was justified in the press”. Accounts of an individual’s disappearance or death often appeared in the press, but the Truth Report refutes many of these accounts on the basis that it covers up or legitimizes the violence stemming from Pinochet’s regime. For example, fictional gun battles were fabricated, legitimizing the arbitrary and often unprovoked deaths of those rebelling against the government. Categories:
-
-* 1 - Yes
-* 2 - Unspecified
-
-**War tribunal**. Variable label: “Individual was subjected to a war tribunal”. Categories:
-
-* 1 - Yes
-* 2 - Unspecified
-
-**Previous arrests**. Variable label: “Individual was previously arrested”. Categories:
-
-* 0 - Reported to the authorities and was allowed to go free (no arrest)
-* 1 - One arrest
-* 2 - Two arrests
-* 3 - Three arrests
-* 4 - Four arrests
-
-**Perpetrator affiliation**. Variable label: “Perpetrator’s political affiliation”. Categories:
-
-* 1 - Opposition (Allende/Left): “private citizens who committed terrorist acts or other kinds of politically motivated attacks” (p.43)
-* 2 - Regime (Pinochet):
-* 3 - Unknown
-* 4 - None
-
-    - _‘Opposition’_ (1):
-    - _‘Government agents’_ (2):
-        - “In this report the Commission is offering as much information as it could obtain about actions committed by government agents [...]: when such information is available the report names the branch or branches said to have participated, and specifically the regiment, base, police precinct, garrison, or group from which the official forces came” (p.43)
-        - “When the Commission was unable to obtain such information but did come to the conviction that the person was killed by, or disappeared in the hands of, government agents, it has stated so” (p.43)
-    - When the perpetrator is _‘unknown’_ (3): “The Commission has not presumed that government agents were involved in the death of individuals, even when it is clear that they were killed by firearms and when there is every reason to believe that the motivation was political, unless there are some grounds for that judgment” (p.43). See also “References to private citizens” on p. 44
-    - “When the Commission here refers to the perpetrators as private citizens acting for political reasons or pretexts, it does not always mean that these were people who were opposed to the military government. In some cases the political motives of such private citizens were quite the contrary, that is, they supported the government. In some of those cases, which will be narrated in the chapter on those killed during protest actions, the Commission does not rule out the possibility that such private citizens were really security agents in civilian dress”
-
-**Perpetrator (string)**. Variable label: “Description of perpetrator’s political affiliation”.
-
-**Locations**. Place. Categories:
-
-* 1 - Home
-* 2 - Work
-* 3 - University
-* 4 - In custody
-* 5 - In public
-* 6 - In hospital
-* 7 - Unknown
-
-**Location (string)**. Variable label: “Location where victim was spotted/reported to be seen”.
-
-**Latitude**. Variable label: “Latitudinal coordinates pertaining to the string ‘location’ variable”.
-
-**Longitude**. Variable label: “Longitudinal coordinates pertaining to the string ‘location’ variable”.
-
-**Exactitude of coordinates**. Variable label: “Exactitude of coordinates pertaining to the string ‘location’ variable”. Categories:
-
-* 0 - Exact
-* 1 - Area/neighborhood level
-* 2 - City/town level
-
-_The determination of coordinates_. The compilation of the ‘Location’ variable was based completely on information given in the Truth Report. However, since this information was in a string format (e.g. intersection of Calle Grecia and Avenida Rosa), creating a new variable incorporating each location’s latitude and longitude was necessary to pursue further analysis of the trends in deaths and disappearances. The format chosen was decimal coordinates.
-
-_Sources used for the determination of coordinates_
-
-Three main websites were used to find the decimal coordinates pertaining to the string ‘Location’ variable:
-
-* 1 - Latitude: http://latitude.to/. Latitude was mostly used for sourcing more inexact coordinates, such as the coordinates for cities or towns. It was also used to convert non-decimal coordinates into the decimal format.
-* 2 - Wikimapia: http://wikimapia.org/. Wikimapia was mostly used for locating shantytowns, neighborhoods, military bases, or police stations that were not found on Google maps. Its strength is that it is an editable map, meaning that individual users can collaborate so as to produce a more comprehensive map (filled with local knowledge) than other standard maps such as Google maps.
-* 3 - Google maps: http://maps.google.co.uk/. Google maps was useful for finding intersections of roads or precise addresses, as well as for searching for police stations, some military bases, and other governmental buildings.
-
-\newpage
-
-# Data Pre-Processing
-
-## Load required packages
-```{r, message=FALSE,warning=FALSE}
-if (!require("RCurl")) {
-        install.packages("RCurl")
+```{r sample-obs-no-eval, eval=FALSE, warning=FALSE, message=FALSE, tidy=FALSE}
+## Download the pinochet package
+if (!require("pinochet")) {
+        install.packages("pinochet")
 }
-if (!require("plyr")) {
-        install.packages("plyr")
+
+# Load the package and the dataset
+library(pinochet)
+data(pinochet)
+
+# Load required packages
+if (!require("kableExtra")) {
+        install.packages("kableExtra")
 }
 if (!require("tidyverse")) {
         install.packages("tidyverse")
 }
+
+# Table 01
+kable(t(pinochet[12, c(1:4,7:22,24:37)]), "latex",
+      caption = "Sample event from the dataset (selected variables)",
+      col.names = c("Value"), booktabs = T) %>%
+  kable_styling(position ="center", latex_options = "hold_position")
+```
+
+```{r sample-obs01, echo=FALSE, warning=FALSE, message=FALSE}
+if (!require("kableExtra")) {
+        install.packages("kableExtra")
+}
+if (!require("tidyverse")) {
+        install.packages("tidyverse")
+}
+load("/Users/politicaltheory/Documents/github/pinochet/data/pinochet.RData")
+
+kable(t(pinochet[12, c(1:4,7:22,24:37)]), "latex", 
+      caption = "Sample event from the dataset (selected variables)",
+      col.names = c("Value"), booktabs = T) %>%
+  kable_styling(position ="center", latex_options = "hold_position")
+```
+
+\newpage
+
+## Table 02 - Number of Events
+
+```{r number,  message=FALSE, warning=FALSE,cache=TRUE}
+kable(table(pinochet$violence), "latex",
+      caption = "Number of killings, disappearances, unresolved cases, and suicides",
+      booktabs = T, col.names = c("Violence", "N")) %>%
+  kable_styling(position ="center", latex_options = "hold_position")
+```
+
+## Figure 01 - Number of Human Rights Abuses
+
+The code below reproduces figure 01. It shows the aggregate number of victims in the regime (1973--1990).
+
+```{r time-trend, fig.align='center', fig.height=3, fig.width=5, warning=FALSE, message=FALSE, fig.cap='Human rights abuses in the Pinochet regime, 1973-1990'}
+# Install necessary packages
+if (!require("tidyverse")) {
+        install.packages("tidyverse")
+}
+if (!require("lubridate")) {
+        install.packages("lubridate")
+}
+
+# Plot
+pinochet %>% 
+  ungroup() %>% 
+  mutate(Year = year(start_date_monthly)) %>%
+  group_by(Year) %>% tally() %>% 
+  filter(!is.na(Year)) %>% 
+  ggplot(aes(x = Year, y = n)) +
+  geom_line() +
+  theme_minimal() +
+  labs(x = NULL, y = NULL, title = "Number of Human Rights Abuses", 
+       subtitle = "Pinochet Regime, 1973-1990") +
+  scale_y_continuous(breaks = c(0, 500, 1000, 1274))
+```
+
+## Figure 02 - Spatial Variation 
+
+```{r maps, warning=FALSE, message=FALSE, fig.align='center', fig.cap="Spatial variation in human rights abuses in the Pinochet regime, 1973-1990", fig.height=6, fig.width=7, tidy=FALSE}
+# Load necessary packages
+if (!require("sf")) {
+        install.packages("sf")
+}
 if (!require("devtools")) {
         install.packages("devtools")
 }
-if (!require("narnia")) {
-        install_github("njtierney/narnia")
+devtools::install_github("ropensci/rnaturalearthdata")
+if (!require("rnaturalearthhires")) {
+        install.packages("rnaturalearthhires",
+                         repos = "http://packages.ropensci.org",
+                         type = "source")
 }
-if (!require("rnaturalearth")) {
-        install.packages("rnaturalearth")
+library(rnaturalearthdata)
+library(rnaturalearthhires)
+
+# Save events
+chile <- rnaturalearthhires::countries10 %>%
+st_as_sf() %>%
+filter(SOVEREIGNT %in% c("Chile", "Argentina", "Peru", "Paraguay"))
+
+violent_events <- pinochet %>% 
+  select(violence, latitude_1, longitude_1) %>%
+  filter(!is.na(violence), !is.na(latitude_1), !is.na(longitude_1)) %>%
+  st_as_sf(coords = c("longitude_1", "latitude_1"), crs = 5361) 
+
+coords_vio <- st_coordinates(violent_events) %>% as_tibble()
+violent_events <- bind_cols(violent_events, coords_vio)
+
+# Create map
+ggplot() +
+  geom_sf(data = chile) +
+  coord_sf(xlim = c(-75.6, -67), ylim = c(-55, -19)) +
+  labs(x = NULL, y = NULL) +
+  geom_point(data = violent_events, aes(x = X, y = Y,
+                                        colour = violence,
+                                        fill = violence),
+             shape = 21) + 
+  scale_colour_manual(values = c("#042333FF", "#481567FF",
+                                 "#253582FF", "#2D708EFF",
+                                 "#29AF7FFF")) +
+  scale_fill_manual(values = alpha(c("#042333FF", "#481567FF",
+                                     "#253582FF", "#2D708EFF",
+                                     "#29AF7FFF"), .6)) +
+  facet_wrap(~violence, nrow = 1) +
+  theme_minimal() +
+  theme(strip.text = element_blank()) +
+  theme(legend.position = "bottom",
+        axis.text = element_blank()) + 
+  theme(legend.title=element_blank())
+```
+
+## Figure 03 - Violence Perpetrators
+
+```{r time-trend-perpetrators, fig.align='center', fig.height=4, fig.width=5, warning=FALSE, message=FALSE, fig.cap='Violence perpetrators in the Pinochet regime, 1973-1990'}
+# Load requied packages
+if (!require("tidyverse")) {
+        install.packages("tidyverse")
 }
 
-devtools::install_github("tidyverse/ggplot2")
-library(ggplot2)
-```
-
-## Load data
-```{r, message=FALSE,warning=FALSE,cache=TRUE, tidy=FALSE}
-df <- readr::read_csv("https://goo.gl/F1tgk1")
-```
-
-## Data manipulation
-```{r, message=FALSE,warning=FALSE,cache=FALSE}
-# Convert names to lowercase
-names(df) <- tolower(names(df))
-
-# Rename variables
-df <- plyr::rename(df,
-                   c("merged id" = "merged_id",
-                     "start date" = "start_date",
-                     "end date" = "end_date",
-                     "last name" = "last_name",
-                     "first name" = "first_name",
-                     "sex (c)" = "female",
-                     "occupation (c)" = "occupation",
-                     "occupation" = "occupation_2",                     
-                     "victim affiliation (c)" = "victim_affiliation",
-                     "victim affiliation" = "victim_affiliation2",
-                     "violence (c)" = "violence",
-                     "method (c)" = "method",
-                     "interrogation (c)" = "interrogation",
-                     "torture (c)" = "torture",
-                     "war tribunal" = "war_tribunal",
-                     "previous arrests (#)" = "number_previous_arrests",
-                     "perpetrator affiliation (c)" = "perpetrator_affiliation",
-                     "place-1" = "place_1",
-                     "start location-1" = "start_location_1",
-                     "latitude-1" = "latitude_1",
-                     "longitude-1" = "longitude_1",
-                     "exact coordinates-1" = "exact_coordinates_1",
-                     "place-2" = "place_2",
-                     "location-2" = "location_2",
-                     "latitude-2" = "latitude_2",
-                     "longitude-2" = "longitude_2",
-                     "exact coordinates-2" = "exact_coordinates_2",
-                     "place ©-3" = "place_3",
-                     "end location-3" = "end_location_3",
-                     "latitude-3" = "latitude_3",
-                     "longitude-3" = "longitude_3",
-                     "exact coordinates-3" = "exact_coordinates_3",
-                     "place (c)-4" = "place_4",
-                     "end location-4" = "end_location_4",
-                     "latitude-4" = "latitude_4",
-                     "longitude-4" = "longitude_4",
-                     "exact coordinates-4" = "exact_coordinates_4",
-                     "place (c)-5" = "place_5",
-                     "end location-5" = "end_location_5",
-                     "latitude-5" = "latitude_5",
-                     "longitude-5" = "longitude_5",
-                     "exact coordinates-5" = "exact_coordinates_5",
-                     "place (c)-6" = "place_6",
-                     "end location-6" = "end_location_6",
-                     "latitude-6" = "latitude_6",
-                     "longitude-6" = "longitude_6",
-                     "exact coordinates-6" = "exact_coordinates_6"
-                     ))
-
-# Transform variables
-df <- transform(df,
-                merged_id = as.integer(merged_id),
-                start_date = as.Date(start_date, "%d/%m/%Y"),
-                end_date = as.Date(end_date, "%d/%m/%Y"),
-                minor = as.factor(minor),
-                age = as.numeric(age),
-                female = female - 1,
-                violence = as.integer(violence),
-                method = as.integer(method),
-                number_previous_arrests = as.integer(number_previous_arrests),
-                perpetrator_affiliation = as.integer(perpetrator_affiliation),
-                place_1 = as.integer(place_1),
-                exact_coordinates_1 = as.numeric(exact_coordinates_1),
-                exact_coordinates_2 = as.numeric(exact_coordinates_2),
-                exact_coordinates_3 = as.numeric(exact_coordinates_3),
-                exact_coordinates_4 = as.numeric(exact_coordinates_4),
-                exact_coordinates_5 = as.numeric(exact_coordinates_5)
-                )
-
-# Recode torture and interrogation
-df$torture <- ifelse(df$torture > 2 | is.na(df$torture), "NA",
-                     ifelse(df$torture == 2, 0, df$torture))
-df$interrogation <- ifelse(df$interrogation > 2 | is.na(df$interrogation), "NA",
-                           ifelse(df$interrogation == 2, 0, df$interrogation))
-
-# Revalue variables
-df$minor <- plyr::revalue(df$minor, c("y" = 1, "n" = 0))
-
-# Save data
-readr::write_csv(df, "dataset.csv")
-```
-
-## Visualise Missing Data
-
-```{r, warning=FALSE,error=FALSE,message=FALSE,fig.width=7, fig.height=7}
-# Proportion of variables that contain any missing values
-miss_var_pct(df)
-
-# Number of missings in each variable
-gg_miss_var(df)
-```
-
-\newpage
-
-## Figure 1
-```{r, warning=FALSE,error=FALSE,message=FALSE,cache=TRUE}
-df1 <- df %>%
-        filter(!is.na(violence)) %>%
-        group_by(violence) %>%
-        summarise(n = n()) %>%
-        mutate(freq = round(n / sum(n), 3)) %>%
-        as.data.frame() %>%
-        mutate(violence = factor(violence,
-                                 labels = c("1" = "Killed",
-                                            "2" = "Suicide",
-                                            "3" = "Disappearance",
-                                            "4" = "Disappearance\nwith Information",
-                                            "5" = "Unresolved"))) %>%
-        print()
-
-
-
-ggplot(df1, aes(x = reorder(violence, -n), y = n)) +
-        geom_histogram(stat = "identity") +
-        scale_x_discrete("\nType of Violence") +
-        geom_text(stat = "identity", aes(label = n),
-                  vjust = -0.5, size = 2.6) +
-        ylab("Number of Victims\n") +
-        theme_minimal()  +
-        theme(axis.text.y = element_blank(),
-              panel.grid.major = element_blank(),
-              panel.grid.minor = element_blank())
-```
-
-\newpage
-
-## Figure 2
-```{r, warning=FALSE,error=FALSE,message=FALSE}
-df2 <- df %>%
-        select(age) %>%
-        na.omit() %>%
-        unlist() %>%
-        as.numeric() %>%
-        cut(breaks = c(0, 16, 20, 25, 30, 35, 40, 45, 50, 85)) %>%
-        as.vector()
-
-my_labels <- c("Under 16", "16-20", "20-25", "25-30", "30-35",
-                "35-40", "40-45", "45-50", "Over 50")
-
-ggplot(as.data.frame(df2), aes(x = df2)) +
-        geom_histogram(stat = "count") +
-        scale_x_discrete("", labels = my_labels) +
-        geom_text(stat = "count", aes(label = ..count..),
-                  vjust = -1, size = 2.6) +
-        ylab("") +
-        theme_minimal() +
-        theme(axis.text.y = element_blank(),
-              panel.grid.major = element_blank(),
-              panel.grid.minor = element_blank())
-```
-
-\newpage
-
-## Figure 3
-```{r, warning=FALSE,error=FALSE,message=FALSE, fig.width=8.75, fig.height=5}
-df3 <- df %>%
-        select(occupation) %>%
-        filter(occupation %in% c(1:10)) %>%
-        na.omit() %>%
-        group_by(occupation) %>%
-        summarise(n = n()) %>%
-        mutate(freq = round(n / sum(n), 3)) %>%
-        as.data.frame() %>%
-        mutate(occupation = factor(occupation,
-                                   labels = c("White\nCollar", "Blue\nCollar",
-                                              "School\nStudent",
-                                              "University\nStudent", "Military",
-                                              "Non-Military\nGovernment",
-                                              "Unemployed", "Unknown", "Ex-Military",
-                                              "Housewife")))
-
-ggplot(df3, aes(x = reorder(occupation, -n), y = n)) +
-        geom_histogram(stat = "identity") +
-        scale_x_discrete("") +
-        geom_text(stat = "identity", aes(label = n),
-                  vjust = -0.5,  size = 2.6) +
-        ylab("") +
-        theme_minimal() +
-        theme(axis.text.y = element_blank(),
-              panel.grid.major = element_blank(),
-              panel.grid.minor = element_blank(),
-              axis.text.x = element_text(angle = 45, hjust = 1, size = 11))
-```
-
-\newpage
-
-## Tables 1, 2 and 3
-```{r}
-df %>%
-        select(interrogation) %>%
-        group_by(interrogation) %>%
-        summarise(n = n()) %>%
-        mutate(freq = round(n / sum(n), 3))
-
-df %>%
-        select(torture) %>%
-        group_by(torture) %>%
-        summarise(n = n()) %>%
-        mutate(freq = round(n / sum(n), 3))
-
-df %>%
-        select(targeted) %>%
-        group_by(targeted) %>%
-        summarise(n = n()) %>%
-        mutate(freq = round(n / sum(n), 3))
-
-```
-
-\newpage 
-
-## Figure 4
-```{r, warning=FALSE,error=FALSE,message=FALSE, fig.width=8, fig.height=5.55}
-df5 <- df
-
-df5$female <- factor(df5$female,
-                     levels = c(0, 1),
-                     labels = c("Male", "Female"))
-
-df5$violence <- factor(df5$violence,
-                       levels = c(1, 2, 3, 4, 5),
-                       labels = c("1" = "Killed",
-                                  "2" = "Suicide",
-                                  "3" = "Disappearance",
-                                  "4" = "Disappearance\nwith Information",
-                                  "5" = "Unresolved"))
-
-par(mar = c(0, 0, 0, 0))
-mosaicplot(female ~ violence, data = df5, las = 1, color = TRUE,
-           xlab = "Gender", main = "", ylab = "Type of Violence")
-
-table(df5$violence, df5$female)
-
-round(prop.table(table(df5$violence, df5$female)), 2)
-```
-
-\newpage 
-
-## Figure 5
-```{r, warning=FALSE,error=FALSE,message=FALSE}
-df4 <- df %>%
-        select(violence, start_date) %>%
-        na.omit() %>%
-        mutate(violence_dummy = ifelse(violence >= 1, 1, 0)) %>%
-        mutate(day = format(start_date, "%d"),
-               month = format(start_date, "%m"),
-               year = format(start_date, "%Y")) %>%
-        filter(year < 1992 & year > 1972) %>%
-        group_by(year, month) %>%
-        summarise(total = sum(violence_dummy)) %>%
-        mutate(dates = paste(month, year, sep="-")) %>%
-        mutate(day = "01", date = paste0(day, "-", dates),
-               date = lubridate::parse_date_time(date, "dmY"))
-
-ggplot(df4, aes(date, total)) +
-        geom_line() +
-        scale_x_datetime(name = "",
-                         date_breaks = "15 months",
-                         expand = c(0, 0),
-                         date_labels = "%b\n%Y") +
-        ylab("") +
-        theme_minimal(base_size = 12) +
-        theme(panel.grid.minor = element_blank(),
-              axis.text.x = element_text(hjust = 1))
-```
-
-\newpage
-
-## Figure 6
-```{r}
-df4 <- df %>%
-        select(violence, start_date, occupation) %>%
-        na.omit() %>%
-        filter(occupation %in% c(1:6)) %>%
-        mutate(violence_dummy = ifelse(violence >= 1, 1, 0)) %>%
-        mutate(day = format(start_date, "%d"),
-               month = format(start_date, "%m"),
-               year = format(start_date, "%Y")) %>%
-        filter(year < 1992 & year > 1972) %>%
-        group_by(year, month, occupation) %>%
-        summarise(total = sum(violence_dummy)) %>%
-        mutate(dates = paste(month, year, sep="-")) %>%
-        mutate(day = "01", date = paste0(day, "-", dates),
-               date = lubridate::parse_date_time(date, "dmY")) %>%
-        as.data.frame() %>%
-        mutate(occupation = factor(occupation,
-                                   labels = c("White\nCollar", "Blue\nCollar",
-                                              "School\nStudent", "University\nStudent",
-                                              "Military", "Non-Military\nGovernment")))
-
-ggplot(df4, aes(date, total)) +
-        geom_line() +
-        scale_x_datetime(name = "",
-                         date_breaks = "18 months",
-                         expand = c(0, 0),
-                         date_labels = "%b\n%Y") +
-        ylab("") +
-        theme_minimal(base_size = 12) +
-        scale_y_continuous(expand = c(0, 0)) +
-        theme(panel.grid.minor = element_blank(),
-              axis.text.x = element_text(hjust = 1)) +
-        facet_wrap( ~ occupation, scales = "free", ncol = 2)
-```
-
-\newpage
-
-## Figure 7
-```{r, warning=FALSE,error=FALSE,message=FALSE,cache=TRUE, fig.width=11,fig.height=7}
-df7 <- df %>%
-        select(violence, longitude_1, latitude_1) %>%
-        na.omit()
-
-df7$violence <- factor(df7$violence,
-                       levels = c(1, 2, 3, 4, 5),
-                       labels = c("1" = "Killed",
-                                  "2" = "Suicide",
-                                  "3" = "Disappearance",
-                                  "4" = "Disappearance\nwith Information",
-                                  "5" = "Unresolved"))
-
-sf_data <- rnaturalearth::ne_countries(returnclass = "sf", continent = c("South America", "North America"))
-
-ggplot() +
-  geom_sf(data = sf_data, colour = "black", size = .2, fill = "#eeeeee") +
+# Plot
+pinochet %>% 
+  select(c(perpetrator_affiliation, start_date_monthly)) %>%
+  mutate(Year = year(start_date_monthly)) %>%
+  filter(!is.na(perpetrator_affiliation)) %>% 
+  filter(!is.na(Year)) %>%
+  filter(Year >= 1975) %>%
+  group_by(perpetrator_affiliation, Year) %>%
+  summarise(no_rows = length(perpetrator_affiliation)) %>%
+  ggplot(aes(x = Year, y = no_rows, colour = perpetrator_affiliation)) +
+  viridis::scale_color_viridis(discrete = TRUE, end = 0.5, direction = -1) + 
+  geom_line() +
   theme_minimal() +
-  geom_point(data = df7, aes(x = longitude_1, y = latitude_1,
-                             color = factor(violence)),
-             alpha = 0.4, size = 1) +
-        theme(axis.title.x = element_blank()) +
-        theme(axis.title.y = element_blank()) +
-        theme(legend.position = "none") +
-        facet_wrap(~ violence, ncol = 3) +
-        theme(plot.margin = unit(c(0, 0, 0.5, 0), "cm"))
+  labs(x = NULL, y = NULL, title = "Violence Perpetrators", 
+       subtitle = "Pinochet Regime, 1975-1990") +
+  scale_x_continuous(breaks = c(1975, 1980, 1985, 1990)) +
+  facet_grid(perpetrator_affiliation ~ ., scales = "fixed") + 
+  theme(legend.position = "bottom") + 
+  theme(legend.title=element_blank())
+  
 ```
 
 \newpage
 
-## Figure 8
-```{r, warning=FALSE,error=FALSE,message=FALSE,cache=TRUE,fig.width=11,fig.height=7}
-df8 <- df %>%
-        select(occupation, violence, longitude_1, latitude_1) %>%
-        filter(occupation %in% c(1:10)) %>%
-        na.omit() %>%
-        group_by(occupation) %>%
-        as.data.frame() %>%
-        mutate(occupation = factor(occupation,
-                                   labels = c("White\nCollar", "Blue\nCollar",
-                                              "School\nStudent",
-                                              "University\nStudent", "Military",
-                                              "Non-Military\nGovernment",
-                                              "Unemployed", "Unknown",
-                                              "Ex-Military",
-                                              "Housewife"))) %>%
-        mutate(violence = ifelse(violence >= 1, 1, 0))
+# Session Information
 
-sf_data <- rnaturalearth::ne_countries(returnclass = "sf", continent = c("South America", "North America"))
-
-ggplot() +
-  geom_sf(data = sf_data, colour = "black", size = .2, fill = "#eeeeee") +
-  theme_minimal() +
-  geom_point(data = df8, aes(x = longitude_1, y = latitude_1,
-                             color = factor(occupation)),
-             alpha = 0.4, size = .8) +
-        theme(axis.title.x = element_blank()) +
-        theme(axis.title.y = element_blank()) +
-        theme(legend.position = "none") +
-        facet_wrap(~ occupation, ncol = 4) +
-        theme(plot.margin = unit(c(0, 0, 0.5, 0), "cm"))
-```
-
-\newpage
-```{r}
+```{r session}
 sessionInfo()
 ```
 
-\newpage
+[^df]: Postdoctoral Research Fellow, the Political Theory Project, Brown University, 8 Fones Alley, Providence, RI 02912, [`danilofreire@gmail.com`](mailto:danilofreire@gmail.com), [`http://danilofreire.github.io`](http://danilofreire.github.io). Corresponding author.
+
+[^jm]: Senior Lecturer in Public Policy, Department of Political Economy, King's College London, [`john.meadowcroft@kcl.ac.uk`](mailto:john.meadowcroft@kcl.ac.uk), [`http://johnmeadowcroft.net`](http://johnmeadowcroft.net).
+
+[^ds]: Associate Professor, Department of Political Science and the Political Theory Project, Brown University, [`david_skarbek@brown.edu`](david_skarbek@brown.edu), [`http://davidskarbek.com`](http://davidskarbek.com).
+
+[^eg]: Software Developer, Attest, UK.
+
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{6pt}
