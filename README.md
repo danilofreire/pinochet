@@ -56,7 +56,7 @@ pinochet %>%
   scale_y_continuous(breaks = c(0, 500, 1000, 1274))
 ```
 
-!["Human rights abuses in the Pinochet regime, 1973-1990"]()
+!["Human rights abuses in the Pinochet regime, 1973-1990"](https://github.com/danilofreire/pinochet/raw/rap/figures/time-trend.png)
 
 We can also plot the geographical locations of the human rights abuses: 
 
@@ -113,7 +113,7 @@ ggplot() +
   theme(legend.title=element_blank())
 ```
 
-!["Spatial variation in human rights abuses in the Pinochet regime, 1973-1990"]()
+!["Spatial variation in human rights abuses in the Pinochet regime, 1973-1990"](https://github.com/danilofreire/pinochet/raw/rap/figures/map.png)
 
 We believe our data open new topics of research. For instance, researchers can test whether the Pinochet regime has caused attitudinal changes in direct or indirect victims, the relationship between human rights abuses and post-regime levels of interpersonal violence, or investigate the connections between international legitimacy and domestic politics in repressive regimes. These questions are still discussed in the literature and our dataset provides a way to empirically test them.
 
