@@ -380,6 +380,7 @@ $(document).ready(function () {
 <div id="deaths-and-disappearances-in-the-pinochet-regime-a-new-dataset" class="section level1">
 <h1>Deaths and Disappearances in the Pinochet Regime: A New Dataset</h1>
 <p>This Github repository contains data and documented R code for <a href="https://osf.io/rm4y8">Deaths and Disappearances in the Pinochet Regime: A New Dataset</a> by Freire et al (2019). We coded the personal details of 2,398 victims named in the Chilean Truth Commission Report along with information about the perpetrators and geographical coordinates for all identifiable atrocity locations. The dataset covers from 1973 to 1990 and includes 59 indicators. Please refer to our <a href="https://osf.io/rm4y8">accompanying article</a> and our <a href="http://github.com/danilofreire/pinochet/manuscript/online-appendix/online-appendix.pdf">online appendix</a> for more details.</p>
+<p>This branch has the data and code for the main article. The source code for the <code>pinochet</code> package is available in the <a href="https://github.com/danilofreire/pinochet/tree/package">package branch</a>.</p>
 <div id="installation" class="section level2">
 <h2>Installation</h2>
 <p>The dataset is available both as an <a href="http://github.com/danilofreire/pinochet/data/pinochet.xlsx">Excel spreadsheet</a> and as the <code>pinochet</code> package for <code>R</code>. The stable version of the package is on <a href="https://cran.r-project.org/package=pinochet">CRAN</a>. You can install it with:</p>
@@ -388,7 +389,10 @@ $(document).ready(function () {
 <pre><code>if (!require(&quot;devtools&quot;)) {
     install.packages(&quot;devtools&quot;)
 }
-devtools::install_github(&quot;danilo/pinochet&quot;)</code></pre>
+devtools::install_github(&quot;danilo/pinochet&quot;, ref = &quot;package&quot;)</code></pre>
+<p>Then load the dataset with:</p>
+<pre><code>library(pinochet)
+data(pinochet)</code></pre>
 </div>
 <div id="variables" class="section level2">
 <h2>Variables</h2>
