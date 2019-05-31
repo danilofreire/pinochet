@@ -6,7 +6,7 @@ This branch has the data and code for the main article. The source code for the 
 
 ## Installation
 
-The dataset is available in three formats: as an [Excel spreadsheet](http://github.com/danilofreire/pinochet/data/pinochet.xlsx), a [`csv` file](http://github.com/danilofreire/pinochet/data/pinochet.csv),  and as the [`pinochet` package for `R`](http://github.com/danilofreire/pinochet/tree/package). The stable version of the package is on [CRAN](https://cran.r-project.org/package=pinochet). You can install it with:
+The dataset is available in three formats: as an [Excel spreadsheet](https://github.com/danilofreire/pinochet/raw/master/data/pinochet.xlsx), a [`csv` file](https://raw.githubusercontent.com/danilofreire/pinochet/master/data/pinochet.csv),  and as the [`pinochet` package for `R`](http://github.com/danilofreire/pinochet/tree/package). The stable version of the package is on [CRAN](https://cran.r-project.org/package=pinochet). You can install it with:
 
 ```
 install.packages("pinochet")
