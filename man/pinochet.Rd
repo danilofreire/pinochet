@@ -8,8 +8,8 @@
 \describe{
   \item{additional_comments}{any further information on the victim}
   \item{age}{victim's age}
-  \item{end_date_daily}{date when the human rights abuse ended}
-  \item{end_date_monthly}{calendar month when human rights abuse end}
+  \item{end_date_daily}{calendar day when the human rights abuse ended}
+  \item{end_date_monthly}{calendar month when human rights abuse ended}
   \item{exact_coordinates_1}{exactitude of coordinates for place_1, 1 = exact}
   \item{exact_coordinates_2}{exactitude of coordinates for place_2, 1 = exact}
   \item{exact_coordinates_3}{exactitude of coordinates for place_3, 1 = exact}
@@ -45,9 +45,9 @@
   \item{mistreatment}{individual was mistreated, 1 = yes}
   \item{nationality}{individual's nationality}
   \item{number_previous_arrests}{number of individual's previous arrests}
-  \item{occupation}{victim occupation}
+  \item{occupation}{victim's occupation}
   \item{occupation_detail}{details about victim's occupation, when available}
-  \item{page}{report page which describes the victim}
+  \item{page}{report page where we retrieved information about the victim}
   \item{perpetrator_affiliation}{perpetrator's political affiliation}
   \item{perpetrator_affiliation_detail}{details about perpetrator's political affiliation}
   \item{place_1}{place where the individual was spotted/reported to be seen (in chronological order, from 1 to 6 places)}
@@ -75,7 +75,7 @@ data(pinochet)
 \description{
 A dataset containing information about victims of the Pinochet regime
 in Chile (1973-1990). The data comes from the National Truth and Reconciliation
-Commission Report (1991). We included georeferenced information about all incidents
+Commission Report (1991, ISBN:9780268016463). We included georeferenced information about all incidents
 where the information could be retrieved. More information about the coding process
 is available at http://github.com/danilofreire/pinochet.
 }

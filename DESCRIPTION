@@ -7,7 +7,7 @@ Authors@R: c(
     person(given = "Lucas", family = "Mingardi", email = "lucasmingardi@gmail.com", role = "aut"),
     person(given = "Robert", family = "McDonnell", email = "robertmylesmcdonnell@gmail.com", role = "aut")
     )
-Description: Packages data about the victims of the Pinochet regime as compiled by the Chilean National Commission for Truth and Reconciliation Report (1991).
+Description: Packages data about the victims of the Pinochet regime as compiled by the Chilean National Commission for Truth and Reconciliation Report (1991, ISBN:9780268016463).
 License: MIT + file LICENSE
 URL: http://github.com/danilofreire/pinochet
 Encoding: UTF-8

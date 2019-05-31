@@ -1,21 +1,13 @@
 ---
 title: "Introducing the `pinochet` package"
 author: "Danilo Freire"
-date: "5/28/2019"
+date: "31 May 2019"
 output: html_document
 vignette: >
   %\VignetteIndexEntry{Introducing the `pinochet` package}
   %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-r <- getOption("repos")
-r["CRAN"] <- "https://cloud.r-project.org/"
-options(repos = r)
-
-```
 
 ## The `pinochet` R package
 
@@ -39,7 +31,7 @@ data(pinochet)
 
 It is very easy to make summaries, plots and maps with `pinochet`. For instance, one can check the number of victims that suffered different types of violence with the following code:
 
-```{r table, message=FALSE,warning=FALSE}
+```{r table-noeval, message=FALSE,warning=FALSE,eval=FALSE}
 # Load or install required packages
 if (!require("tidyverse")) {
         install.packages("tidyverse")
@@ -56,9 +48,19 @@ kable(table(pinochet$violence), "html", caption = "Number of killings, disappear
   kable_styling(position ="center")
 ```
 
+```{r table, echo=FALSE,warning=FALSE,message=FALSE}
+library(pinochet)
+data("pinochet")
+library(kableExtra)
+library(tidyverse)
+kable(table(pinochet$violence), "html", caption = "Number of killings, disappearances, unresolved cases, and suicides", col.names = c("Violence", "N")) %>%
+  kable_styling(position ="center")
+```
+
+
 Users can also plot time trends of variables of interest. The graph below shows the total number of human rights abuses in the regime.
 
-```{r trend, message=FALSE,warning=TRUE}
+```{r trend-noeval, message=FALSE,warning=TRUE,eval=FALSE}
 # Load or install required packages
 if (!require("tidyverse")) {
         install.packages("tidyverse")
@@ -68,6 +70,23 @@ if (!require("lubridate")) {
 }
 
 # Plot graph
+pinochet %>% ungroup() %>% 
+  mutate(Year = year(start_date_monthly)) %>%
+  group_by(Year) %>% tally() %>% 
+  filter(!is.na(Year)) %>% 
+  ggplot(aes(x = Year, y = n)) +
+  geom_line() +
+  theme_minimal() +
+  labs(x = NULL, y = NULL, title = "Number of Human Rights Abuses", 
+       subtitle = "Pinochet Regime, 1973-1990") +
+  scale_y_continuous(breaks = c(0, 500, 1000, 1274))
+```
+
+```{r trend, message=FALSE,warning=TRUE,echo=FALSE}
+library(tidyverse)
+library(sf)
+library(lubridate)
+
 pinochet %>% ungroup() %>% 
   mutate(Year = year(start_date_monthly)) %>%
   group_by(Year) %>% tally() %>% 
@@ -138,7 +157,7 @@ If you find the dataset useful, please consider citing the article and the R pac
 @misc{freire2019deaths,
   title={{Deaths and Disappearances in the Pinochet Regime: A New Dataset}},
   author={Freire, Danilo and Meadowcroft, John and Skarbek, David and Guerrero, Eugenia},
-  howpublished = {\url{https://osf.io/rm4y8}},
+  howpublished = {\url{https://osf.io/vqnwu}},
   publisher={Open Science Framework},
   year={2019},
   month={May}
@@ -146,7 +165,7 @@ If you find the dataset useful, please consider citing the article and the R pac
 
 @manual{freire2019pinochet,
   title={\texttt{pinochet}: Data about the victims of the Pinochet regime, 1973-1990},
-  author={Freire, Danilo and Mingardi, Lucas and McDonnell, Robert Myles},
+  author={Freire, Danilo and Mingardi, Lucas and McDonnell, Robert},
   year={2019},
   note={R package version 0.1},
   url={https://CRAN.R-project.org/package=pinochet}
