@@ -58,18 +58,20 @@ Despite these noteworthy examples, quantitative studies on the dynamics of autho
 
 Our dataset comprises 2,398 observations and 59 variables. Each observation corresponds to a victim of the Pinochet regime and every individual has a unique id number. There are several variables describing the personal information of the victims, such as age, gender, nationality, occupation, and political affiliation if available. The data also feature geographical coordinates for a number of the incidents, as well as information about methods of torture and causes of death. Table 1 shows an example entry from our dataset.
 
-Users can download the data as an Excel spreadsheet (`.xlsx`) or as a comma-separated values text file (`.csv`).  We have also created an `R` package called `pinochet` which includes the dataset in both formats plus the data codebook. The files follow the principles of "tidy data", where each column represents one variable and each row is one case [@wickham2014tidy]. The `pinochet` package is available for download on the Comprehensive R Archive Network (CRAN) and at <http://github.com/danilofreire/pinochet>. To make the data accessible, our GitHub repository has detailed installation instructions for users new to `R`. 
+Users can download the data as an Excel spreadsheet (`.xlsx`) or as a comma-separated values text file (`.csv`).  We have also created an `R` package called `pinochet` which includes the dataset in both formats plus the data codebook. The files follow the principles of "tidy data", where each column represents one variable and each row is one case [@wickham2014tidy]. The `pinochet` package is available for download on the [Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/package=pinochet) and at <http://github.com/danilofreire/pinochet>. To make the data accessible, our GitHub repository has detailed installation instructions for users new to `R`. 
 
 \newpage
 
-```{r sample-obs, echo=FALSE, warning=FALSE, message=FALSE,cache=TRUE}
+```{r sample-obs, echo=FALSE, warning=FALSE, message=FALSE}
 if (!require("kableExtra")) {
         install.packages("kableExtra")
 }
 if (!require("tidyverse")) {
         install.packages("tidyverse")
 }
-load("/Users/politicaltheory/Documents/github/pinochet/data/pinochet.RData")
+if (!require("pinochet")) {
+        install.packages("pinochet")
+}
 kable(t(pinochet[12, c(1:4,7:22,24:37)]), "latex", caption = "Sample event from the dataset (selected variables)", col.names = c("Value"), booktabs = T) %>%
   kable_styling(position ="center", latex_options = "hold_position")
 ```
@@ -210,6 +212,7 @@ pinochet %>%
   labs(x = NULL, y = NULL, title = "Violence Perpetrators", 
        subtitle = "Pinochet Regime, 1975-1990") +
   scale_x_continuous(breaks = c(1975, 1980, 1985, 1990)) +
+  scale_y_continuous(breaks = c(0, 50, 100, 135)) + 
   facet_grid(perpetrator_affiliation ~ ., scales = "fixed") + 
   theme(legend.position = "bottom") + 
   theme(legend.title=element_blank())

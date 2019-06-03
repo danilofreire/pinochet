@@ -175,7 +175,10 @@ if (!require("kableExtra")) {
 if (!require("tidyverse")) {
         install.packages("tidyverse")
 }
-load("/Users/politicaltheory/Documents/github/pinochet/data/pinochet.RData")
+if (!require("pinochet")) {
+        install.packages("pinochet")
+}
+
 
 kable(t(pinochet[12, c(1:4,7:22,24:37)]), "latex", 
       caption = "Sample event from the dataset (selected variables)",
@@ -283,6 +286,9 @@ ggplot() +
 if (!require("tidyverse")) {
         install.packages("tidyverse")
 }
+if (!require("lubridate")) {
+        install.packages("lubridate")
+}
 
 # Plot
 pinochet %>% 
@@ -300,6 +306,7 @@ pinochet %>%
   labs(x = NULL, y = NULL, title = "Violence Perpetrators", 
        subtitle = "Pinochet Regime, 1975-1990") +
   scale_x_continuous(breaks = c(1975, 1980, 1985, 1990)) +
+  scale_y_continuous(breaks = c(0, 50, 100, 135)) + 
   facet_grid(perpetrator_affiliation ~ ., scales = "fixed") + 
   theme(legend.position = "bottom") + 
   theme(legend.title=element_blank())
