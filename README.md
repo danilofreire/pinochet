@@ -1,6 +1,6 @@
 # Deaths and Disappearances in the Pinochet Regime: A New Dataset
 
-This Github repository contains data and documented R code for [Deaths and Disappearances in the Pinochet Regime: A New Dataset](https://osf.io/vqnwu) by Freire et al (2019). We coded the personal details of 2,398 victims named in the Chilean Truth Commission Report along with information about the perpetrators and geographical coordinates for all identifiable atrocity locations. The dataset covers from 1973 to 1990 and includes 59 indicators. Please refer to our [accompanying article](https://doi.org/10.31235/osf.io/vqnwu) and our [online appendix](https://osf.io/8fkxq) for more details.
+This Github repository contains data and documented R code for [Deaths and Disappearances in the Pinochet Regime: A New Dataset](https://doi.org/10.31235/osf.io/vqnwu) by Freire et al (2019). We coded the personal details of 2,398 victims named in the Chilean Truth Commission Report along with information about the perpetrators and geographical coordinates for all identifiable atrocity locations. The dataset covers from 1973 to 1990 and includes 59 indicators. Please refer to our [accompanying article](https://doi.org/10.31235/osf.io/vqnwu) and our [online appendix](https://osf.io/8fkxq) for more details.
 
 This branch has the data and code for the main article. The source code for the `pinochet` `R` package is available in the [package branch of this repository](https://github.com/danilofreire/pinochet/tree/package).
 
