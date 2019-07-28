@@ -1,6 +1,6 @@
 # Deaths and Disappearances in the Pinochet Regime: A New Dataset
 
-![DOI](https://zenodo.org/badge/103286196.svg)](https://zenodo.org/badge/latestdoi/103286196)
+![DOI](https://zenodo.org/badge/103286196.svg)
 [![](http://cranlogs.r-pkg.org/badges/grand-total/pinochet?color=blue)](https://cran.r-project.org/package=pinochet)
 
 This Github repository contains data and documented R code for [Deaths and Disappearances in the Pinochet Regime: A New Dataset](https://doi.org/10.31235/osf.io/vqnwu) by Freire et al (2019). We coded the personal details of 2,398 victims named in the Chilean Truth Commission Report along with information about the perpetrators and geographical coordinates for all identifiable atrocity locations. The dataset covers from 1973 to 1990 and includes 59 indicators. Please refer to our [accompanying article](https://doi.org/10.31235/osf.io/vqnwu) and our [online appendix](https://osf.io/8fkxq) for more details.
