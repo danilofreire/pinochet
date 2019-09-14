@@ -1,5 +1,8 @@
 # Deaths and Disappearances in the Pinochet Regime: A New Dataset
 
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/pinochet)](https://cran.r-project.org/package=pinochet) 
+[![Travis-CI Build
+Status](https://travis-ci.org/danilofreire/pinochet.svg?branch=master)](https://travis-ci.org/danilofreire/pinochet)
 [![DOI](https://zenodo.org/badge/103286196.svg)](https://zenodo.org/badge/latestdoi/103286196)
 [![](http://cranlogs.r-pkg.org/badges/grand-total/pinochet?color=blue)](https://cran.r-project.org/package=pinochet)
 
@@ -159,5 +162,3 @@ If you use the `pinochet` package, you can cite it as:
     url = {http://github.com/danilofreire/pinochet}
 }
 ```
-
-
