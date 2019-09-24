@@ -46,7 +46,7 @@ names(pinochet)
 
 ## Applications
 
-To illustrate the potential uses of the package, we show some spatial and temporal variation of the data. We see that the Pinochet regime concentrated most of the violence in the first three months after the coup. The graph below describe time trends for the atrocities perpetrated by the dictatorship:
+To illustrate the potential uses of the package, we show some spatial and temporal variation of the data. We see that the Pinochet regime concentrated most of the violence in the first three months after the coup. The graph below describes time trends for the atrocities perpetrated by the dictatorship:
 
 ```
 # Install necessary packages
