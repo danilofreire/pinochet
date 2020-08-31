@@ -1,7 +1,7 @@
 Package: pinochet
 Type: Package
 Title: Data About the Victims of the Pinochet Regime, 1973-1990
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person(given = "Danilo", family = "Freire", email = "danilofreire@gmail.com", role = c("aut", "cre")),
     person(given = "Lucas", family = "Mingardi", email = "lucasmingardi@gmail.com", role = "aut"),
