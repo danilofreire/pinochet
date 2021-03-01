@@ -1,9 +1,11 @@
-doc
-Meta
-article_cache/
-
 # Created by https://www.toptal.com/developers/gitignore/api/latex,macos,vim,r,python,microsoftoffice
 # Edit at https://www.toptal.com/developers/gitignore?templates=latex,macos,vim,r,python,microsoftoffice
+
+### Directories ###
+doc
+Meta
+manuscript/article_cache/
+manuscript/article_files/
 
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
