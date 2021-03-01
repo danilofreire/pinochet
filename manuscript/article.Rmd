@@ -1,0 +1,124 @@
+---
+title:  |
+        | Human Rights Violations in the Pinochet Regime:
+        | A Quantitative Presentation of the Rettig and Valech Reports
+author: 
+  - Mauricio Carrasco[^auth01]
+  - Danilo Freire[^auth02]
+  - Pablo Seguel Gutierrez[^auth03]
+date: \today
+thanks: "The authors thank Eugenia Guerrero, John Meadowcroft, and David Skarbek for their work on the Rettig Report dataset. All replication materials and the source code for the `pinochet R` package are available at <https://github.com/danilofreire/pinochet>."
+abstract: "This article introduces a new dataset on human rights violations during the Pinochet regime in Chile (1973-1990). Based on previous work by @freire2019dataset, we code all cases of deaths and disappearances recorded in the Rettig (1991), Valech I (2004), and Valech II (2005) reports. Our dataset includes XX variables and presents information on XXXX individuals, of which XXX appear in at least two reports. We also provide geographical coordinates for all locations of human rights abused mentioned in the three reports. The data are available in several formats, including an `R` package built especifically for our purposes. The paper shows the temporal and spatial variation of human rights violations during the regime, and proposes further avenues of research for those interested in Chilean history and cross-national studies of state-sponsored violence."
+abstractspacing: double
+keywords: Chile; human rights violations; Pinochet; state-sponsored violence; truth commission
+jelcodes: 
+fontsize: 12pt
+margin: 2cm
+urlcolor: darkblue
+linkcolor: Mahogany
+citecolor: Mahogany
+spacing: double
+papersize: a4paper
+bibliography: references.bib
+biblio-style: apalike
+output:
+  pdf_document:
+    citation_package: natbib
+    fig_caption: yes
+    number_sections: yes
+    keep_tex: no
+    toc: no
+    toc_depth: 3
+    template: article-template.latex
+---
+
+```{r setup, message=FALSE, warning=FALSE, echo=FALSE}
+# If you need to install any package while knitting the document
+r <- getOption("repos")
+r["CRAN"] <- "https://cran.rstudio.com/"
+options(repos = r)
+
+# Chunk definitions
+def_chunk_hook  <- knitr::knit_hooks$get("chunk")
+knitr::knit_hooks$set(chunk = function(x, options) {
+  x <- def_chunk_hook(x, options)
+  ifelse(options$size != "normalsize",
+         paste0("\n \\", options$size, "\n\n", x,
+                "\n\n \\normalsize"), x)
+})
+
+# Install packages
+packages <- c("kableExtra", "scales", "tidyverse")
+installed_packages <- packages %in% rownames(installed.packages())
+if (any(installed_packages == FALSE)) {
+  install.packages(packages[!installed_packages])
+}
+invisible(lapply(packages, library, character.only = TRUE))
+
+# Read dataset
+library(readr)
+df <- read_csv("../data/victims.csv")
+```
+
+[^auth01]: Author information. 
+[^auth02]: Independent Researcher,
+[`danilofreire@gmail.com`](mailto:danilofreire@gmail.com),
+<https://danilofreire.github.io>.
+[^auth03]: Author information.
+
+\newpage
+
+# Introduction
+\label{sec:intro}
+
+General Augusto Pinochet ruled Chile with an iron fist from 1973 to 1990. Later
+findings show that the Chilean Armed Forces and the government's secret police
+carried out gross human rights violations against political dissidents,
+including murders, beatings, waterboarding, and kidnappings [@ensalaco2000chile;
+@huneeus2007pinochet; @verdugo2001chile]. Most of the repression occurred in the
+first months of the military regime, but state terrorism continued until the
+last years of the dictatorship, often in collaboration with other Latin American
+countries [@dinges2005condor; @mcsherry2012predatory]. While the true extension
+of the brutality of the Pinochet regime remains unknown, estimates suggests that
+the number of victims may be close to 30,000 [@weissbrodt1992report].
+
+In this paper, we provide a quantitative presentation of all cases of deaths and
+disappearances recorded in the Rettig and Valech reports. Both reports were
+elaborated at the request of the Chilean government and are the official sources
+of information on serious human rights abuses during the Pinochet years. The
+National Commission for Truth and Reconciliation Report, also known as the
+Rettig Report after its main editor Raúl Rettig, was compiled in 1991 and
+recorded more than 2,000 cases of murder and kidnappings from 1973 to 1990
+[@rettig1991report]. In 2004, a commission chaired by Bishop Sergio Valech
+produced another compilation of victims of the military dictatorship, which
+complemented and expanded the original findings [@valech2004report]. The Valech
+report was updated in 2010 to include more cases. 
+
+Our dataset contains `r ncol(df)` variables and `r comma(nrow(df))`
+observations. The data describes personal characteristics of the victims -- such
+as unique id, name, age, gender, and occupation -- as well as information about
+the crimes, including the type, perpetrator, and geolocation whenever such
+information was available in the reports. We formatted the dataset following the
+principles of "tidy data", in which each row correspondents to one case, each
+variable forms a column, and the data are represented as a table
+[@wickham2014tidy]. Moreover, we provide three different presentations of the
+data. The first table includes only the cases mentioned in Rettig Report, the
+second is the data from the Valech Report, and in the final table we merged all
+cases together. To make the data easily available to users, we provide a
+companion `R` package, named `pinochet` [@freire2019pinochet], alongside `csv`
+and `xlsx` files that scholars can download at
+<http://github.com/danilofreire/pinochet>.
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{5pt}
